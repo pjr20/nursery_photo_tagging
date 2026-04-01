@@ -1,17 +1,11 @@
 {
-  "outputDirectory": ".",
-  "builds": [
-    { "src": "index.html", "use": "@vercel/static" }
-  ],
-  "routes": [
+  "headers": [
     {
-      "src": "/plants.csv",
-      "dest": "/public/plants.csv",
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-        "Cache-Control": "public, max-age=300"
-      }
-    },
-    { "src": "/(.*)", "dest": "/index.html" }
+      "source": "/plants.csv",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Cache-Control", "value": "public, max-age=300" }
+      ]
+    }
   ]
 }

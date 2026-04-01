@@ -7,6 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="ML Photos">
 <meta name="theme-color" content="#1e3a1a">
+<link rel="manifest" href="/manifest.json">
 <title>Maple Lane · Photo Capture</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,600;1,300&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -775,43 +776,109 @@ function savePhoto() {
 
 // ═══════════════════════════════════════════════════
 //  BARCODE SCANNER
+//  Uses native BarcodeDetector on Android/Chrome,
+//  Quagga2 on iPhone Safari (loaded eagerly on boot)
 // ═══════════════════════════════════════════════════
+let quaggaReady = false;
+let quaggaRunning = false;
+
+// Load Quagga2 eagerly so it's ready when needed
+(function loadQuagga() {
+  if ('BarcodeDetector' in window) return; // not needed on Chrome/Android
+  const s = document.createElement('script');
+  s.src = 'https://cdn.jsdelivr.net/npm/@ericblade/quagga2@1.8.4/dist/quagga.min.js';
+  s.onload  = () => { quaggaReady = true; };
+  s.onerror = () => { quaggaReady = false; };
+  document.head.appendChild(s);
+})();
+
 async function openScanner() {
   document.getElementById('scan-modal').classList.add('open');
-  try {
-    scanStream = await navigator.mediaDevices.getUserMedia({ video:{facingMode:'environment'}, audio:false });
-    document.getElementById('scan-video').srcObject = scanStream;
-    if ('BarcodeDetector' in window) {
+
+  // Use native BarcodeDetector where available (Chrome, Android, Firefox 123+)
+  if ('BarcodeDetector' in window) {
+    try {
+      scanStream = await navigator.mediaDevices.getUserMedia({
+        video:{ facingMode:'environment', width:{ideal:1280}, height:{ideal:720} }, audio:false
+      });
+      const vid = document.getElementById('scan-video');
+      vid.srcObject = scanStream;
       barcodeDetector = new BarcodeDetector({
         formats:['ean_13','ean_8','upc_a','upc_e','code_128','code_39','qr_code','itf','codabar']
       });
-      scanLoop();
-    } else { loadZXing(); }
-  } catch(e) { toast('Camera access denied', '⚠️'); closeScanner(); }
+      // Wait for video to be fully playing before scanning frames
+      let loopStarted = false;
+      const startLoop = () => { if (!loopStarted) { loopStarted = true; scanLoop(); } };
+      vid.addEventListener('playing', startLoop, { once: true });
+      setTimeout(startLoop, 1500); // safety fallback
+    } catch(e) {
+      const msg = e.name === 'NotAllowedError' ? 'Camera access denied' : 'Could not open camera';
+      toast(msg, '⚠️'); closeScanner();
+    }
+    return;
+  }
+
+  // iPhone Safari — use Quagga2
+  if (!quaggaReady) {
+    // Still loading — wait up to 5 seconds
+    let waited = 0;
+    const wait = setInterval(() => {
+      waited += 200;
+      if (quaggaReady) { clearInterval(wait); startQuagga(); }
+      else if (waited >= 5000) {
+        clearInterval(wait);
+        toast('Scanner unavailable — search by name instead', '⚠️');
+        closeScanner();
+      }
+    }, 200);
+    return;
+  }
+  startQuagga();
+}
+
+function startQuagga() {
+  if (quaggaRunning) return;
+  quaggaRunning = true;
+
+  Quagga.init({
+    inputStream: {
+      name: 'Live',
+      type: 'LiveStream',
+      target: document.getElementById('scan-video'),
+      constraints: { facingMode: 'environment', width:{ ideal:1280 }, height:{ ideal:720 } }
+    },
+    decoder: {
+      readers: ['ean_reader','ean_8_reader','upc_reader','upc_e_reader','code_128_reader','code_39_reader']
+    },
+    locate: true
+  }, err => {
+    if (err) {
+      quaggaRunning = false;
+      toast('Camera access denied', '⚠️');
+      closeScanner();
+      return;
+    }
+    Quagga.start();
+    Quagga.onDetected(result => {
+      const code = result && result.codeResult && result.codeResult.code;
+      if (code) { closeScanner(); handleCode(code); }
+    });
+  });
 }
 
 async function scanLoop() {
   if (!scanStream || !barcodeDetector) return;
+  const vid = document.getElementById('scan-video');
+  // Don't attempt detection on a frame that isn't ready
+  if (vid.readyState < 2) { setTimeout(scanLoop, 100); return; }
   try {
-    const codes = await barcodeDetector.detect(document.getElementById('scan-video'));
+    const codes = await barcodeDetector.detect(vid);
     if (codes.length) { closeScanner(); handleCode(codes[0].rawValue); return; }
-  } catch(_) {}
-  requestAnimationFrame(scanLoop);
-}
-
-function loadZXing() {
-  const s = document.createElement('script');
-  s.src = 'https://cdnjs.cloudflare.com/ajax/libs/zxing-js/0.19.1/zxing.min.js';
-  s.onload = () => {
-    try {
-      new ZXing.BrowserMultiFormatReader().decodeFromVideoElement(
-        document.getElementById('scan-video'), (res, err) => {
-          if (res) { closeScanner(); handleCode(res.getText()); }
-        });
-    } catch(e) { toast('Scanner unavailable — use search', '⚠️'); closeScanner(); }
-  };
-  s.onerror = () => { toast('Scanner failed to load', '⚠️'); closeScanner(); };
-  document.head.appendChild(s);
+  } catch(e) {
+    // Ignore transient errors (empty frames, focus changes)
+    if (e.name !== 'InvalidStateError') console.warn('scan err:', e.message);
+  }
+  if (scanStream) requestAnimationFrame(scanLoop);
 }
 
 function handleCode(code) {
@@ -836,6 +903,10 @@ function closeScanner() {
   document.getElementById('scan-modal').classList.remove('open');
   if (scanStream) { scanStream.getTracks().forEach(t=>t.stop()); scanStream = null; }
   barcodeDetector = null;
+  if (quaggaRunning) {
+    try { Quagga.stop(); } catch(_) {}
+    quaggaRunning = false;
+  }
 }
 
 // ═══════════════════════════════════════════════════
@@ -908,6 +979,13 @@ function emoji(name) {
 }
 
 function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+// Register service worker for PWA install
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(e => console.warn('SW:', e));
+  });
+}
 </script>
 </body>
 </html>
