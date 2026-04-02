@@ -1,21 +1,2996 @@
-Name,Size,SKU
-Knock Out Rose,3 Gal,10-2847
-Knock Out Rose,5 Gal,10-2848
-Knock Out Rose,7 Gal,10-2849
-English Lavender,1 Gal,10-1193
-English Lavender,3 Gal,10-1194
-Blue Spruce,5 Gal,20-0447
-Blue Spruce,15 Gal,20-0448
-Japanese Maple,7 Gal,20-0892
-Japanese Maple,15 Gal,20-0893
-Black-Eyed Susan,1 Qt,10-3301
-Black-Eyed Susan,1 Gal,10-3302
-Endless Summer Hydrangea,3 Gal,10-4471
-Endless Summer Hydrangea,5 Gal,10-4472
-Arborvitae Emerald Green,3 Gal,30-1101
-Arborvitae Emerald Green,5 Gal,30-1102
-Arborvitae Emerald Green,6 ft B&B,30-1103
-Boxwood Winter Gem,2 Gal,30-2204
-Boxwood Winter Gem,3 Gal,30-2205
-Karl Foerster Grass,1 Gal,10-5519
-Karl Foerster Grass,3 Gal,10-5520
+ITEM_NO,DESCR,STK_UNIT
+10014,Acer p. v. d. Red Dragon,2 GAL
+10035,Quercus robur x bicolor Long,15 gal
+10036,Stewartia pseudocamellia,5 gal
+10040,Thuja x Green Giant,7 gal
+10047,Carpinus x Skylark™,3 GAL
+10049,Amelanchier x gr. Robin Hill,15 gal
+10050,Ginkgo b. Mariken,7 gal
+10108,Acer p. v. d. Tamukeyama,2 GAL
+10132,Cercidiphyllum japonicum,7 gal
+10135,Nyssa s. Wild Fire,7 gal
+10136,Salix i. Hakuro Nishiki,10 Gal TF
+10169,Cornus k. Greensleeves®,3 GAL
+10170,Cornus kousa Radiant Rose,3 GAL
+10171,Magnolia x Judy Zuk,7 gal
+10172,Magnolia x Sunsation,7 gal
+10173,Quercus robur x bicolor Long,3 GAL
+10205,Liquidambar s. Slender Silhoue,15 gal
+10206,Ginkgo b. Mariken,15 gal
+10207,Ginkgo b. Sky Tower,20 gal
+10208,Ginkgo b. Mariken,20 gal
+1021,Stewartia pseudocamellia,7 GAL
+10210,Ginkgo b. Saratoga,10 gal
+10212,Nyssa s.The James Forest Fire™,20 gal
+10213,Nyssa s. Northern Splendor™,20 gal
+10217,Cercis canadensis MS,5 gal MS
+10332,Fagus sylvatica,"4/4.5"""
+10332,Fagus sylvatica,"4/4.5"""
+10340,Hydrangea p. Quick Fire® PW,"24/30"" (5')"
+10340,Hydrangea p. Quick Fire® PW,"24/30"" (5')"
+10341,Hydrangea p. Quick Fire® PW,"36/42"""
+10341,Hydrangea p. Quick Fire® PW,"36/42"""
+10468,Amelanchier x gr. Autumn Brill,10 Gal TF
+10469,Amelanchier x gr. Robin Hill T,10 Gal TF
+10470,Betula n. Heritage,3 GAL
+10471,Cercis canadensis MS,15 gal MS
+10472,Cornus kousa MS,10 GAL MS
+10473,Ginkgo b. Mariken,10 gal
+10477,Abies balsamea v. phanerolepis,1 GAL
+10480,Syringa reticulata Ivory Silk,15 gal
+10880,Cornus k. Scarlet Fire®,7 gal
+10893,Carpinus b. Fastigiata,3 GAL
+10928,Cornus k. Greensleeves®,5 gal
+10929,Cornus kousa Radiant Rose,7 gal
+10930,Liquidambar s. Slender Silhoue,20 gal
+10932,Cornus kousa TF,15 gal
+10934,Ginkgo b. Sky Tower,5 gal
+10936,Cercidiphyllum j. Claim Jumper,15 gal
+10994,Cornus k. Summer Fun,10 gal
+10995,Cornus k. Schmred,7 gal
+10996,Hydrangea p. Van. Straw.™ FE,10 Gal TF
+10997,Malus x Snow Crystal®,10 gal
+10998,Malus x Showtime™ PW,10 gal
+11000,Prunus First Blush®,10 gal
+11001,Malus x Sparkling Sprite®,10 gal
+11003,Cercis c. Golden Falls,7 gal
+11004,Pyrus 4-N-1 Combo,15 gal
+11005,Prunus i. Little Twist®,7 gal
+11006,Hibiscus s. Blue Chiffon® PW,7 Gal TF
+11007,Cladrastis kentuckia,7 gal
+11008,Cercis c. Midnight Express®,7 gal
+11009,Nyssa s. Northern Splendor™,15 gal
+11010,Syringa Bloomerang® Dark P. PW,15 gal TF
+11011,Hydrangea p. L. Lime Punch® PW,7 Gal TF
+11012,Cercis c. Royal White,7 Gal TF
+11013,Hydrangea p. L. Quick Fire® PW,7 Gal TF
+11014,Cornus kousa TF,7 Gal TF
+11015,Magnolia x Galaxy,7 Gal TF
+11016,Acer saccharum Green Mountain,20 gal
+11017,Syringa reticulata Ivory Silk,7 Gal TF
+11018,Cornus k. Greensleeves®,7 Gal TF
+11019,Ginkgo b. Sky Tower,7 gal
+11082,Cornus k. var. ch. Milky Way,7 Gal TF
+11091,Cornus fl. Cloud Nine,3 GAL
+2004,Carpinus b. Fastigiata,15 GAL
+2009,Prunus x Snofozam,15 GAL
+2085,Fagus s. Purpurea,7 GAL
+2087,Ginkgo b. Sky Tower,3 GAL
+2202,Hydrangea p. Van. Straw.™ FE,7 GAL TF
+2246,Stewartia pseudocamellia,15 GAL
+233,Acer p. v. d. Crimson Queen,3 GAL
+250,Acer p. v. d. Tamukeyama,5 GAL
+3187,Hydrangea p. Limelight® PW,15 GAL TF
+3257,Carpinus b. Fastigiata,20 GAL
+41,Acer pal. Bloodgood,3 GAL
+4277,Cornus kousa MS,7 GAL
+4306,Cercidiphyllum j. Rotfuchs,7 GAL TF
+4310,Ginkgo b. Sky Tower,10 GAL
+4329,Cercidiphyllum j. Claim Jumper,3 GAL
+4331,Cornus k. x Rosy Teacup®,3 GAL
+4394,Malus x Harvest Gold,20 GAL
+4395,Acer griseum,20 GAL
+4402,Liquidambar s. Slender Silhoue,10 GAL
+4546,Ginkgo b. Fastigiata,10 GAL
+5334,Acer pseud. Esk Sunset,3 GAL
+5340,Cornus k. x Rosy Teacup®,7 GAL
+5343,Fagus sylvatica,10 GAL
+5346,Fagus s. Purpurea,10 GAL
+5347,Ginkgo b. Saratoga,7 GAL
+5350,Quercus robur x bicolor Long,7 GAL
+5648,Juniperus v. Taylor,3 GAL
+5654,Pinus n. Green Tower,3 GAL
+5657,Pinus s. Horsford Dwarf,3 GAL
+5736,Cornus x Venus®,15 GAL
+5771,Syringa Bloomerang® Dark P. PW,7 GAL TF
+5801,Betula pl. Parkland Pillar® FE,15 GAL
+5898,Acer pseudosieboldianum,1 GAL
+6018,Carpinus betulus,10 GAL
+613,Cornus x Venus®,10 GAL TF
+6306,Carpinus b. Frans Fontaine,10 GAL
+6307,Carpinus b. Frans Fontaine,15 GAL
+6309,Fagus s. Purpurea,15 GAL
+6368,Carpinus betulus,7 GAL
+6369,Carpinus x Skylark™,7 GAL
+6371,Cornus k. Scarlet Fire®,3 GAL
+6372,Magnolia x Galaxy,3 GAL
+6383,Pyrus cal. Chanticleer pear,15 GAL
+6391,Quercus p. Green Pillar®,3 GAL
+6671,Cornus kousa TF,7 GAL
+6791,Carpinus b. Frans Fontaine,20 GAL
+7029,Betula n. Heritage,15 GAL
+10064,Acer p. v. d. Tamukeyama,"10 GAL 30/36"""
+10133,Cladrastis kentuckia,10 gal
+10214,Acer pal. Bloodgood,10 Gal Heavy
+10727,Betula pl. Parkland Pillar® FE,BR
+11096,Acer r. Brandywine,10 gal
+11098,Betula nigra,10 gal
+11099,Betula nigra,25 gal
+11103,Cercis c. Lavender Twist®,15 gal
+11128,Salix alba Tristis Niobe,15 gal
+11192,Carpinus b. Frans Fontaine,BR
+2679,Acer p. v. d. Crimson Queen,20 gal
+3918,Ginkgo b. Mariken,6 GAL
+4548,Syringa Bloomerang® Dark P. PW,10 GAL TF
+5338,Cornus florida,10 gal
+6122,Cornus k. Scarlet Fire®,6 GAL
+6720,Acer p. v. d. Viridis,15 GAL
+6722,Acer shirasawanum Aureum,15 gal
+6743,Picea g. Conica Spiral,7 gal
+6767,Sciadopitys v. Winter Green,4.5/5'
+6803,Pinus peuce Pacific Blue,6 GAL
+6807,Picea Abies Frohburg,10 GAL
+6809,Acer pal. Green Star LB,"3.5-4"""
+6850,Acer p. v. d. Crimson Queen,"10 GAL 30/36"""
+6851,Acer p. v. d. Red Dragon,"15GAL 36/42"""
+6852,Acer p. v. d. Tamukeyama,"15GAL 36/42"""
+6853,Acer p. v. d. Viridis,"15G 36/42"""
+1323,Hemerocallis Happy Returns,1 GAL
+5150,Hemerocallis Pardon Me,1 GAL
+5508,Hemerocallis Rosy Returns,2 GAL
+5577,Hemerocallis Rosy Returns,1 GAL
+6282,Hemerocallis Happy Returns,1 QUART
+6286,Hemerocallis Stella D'oro,1 QUART
+1327,Hemerocallis Stella D'Oro,2 GAL
+1328,Hemerocallis Stella D'Oro,1 GAL
+3046,Hemerocallis Orange Smoothie®,1 GAL
+6417,Hemerocallis Purple D'Oro,1 GAL
+6418,Hemerocallis Fragrant Returns,1 GAL
+6450,Hemerocallis Happy Returns,1 GAL
+6690,Hemerocallis Rainbow Rhythm®,1 GAL
+10372,12017 Delivery Fee,EACH
+1559,12106 Delivery Fee,EACH
+1560,12130 Delivery Fee,EACH
+1561,12184 Delivery Fee,EACH
+1562,12115 Delivery Fee,EACH
+1563,12132 Delivery Fee,EACH
+1564,12156 Delivery Fee,EACH
+1565,12024 Delivery Fee,EACH
+1566,12033 Delivery Fee,EACH
+1578,Freight,EACH
+1757,12136 Delivery Fee,EACH
+1805,12037 Delivery Fee,EACH
+1806,12050 Delivery Fee,EACH
+1911,12073 Delivery Fee,EACH
+1970,12075 Delivery Fee,EACH
+2114,12165 Delivery Fee,EACH
+3010,12123 Delivery Fee,EACH
+3034,12173 Delivery Fee,EACH
+3119,12505 Delivery Fee,EACH
+4112,12534 Delivery Fee,EACH
+4158,12061 Delivery Fee,EACH
+5426,12060 Delivery Fee,EACH
+5475,12523 Delivery Fee,EACH
+5476,12029 Delivery Fee,EACH
+5483,12015 Delivery Fee,EACH
+5534,12502 Delivery Fee,EACH
+5633,12125 Delivery Fee,EACH
+6078,12174 Delivery Fee,EACH
+6079,12063 Delivery Fee,EACH
+6080,12172 Delivery Fee,EACH
+6081,12513 Delivery Fee,EACH
+6265,12516 Delivery Fee,EACH
+6266,12062 Delivery Fee,EACH
+6267,12144 Delivery Fee,EACH
+6268,12153 Delivery Fee,EACH
+6269,12195 Delivery Fee,EACH
+6270,12196 Delivery Fee,EACH
+6271,12530 Delivery Fee,EACH
+6272,12544 Delivery Fee,EACH
+6273,12565 Delivery Fee,EACH
+6274,12018 Delivery Fee,EACH
+6275,12140 Delivery Fee,EACH
+6276,12168 Delivery Fee,EACH
+6277,12169 Delivery Fee,EACH
+6278,12198 Delivery Fee,EACH
+6279,12521 Delivery Fee,EACH
+6280,12529 Delivery Fee,EACH
+6281,12541 Delivery Fee,EACH
+6318,12503 Delivery Fee,EACH
+10073,Prunus x  Accolade,"4.5/5"""
+10074,Acer saccharum Commemoration®,"2/2.5"""
+10074,Acer saccharum Commemoration®,"2/2.5"""
+10075,Acer x. freemanii Bailston,"2.5/3"""
+10075,Acer x. freemanii Bailston,"2.5/3"""
+10077,Syringa reticulata Ivory Silk,"2.5/3"" TF"
+10077,Syringa reticulata Ivory Silk,"2.5/3"" TF"
+10078,Quercus rubra,"2.5/3"""
+10078,Quercus rubra,"2.5/3"""
+10079,Betula papyrifera,8/10'
+10080,Cornus x Stellar Pink®,"3.5/4"""
+10081,Cornus k. var. ch. Milky Way,7/8'
+10103,Hamamelis virginiana,6/7'
+10118,Fagus grandifolia,10/12'
+10265,Thuja o. Full Speed A Hedge® A,6/7'
+10280,Acer pal. Bloodgood TF,"1.5/2"""
+10280,Acer pal. Bloodgood TF,"1.5/2"""
+10281,Acer pal. Bloodgood TF,"1.5/2"" (8/10')"
+10281,Acer pal. Bloodgood TF,"1.5/2"" (8/10')"
+10282,Acer pal. Bloodgood TF,"1.25/1.5"" (7/8'"
+10282,Acer pal. Bloodgood TF,"1.25/1.5"" (7/8'"
+10283,Acer pal. Wolff,"1.5/2"" (8/10')"
+10283,Acer pal. Wolff,"1.5/2"" (8/10')"
+10284,Acer plat. Princeton Gold®,"2.5/3"""
+10284,Acer plat. Princeton Gold®,"2.5/3"""
+10285,Acer x. freemanii Armstrong,"2.5/3"""
+10285,Acer x. freemanii Armstrong,"2.5/3"""
+10286,Acer r. Magnificent Magenta,"4.5/5"""
+10286,Acer r. Magnificent Magenta,"4.5/5"""
+10287,Acer r. Magnificent Magenta,"5/5.5"""
+10287,Acer r. Magnificent Magenta,"5/5.5"""
+10288,Acer r. October Glory,"5/5.5"""
+10288,Acer r. October Glory,"5/5.5"""
+10289,Abies fraseri,6/7'
+10289,Abies fraseri,6/7'
+10290,Acer x. freemanii Jeffersred,"5/5.5"""
+10290,Acer x. freemanii Jeffersred,"5/5.5"""
+10291,Aesculus parviflora,2/3'
+10291,Aesculus parviflora,2/3'
+10292,Amelanchier can. Glenn Form,"2/2.5"" TF"
+10292,Amelanchier can. Glenn Form,"2/2.5"" TF"
+10293,Amelanchier x gr. Autumn Bril,10/12'
+10293,Amelanchier x gr. Autumn Bril,10/12'
+10295,Amelanchier x. lamarckii,10/12'
+10295,Amelanchier x. lamarckii,10/12'
+10296,Amelanchier x. lamarckii,"2/2.5"" TF"
+10296,Amelanchier x. lamarckii,"2/2.5"" TF"
+10297,Betula n. Fox Valley®,4/4.5'
+10297,Betula n. Fox Valley®,4/4.5'
+10298,Betula n. Heritage,"3/3.5"""
+10298,Betula n. Heritage,"3/3.5"""
+10300,Buxus x Green Mountain,"18/24"""
+10300,Buxus x Green Mountain,"18/24"""
+10301,Buxus x Green Mountain,"42/48"""
+10301,Buxus x Green Mountain,"42/48"""
+10302,Carpinus betulus,"2/2.5"""
+10303,Catalpa speciosa,"5"""
+10303,Catalpa speciosa,"5"""
+10304,Cercidiphyllum japonicum,"1.5"" (6/7')"
+10304,Cercidiphyllum japonicum,"1.5"" (6/7')"
+10305,Cercidiphyllum japonicum,"2"""
+10305,Cercidiphyllum japonicum,"2"""
+10306,Cercidiphyllum j. Claim Jumper,"3/3.5"""
+10306,Cercidiphyllum j. Claim Jumper,"3/3.5"""
+10307,Chamaecyparis n. Glauca Pendul,6/7'
+10308,Chamaecyparis n. Pendula,3/4'
+10308,Chamaecyparis n. Pendula,3/4'
+10310,Chionanthus virgincus,6/7'
+10310,Chionanthus virgincus,6/7'
+10311,Cladrastis kentuckia,"2/2.5"""
+10311,Cladrastis kentuckia,"2/2.5"""
+10312,Buxus m. Green Gem,"24/30"""
+10312,Buxus m. Green Gem,"24/30"""
+10313,Chamaecyparis n. Glauca Pendul,6/7'
+10314,Cornus k. x Rosy Teacup®,"6/7' (1/1.25"")"
+10314,Cornus k. x Rosy Teacup®,"6/7' (1/1.25"")"
+10315,Cornus k. x Rosy Teacup®,"1.5/2"" TF"
+10315,Cornus k. x Rosy Teacup®,"1.5/2"" TF"
+10316,Cornus k. x Rosy Teacup®,"8/10' (1.5/2"")"
+10317,Cornus k. Scarlet Fire®,"1/1.5"" TF"
+10317,Cornus k. Scarlet Fire®,"1/1.5"" TF"
+10318,Cornus k. Scarlet Fire®,4/5' TF
+10318,Cornus k. Scarlet Fire®,4/5' TF
+10319,Cornus k. Scarlet Fire®,5/6' TF
+10319,Cornus k. Scarlet Fire®,5/6' TF
+10320,Cornus kousa TF,"1"" TF"
+10320,Cornus kousa TF,"1"" TF"
+10321,Cornus x Varieg. Stellar Pink®,"2.5/3"""
+10321,Cornus x Varieg. Stellar Pink®,"2.5/3"""
+10322,Cornus x Venus®,"1/1.5"" TF"
+10322,Cornus x Venus®,"1/1.5"" TF"
+10323,Cornus x Venus®,"1.5/2"""
+10324,Cotinus c. Royal Purple,4.5/5'
+10324,Cotinus c. Royal Purple,4.5/5'
+10325,Crataegus v. Winter King,"3/3.5"""
+10325,Crataegus v. Winter King,"3/3.5"""
+10326,Euonymus a. compactus,5/6'
+10326,Euonymus a. compactus,5/6'
+10327,Fagus s. Tricolor,6/7'
+10327,Fagus s. Tricolor,6/7'
+10328,Fagus s. Tricolor,7/8'
+10328,Fagus s. Tricolor,7/8'
+10329,Fagus s. Riversii,7/8'
+10329,Fagus s. Riversii,7/8'
+10330,Fagus s. Purple Fountain,"1.5"" (8/10)"
+10330,Fagus s. Purple Fountain,"1.5"" (8/10)"
+10331,Fagus s. Purple Fountain,"3/3.5"""
+10331,Fagus s. Purple Fountain,"3/3.5"""
+10333,Forsythia x Meadowlark,6/7'
+10333,Forsythia x Meadowlark,6/7'
+10334,Ginkgo b. Autumn Gold,"3.5/4"""
+10335,Ginkgo b. Magyar,"1.5/2"""
+10335,Ginkgo b. Magyar,"1.5/2"""
+10336,Ginkgo b. Sky Tower,"1.5/2"""
+10336,Ginkgo b. Sky Tower,"1.5/2"""
+10337,Ginkgo b. Sky Tower,"2/2.5"" (8/10')"
+10337,Ginkgo b. Sky Tower,"2/2.5"" (8/10')"
+10338,Gleditsia t. Skyline®,"1.5/2"""
+10338,Gleditsia t. Skyline®,"1.5/2"""
+10343,Juniperus c. Gin Fizz® PW,5/6'
+10343,Juniperus c. Gin Fizz® PW,5/6'
+10345,Ginkgo b. Autumn Gold,"3/3.5"""
+10345,Ginkgo b. Autumn Gold,"3/3.5"""
+10346,Juniperus c. Spartan,7/8'
+10346,Juniperus c. Spartan,7/8'
+10347,Juniperus c. Spartan,8/10'
+10347,Juniperus c. Spartan,8/10'
+10348,Juniperus v. Taylor,4.5/5'
+10348,Juniperus v. Taylor,4.5/5'
+10349,Juniperus v. Taylor,8/10'
+10350,Juniperus virginiana,4/5'
+10350,Juniperus virginiana,4/5'
+10351,Juniperus virginiana,5/6'
+10352,Juniperus c. Hetzii Columnaris,5/6'
+10352,Juniperus c. Hetzii Columnaris,5/6'
+10353,Juniperus c. Hetzii Columnaris,6/7'
+10353,Juniperus c. Hetzii Columnaris,6/7'
+10354,Juniperus c. Hetzii glauca,7/8'
+10354,Juniperus c. Hetzii glauca,7/8'
+10355,Juniperus c. Robusta Green,6/7'
+10355,Juniperus c. Robusta Green,6/7'
+10356,Liquidambar s. Slender Silhoue,14/16'
+10356,Liquidambar s. Slender Silhoue,14/16'
+10357,Liquidambar s. Slender Silhoue,8/10'
+10357,Liquidambar s. Slender Silhoue,8/10'
+10358,Magnolia x soulangeana,7/8'
+10358,Magnolia x soulangeana,7/8'
+10359,Magnolia v. Green Shadow,7/8'
+10359,Magnolia v. Green Shadow,7/8'
+10360,Magnolia v. Northern Belle,"2/2.5"""
+10360,Magnolia v. Northern Belle,"2/2.5"""
+10361,Magnolia x Burgundy Star™,"1.5/2"""
+10361,Magnolia x Burgundy Star™,"1.5/2"""
+10362,Magnolia x Sunsation,8/10'
+10362,Magnolia x Sunsation,8/10'
+10363,Magnolia x Vulcan,"1.5/2"" (6/7')"
+10363,Magnolia x Vulcan,"1.5/2"" (6/7')"
+10364,Malus dom. Honeycrisp,"1.5/2"""
+10364,Malus dom. Honeycrisp,"1.5/2"""
+10365,Malus dom. Macoun,"1.5/2"""
+10366,Malus dom. Zestar,"1.5/2"""
+10367,Malus dom. Triumph,"1.5/2"""
+10367,Malus dom. Triumph,"1.5/2"""
+10369,Malus x Adirondack,"1.5/2"""
+10369,Malus x Adirondack,"1.5/2"""
+10370,Malus x Red Jewel™,"2/2.5"""
+10370,Malus x Red Jewel™,"2/2.5"""
+10371,Nyssa s.The James Forest Fire™,"1.5/2"""
+10371,Nyssa s.The James Forest Fire™,"1.5/2"""
+10375,Picea abies Pendula,6/7'
+10376,Picea glauca,5/6'
+10377,Picea glauca Pendula,4/5'
+10377,Picea glauca Pendula,4/5'
+10378,Picea omorika Pendula,6/7'
+10378,Picea omorika Pendula,6/7'
+10379,Picea p. Globosa,"24/30"""
+10379,Picea p. Globosa,"24/30"""
+10380,Pinus parv. Glauca,6/7'
+10380,Pinus parv. Glauca,6/7'
+10381,Pinus flexilis,3.5/4'
+10382,Pinus n. Green Tower,4/5'
+10382,Pinus n. Green Tower,4/5'
+10383,Pinus n. Green Tower,5/6'
+10383,Pinus n. Green Tower,5/6'
+10384,Pinus s. Blue Shag,"42/48"""
+10384,Pinus s. Blue Shag,"42/48"""
+10385,Picea abies Pendula,7/8'
+10385,Picea abies Pendula,7/8'
+10386,Pinus flexilis,3/4'
+10387,Pinus s. Green Twist,"36/42"""
+10387,Pinus s. Green Twist,"36/42"""
+10388,Pinus s. Nana,4/5'
+10388,Pinus s. Nana,4/5'
+10389,Pinus s. Angel Falls,4/5'
+10389,Pinus s. Angel Falls,4/5'
+10390,Pinus s. Pendula,4/5'
+10390,Pinus s. Pendula,4/5'
+10391,Pinus s. Pendula,5/6'
+10391,Pinus s. Pendula,5/6'
+10392,Pinus s. Pendula,6/7'
+10392,Pinus s. Pendula,6/7'
+10393,Pinus s. Sea Urchin,"18/24"""
+10393,Pinus s. Sea Urchin,"18/24"""
+10394,Platanus a. Bloodgood,"2.5/3"""
+10394,Platanus a. Bloodgood,"2.5/3"""
+10395,Platanus Exclamation!™,"1.5/2"""
+10395,Platanus Exclamation!™,"1.5/2"""
+10396,Platanus Exclamation!™,3.5/4'
+10396,Platanus Exclamation!™,3.5/4'
+10398,Prunus x  Accolade,4/4.5''
+10399,Prunus x sub. Higan,4/4.5'
+10400,Pyrus cal. Chanticleer pear,"2.5/3"""
+10400,Pyrus cal. Chanticleer pear,"2.5/3"""
+10401,Pyrus cal. Cleveland Select,"4/4.5"""
+10402,Prunus x  Accolade,"5/5.5"""
+10402,Prunus x  Accolade,"5/5.5"""
+10403,Quercus alba,"1.5/2"""
+10403,Quercus alba,"1.5/2"""
+10404,Quercus coccinea,3.5/4'
+10404,Quercus coccinea,3.5/4'
+10405,Quercus coccinea,"5/5.5"""
+10405,Quercus coccinea,"5/5.5"""
+10406,Quercus p. Green Pillar®,"8/10' (1.5"")"
+10406,Quercus p. Green Pillar®,"8/10' (1.5"")"
+10407,Quercus palustris,"2.5/3"""
+10407,Quercus palustris,"2.5/3"""
+10408,Quercus robur,2.5/3''
+10408,Quercus robur,2.5/3''
+10409,Quercus robur f. fastigiata,"3.5/4"""
+10409,Quercus robur f. fastigiata,"3.5/4"""
+10410,Quercus robur x bicolor Long,"1.5/2"""
+10410,Quercus robur x bicolor Long,"1.5/2"""
+10411,Quercus robur x bicolor Long,"2/2.5"""
+10411,Quercus robur x bicolor Long,"2/2.5"""
+10412,Quercus robur x bicolor Long,10/12'
+10412,Quercus robur x bicolor Long,10/12'
+10413,Quercus rubra,"5/5.5"""
+10413,Quercus rubra,"5/5.5"""
+10414,Salix alba Tristis Niobe,"1.5/2"""
+10414,Salix alba Tristis Niobe,"1.5/2"""
+10415,Stewartia pseudocamellia,"7/16"""
+10415,Stewartia pseudocamellia,"7/16"""
+10416,Syringa reticulata TF,"3/3.5"""
+10416,Syringa reticulata TF,"3/3.5"""
+10417,Syringa reticulata TF,4/4.5'
+10418,Syringa retic. Ivory Silk MS,4/4.5'
+10418,Syringa retic. Ivory Silk MS,4/4.5'
+10419,Syringa retic. Ivory Silk MS,5/6'
+10419,Syringa retic. Ivory Silk MS,5/6'
+10421,Syringa v. Katherine Havemeyer,7/8'
+10421,Syringa v. Katherine Havemeyer,7/8'
+10422,Malus x Adirondack,"2/2.5"""
+10422,Malus x Adirondack,"2/2.5"""
+10423,Taxus capitata cuspidata,3/4'
+10423,Taxus capitata cuspidata,3/4'
+10424,Taxus x media Beanpole,"42/48"""
+10424,Taxus x media Beanpole,"42/48"""
+10425,Thuja o. Full Speed A Hedge® A,4/5'
+10425,Thuja o. Full Speed A Hedge® A,4/5'
+10426,Thuja p. Spring Grove® PW,4/5'
+10426,Thuja p. Spring Grove® PW,4/5'
+10427,Thuja p. Spring Grove® PW,6/7'
+10427,Thuja p. Spring Grove® PW,6/7'
+10428,Thuja p. Spring Grove® PW,7/8'
+10428,Thuja p. Spring Grove® PW,7/8'
+10429,Tilia a. American Sentry®,"1.5/2"""
+10429,Tilia a. American Sentry®,"1.5/2"""
+10430,Tilia a. American Sentry®,"3.5/4"""
+10430,Tilia a. American Sentry®,"3.5/4"""
+10431,Tsuga canadensis Jeddeloh,"24/30"""
+10431,Tsuga canadensis Jeddeloh,"24/30"""
+10432,Ulmus amer. Lewis & Clark Pr®,"3.5/4"""
+10432,Ulmus amer. Lewis & Clark Pr®,"3.5/4"""
+10433,Ulmus amer. Princeton,"1.5/2"""
+10433,Ulmus amer. Princeton,"1.5/2"""
+10434,Ulmus amer. Princeton,"3/3.5"""
+10434,Ulmus amer. Princeton,"3/3.5"""
+10435,Ulmus x New Horizon,2/2.5''
+10436,Viburnum trilobum Wentworth,6/7'
+10436,Viburnum trilobum Wentworth,6/7'
+10437,Viburnum x carlcephalum,6/7'
+10437,Viburnum x carlcephalum,6/7'
+10438,Ulmus x New Horizon,"3.5/4"""
+10438,Ulmus x New Horizon,"3.5/4"""
+10439,Chamaecyparis n. Pendula,6/7'
+10439,Chamaecyparis n. Pendula,6/7'
+10440,Syringa reticulata Ivory Silk,"4/4.5"""
+10440,Syringa reticulata Ivory Silk,"4/4.5"""
+10462,Quercus palustris,"4/4.5"""
+10549,Acer pal. Wolff,7/8'
+10550,Heptacodium m. Tianshan® FE,4/5'
+10550,Heptacodium m. Tianshan® FE,4/5'
+10551,Malus x Donald Wyman,"2.5/3"""
+10576,Malus x Lollizam,"2/2.5"""
+10644,Prunus sar. Spring Wonder™ FE,"3.5/4"""
+10646,Ulmus amer. Princeton,"2.5/3"""
+10647,Amelanchier x gr. Robin Hill,"2/2.5"""
+10648,Acer plat. Princeton Gold®,"3/3.5"""
+10649,Cercidiphyllum j. Claim Jumper,"3.5/4"""
+10650,Picea orientalis Gowdy,8/10'
+10685,Ulmus x New Horizon,"3/3.5"""
+10686,Ulmus x New Horizon,"4/4.5"""
+10687,Carpinus b. Fastigiata,"1.5/2"""
+10696,Juniperus c. Spartan,7/8'
+10698,Liquidambar s. Worplesdon,"3.5/4"""
+10728,Picea glauca,6/7'
+10729,Quercus coccinea,"4.5/5"""
+10777,Tsuga canadensis,8/10'
+10798,Picea p. Bacheri,5/6'
+10799,Picea p. Bacheri,4/5'
+10800,Picea p. The Blues,7/8'
+10801,Juniperus c. Gin Fizz® PW,6/7'
+10801,Juniperus c. Gin Fizz® PW,6/7'
+10802,Picea omorika,5/6'
+10803,Thuja x Green Giant,10/12' Heavy
+10806,Taxus x media Viridis,7/8'
+10837,Thuja o. Elegantissima,5/6'
+10838,Thuja o. Degroot's Spire,5/6'
+10839,Thuja p. Spring Grove® PW,8/10'
+10839,Thuja p. Spring Grove® PW,8/10'
+10894,Tsuga caroliniana,5/6'
+10895,Tsuga canadensis Jeddeloh,"18/24"""
+11039,Thuja o. Private Jet™ BE,3/4'
+11039,Thuja o. Private Jet™ BE,3/4'
+11040,Thuja plicata Leprechaun,"21/24"""
+11040,Thuja plicata Leprechaun,"21/24"""
+11071,Thuja o. Elegantissima,4/5'
+11088,Acer r. Autumn Radiance®,"4/4.5"""
+11095,Betula n. Fox Valley®,5/6'
+11191,Betula papyrifera,BR
+11194,Cladrastis kentuckia,"2.5/3"""
+11194,Cladrastis kentuckia,"2.5/3"""
+11195,Malus dom. Macoun,"2/2.5"""
+11195,Malus dom. Macoun,"2/2.5"""
+11196,Malus dom. Zestar,"2/2.5"""
+11196,Malus dom. Zestar,"2/2.5"""
+11197,Malus dom. Triumph,"2/2.5"""
+11197,Malus dom. Triumph,"2/2.5"""
+11198,Amelanchier x gr. Autumn Bril,"2/2.5"" TF"
+11201,Picea abies,8/10'
+11201,Picea abies,8/10'
+11202,Picea abies,7/8'
+11202,Picea abies,7/8'
+1181,Cornus kousa TF,8/9'
+123,Picea p. Baby Blue,6/7'
+140,Pinus strobus,4/5'
+140,Pinus strobus,4/5'
+141,Pinus strobus,5/6'
+141,Pinus strobus,5/6'
+1478,Picea abies,4/5'
+1478,Picea abies,4/5'
+1479,Picea abies,5/6'
+1479,Picea abies,5/6'
+1480,Picea abies,6/7'
+1480,Picea abies,6/7'
+1487,Thuja o. Smaragd,6/7'
+1487,Thuja o. Smaragd,6/7'
+1489,Thuja x Green Giant,7/8'
+1489,Thuja x Green Giant,7/8'
+1493,Acer saccharum Bailsta,"1.5/2"""
+1493,Acer saccharum Bailsta,"1.5/2"""
+1500,Acer saccharum Bailsta,2/2.5''
+1500,Acer saccharum Bailsta,2/2.5''
+1513,Malus sargentii Tina,"1.5/2"""
+1513,Malus sargentii Tina,"1.5/2"""
+1514,Malus sargentii Tina,"2/2.5"""
+156,Platanus a. Bloodgood,"2"""
+1568,Thuja o. Smaragd,7/8'
+1568,Thuja o. Smaragd,7/8'
+157,Prunus x  Accolade,2/2.5''
+157,Prunus x  Accolade,2/2.5''
+1580,Acer x. freemanii Jeffersred,1.5/2''
+1580,Acer x. freemanii Jeffersred,1.5/2''
+1586,Syringa v. President Grevy,3/4'
+1587,Syringa v. President Grevy,4/5'
+1587,Syringa v. President Grevy,4/5'
+1588,Syringa v. President Grevy,5/6'
+1589,Syringa v. Charles Joly,2/3'
+1590,Syringa v. Katherine Havemeyer,5/6'
+1591,Syringa v. Ludwig Spaeth,5/6'
+1591,Syringa v. Ludwig Spaeth,5/6'
+1592,Syringa v. Madame Lemoine,4/5'
+1592,Syringa v. Madame Lemoine,4/5'
+1593,Syringa v. Yankee Doodle,3/4'
+1594,Syringa v. Yankee Doodle,5/6'
+1594,Syringa v. Yankee Doodle,5/6'
+1595,Syringa vulgaris,3/4'
+1595,Syringa vulgaris,3/4'
+1596,Syringa vulgaris,4/5'
+1596,Syringa vulgaris,4/5'
+1598,Syringa v. President Lincoln,4/5'
+1606,Pyrus cal. Cleveland Select,2.5''
+1607,Acer r. October Glory,2.5/3''
+1607,Acer r. October Glory,2.5/3''
+1622,Malus x Red Jade,1.5/2''
+1628,Malus x Sugar Tyme®,2/2.5''
+1628,Malus x Sugar Tyme®,2/2.5''
+1641,Malus sargentii Tina,"1/1.5"""
+1647,Pyrus cal. Cleveland Select,2/2.5''
+1651,Malus x Snowdrift,1.5/2''
+1651,Malus x Snowdrift,1.5/2''
+1672,Malus floribunda,1.5/2''
+1693,Quercus rubra,3.5/4''
+1708,Crataegus v. Winter King,1.5/2''
+1708,Crataegus v. Winter King,1.5/2''
+1778,Malus x Sugar Tyme®,1.5/2''
+1778,Malus x Sugar Tyme®,1.5/2''
+1789,Gleditsia t. Skyline®,"2.5"""
+1798,Prunus x  Accolade,2.5/3''
+1798,Prunus x  Accolade,2.5/3''
+1836,Quercus palustris,"1.5/2"""
+1836,Quercus palustris,"1.5/2"""
+1860,Malus x Prairifire,1/1.5''
+191,Syringa reticulata Ivory Silk,"1.5/2"" TF"
+191,Syringa reticulata Ivory Silk,"1.5/2"" TF"
+193,Syringa v. Miss Ellen Willmott,2/3'
+194,Syringa v. Miss Ellen Willmott,3/4'
+2171,Acer r. Brandywine,"3"""
+220,Tsuga canadensis,4/5'
+222,Tsuga canadensis,5/6'
+222,Tsuga canadensis,5/6'
+224,Tsuga canadensis,7/8'
+224,Tsuga canadensis,7/8'
+2247,Thuja x Green Giant,6/7'
+2247,Thuja x Green Giant,6/7'
+2317,Acer r. Franksred,1.5/2''
+2324,Catalpa speciosa,2.5/3''
+2340,Liquidambar s. Worplesdon,"2"""
+2350,Malus x Royal Raindrops®,"1/1.5"""
+2362,Platanus a. Bloodgood,"2.5"""
+2363,Prunus x  Accolade,1/1.5''
+2367,Quercus coccinea,2/2.5''
+2367,Quercus coccinea,2/2.5''
+2368,Quercus palustris,1/1.5''
+2371,Quercus rubra,"1.5/2"""
+2371,Quercus rubra,"1.5/2"""
+2372,Quercus rubra,"2/2.5"""
+2372,Quercus rubra,"2/2.5"""
+2373,Quercus rubra,"1/1.5"""
+2381,Tilia americana Redmond,"1/1.5"""
+2388,Fagus s. Riversii,1/1.5''
+2404,Pinus strobus,6/7'
+2404,Pinus strobus,6/7'
+2406,Pinus parv. Glauca,10/12'
+2407,Picea p. Baby Blue,10/12'
+244,Acer r. Franksred,2.5/3''
+244,Acer r. Franksred,2.5/3''
+2482,Amelanchier x. lamarckii,4/5'
+2483,Amelanchier x. lamarckii,5/6'
+2484,Thuja x Green Giant,4/5'
+2484,Thuja x Green Giant,4/5'
+2485,Malus x Red Jade,1/1.5''
+2713,Syringa vulgaris,5/6'
+2713,Syringa vulgaris,5/6'
+2717,Syringa v. Madame Lemoine,5/6'
+2748,Acer r. Brandywine,2.5/3''
+2748,Acer r. Brandywine,2.5/3''
+2759,Syringa reticulata TF,"2.5/3"" TF"
+2760,Catalpa x erubescens Purpurea,2.5/3''
+2761,Catalpa b. Aurea,"2.5"""
+2764,Amelanchier x gr. Autumn Bril,4/5'
+2764,Amelanchier x gr. Autumn Bril,4/5'
+2789,Juniperus virginiana,6/7'
+2796,Celtis occidentalis,4/4.5''
+2798,Prunus x  Accolade,3/3.5''
+2798,Prunus x  Accolade,3/3.5''
+2799,Syringa reticulata TF,"2/2.5"" TF"
+28,Acer plat. Crimson King,1.5/2''
+28,Acer plat. Crimson King,1.5/2''
+2808,Pyrus cal.Trinity,3/3.5''
+2808,Pyrus cal.Trinity,3/3.5''
+2809,Syringa v. Ludwig Spaeth,4/5'
+2809,Syringa v. Ludwig Spaeth,4/5'
+2810,Malus x Harvest Gold,1.5/2''
+2904,Ginkgo b. Autumn Gold,"2.5/3"""
+2957,Picea p. Baby Blue,4/5'
+2957,Picea p. Baby Blue,4/5'
+3260,Thuja o. Smaragd,3/4'
+3392,Thuja x Green Giant,8/10'
+3392,Thuja x Green Giant,8/10'
+3401,Syringa x. pres. Donald Wyman,4/5'
+3402,Syringa v. Ludwig Spaeth,6/7'
+3402,Syringa v. Ludwig Spaeth,6/7'
+3423,Malus x Lollizam,1.5/2''
+3423,Malus x Lollizam,1.5/2''
+3425,Prunus x  Accolade,3.5/4''
+3429,Pinus s. Blue Shag,"30/36"""
+3429,Pinus s. Blue Shag,"30/36"""
+3430,Syringa v. Madame Lemoine,3/4'
+3432,Syringa v. Ludwig Spaeth,6gal
+3487,Picea p. Baby Blue,5/6'
+3487,Picea p. Baby Blue,5/6'
+3489,Picea p. Baby Blue,12/14'
+3491,Amelanchier x. lamarckii,6/7'
+3491,Amelanchier x. lamarckii,6/7'
+3492,Malus x Showtime™ PW,"1/1.5"""
+3494,Malus x Snowdrift,1/1.5''
+3508,Acer r. Magnificent Magenta,1.5/2''
+3511,Gleditsia t. Skyline®,"1.5"""
+3514,Tilia americana,1.5/2''
+3515,Acer x. freemanii Jeffersred,"2"""
+3515,Acer x. freemanii Jeffersred,"2"""
+3523,Platanus a. Bloodgood,"3/3.5"""
+3524,Acer x. freemanii Jeffersred,3/3.5''
+3526,Thuja o. Techny,5/6'
+3526,Thuja o. Techny,5/6'
+3528,Cercis c. Lavender Twist®,2/2.5''
+3538,Thuja o. Smaragd,4/5'
+3538,Thuja o. Smaragd,4/5'
+3559,Pinus s. Blue Shag,36/42'
+3559,Pinus s. Blue Shag,36/42'
+3570,Quercus robur x bicolor Long,"2"" 10/12'"
+3575,Salix alba Tristis Niobe,3/3.5''
+3575,Salix alba Tristis Niobe,3/3.5''
+3576,Quercus alba,1/1.5''
+3577,Quercus rubra,3/3.5''
+3583,Tilia americana Redmond,1.5/2''
+3583,Tilia americana Redmond,1.5/2''
+3591,Malus x Zumi var. calocarpa,"2/2.5"""
+3598,Crataegus v. Winter King,"1/1.5"""
+3616,Thuja x Green Giant,3/4'
+37,Acer r. October Glory,"2/2.5"""
+37,Acer r. October Glory,"2/2.5"""
+3831,Cornus k. x Rosy Teacup®,6/7' TF
+3835,Cornus kousa MS,8/10'
+3849,Magnolia v. Green Shadow,"2.5/3"""
+3872,Viburnum x carlcephalum,4/5'
+3942,Fagus s. Purpurea Pendula,5/6'
+3977,Tilia americana Redmond,2/2.5''
+3977,Tilia americana Redmond,2/2.5''
+3983,Liriodendron tulipifera,"4"""
+4051,Platanus a. Bloodgood,3.5/4''
+4053,Syringa reticulata Ivory Silk,3/3.5'' TF
+4116,Syringa v. Katherine Havemeyer,4/5'
+4294,Thuja o. Smaragd,5/6'
+4294,Thuja o. Smaragd,5/6'
+4454,Thuja o. Techny,4/5'
+4454,Thuja o. Techny,4/5'
+4562,Acer x. freemanii Jeffersred,"2.5""/3"""
+4564,Acer x. freemanii Jeffersred,3.5/4''
+4564,Acer x. freemanii Jeffersred,3.5/4''
+4582,Betula n. Heritage,6/8'
+4582,Betula n. Heritage,6/8'
+4597,Betula populifolia Whitespire,6/8'
+4597,Betula populifolia Whitespire,6/8'
+4605,Betula populifolia Whitespire,14/16'
+4613,Catalpa b. Aurea,"3.5"""
+4614,Catalpa x erubescens Purpurea,"3/3.5"""
+4658,Fagus s. Pendula,3/3.5''
+4693,Liriodendron tulipifera,"4.5"""
+47,Betula n. Heritage,8/10'
+47,Betula n. Heritage,8/10'
+4702,Malus floribunda,2/2.5''
+4732,Metasequoia glyp. Dawn Redwood,"4"""
+4791,Pinus parv. Glauca,12/14'
+4791,Pinus parv. Glauca,12/14'
+48,Betula n. Heritage,10/12'
+48,Betula n. Heritage,10/12'
+4840,Pyrus cal.Trinity,"3.5/4"""
+4844,Quercus coccinea,1.5/2''
+4856,Salix alba Tristis Niobe,2.5/3''
+4878,Syringa v. Miss Ellen Willmott,4/5'
+4879,Syringa v. Miss Ellen Willmott,5/6'
+4882,Syringa v. Ludwig Spaeth,7/8'
+4889,Syringa v. Yankee Doodle,7'
+4891,Syringa vulgaris,2/3'
+49,Betula n. Heritage,12/14'
+49,Betula n. Heritage,12/14'
+4938,Tilia americana,2/2.5''
+4938,Tilia americana,2/2.5''
+4995,Acer r. Magnificent Magenta,1/1.5''
+4998,Acer saccharum Green Mountain,BR
+5004,Acer r. Brandywine,"1/1.5"""
+5005,Acer plat. Princeton Gold®,"1/1.5"""
+5007,Platanus Exclamation!™,2/2.5''
+5028,Prunus sar. Spring Wonder™ FE,1.5/2''
+5029,Betula n. Heritage,1.5/2''
+52,Betula populifolia Whitespire,10/12'
+52,Betula populifolia Whitespire,10/12'
+5234,Buxus x Green Mountain,"36/42"""
+53,Betula populifolia Whitespire,12/14'
+5337,Carpinus x Skylark™,4'
+5359,Catalpa speciosa,"2/2.5"""
+5392,Liriodendron tulipifera,"5"""
+5414,Metasequoia glyp. Dawn Redwood,"5"""
+5491,Platanus Exclamation!™,"2.5"""
+5492,Platanus Exclamation!™,"3.5"""
+5549,Syringa vulgaris Alba,2/3'
+5593,Fagus s. Riversii,5/6'
+5594,Fagus s. Roseo Marginata,3/4'
+5595,Fagus s. Roseo Marginata,4/5'
+5599,Picea omorika Pendula,5/6'
+5826,Picea orientalis Gowdy,5/6'
+6027,Test Plant,EACH
+6074,Amelanchier x. lamarckii,7/8'
+6074,Amelanchier x. lamarckii,7/8'
+6092,Fagus s. Roseo Marginata,3/3.5''
+6151,Carpinus caroliniana,"2"""
+6152,Carpinus caroliniana,"2.5"""
+6159,Amelanchier x gr. Autumn Bril,7/8'
+6159,Amelanchier x gr. Autumn Bril,7/8'
+6163,Aesculus pavia,5' MS
+6190,Malus x Louisa,"1.5"""
+6195,Platanus Exclamation!™,3/3.5''
+6195,Platanus Exclamation!™,3/3.5''
+6204,Quercus alba,3/3.5''
+6217,Gleditsia t. Shademaster,"2/2.5"""
+6218,Malus x Snowdrift,2.5/3''
+6221,Cercis canadensis MS,5/6' MS
+6221,Cercis canadensis MS,5/6' MS
+6283,Platanus Exclamation!™,"1.5"""
+6326,Juniperus virginiana,10'
+6340,Taxus x media Hicksii,8' HEAVY
+6342,Betula populifolia Whitespire,"2/2.5"""
+6347,Platanus Exclamation!™,"5/5.5"""
+6355,Aesculus pavia,6' MS
+6411,Tsuga canadensis,6/7'
+6411,Tsuga canadensis,6/7'
+6414,Thuja o. Hetz Wintergreen,5/6'
+6414,Thuja o. Hetz Wintergreen,5/6'
+6415,Thuja o. Hetz Wintergreen,6/7'
+6415,Thuja o. Hetz Wintergreen,6/7'
+6454,Abies concolor,3/4'
+6454,Abies concolor,3/4'
+6455,Abies concolor,4/5'
+6455,Abies concolor,4/5'
+6456,Abies concolor,5/6'
+6457,Abies concolor,6/7'
+6463,Abies nordmanniana,5/6'
+6464,Abies nordmanniana,6/7'
+6465,Acer pal. Bloodgood TF,4/5'
+6467,Acer pal. Bloodgood TF,5/6'
+6467,Acer pal. Bloodgood TF,5/6'
+6468,Acer p. v. d. Tamukeyama,3/4'
+6469,Acer p. v. d. Tamukeyama,4/5'
+6469,Acer p. v. d. Tamukeyama,4/5'
+6470,Acer p. v. d. Waterfall,3/4'
+6471,Acer pal. Wolff,4/5'
+6472,Acer plat. Princeton Gold®,2/2.5''
+6473,Acer r. Autumn Radiance®,1.5/2''
+6474,Acer r. Autumn Radiance®,2.5/3''
+6475,Acer r. Magnificent Magenta,2/2.5''
+6475,Acer r. Magnificent Magenta,2/2.5''
+6476,Acer r. Magnificent Magenta,2.5/3''
+6476,Acer r. Magnificent Magenta,2.5/3''
+6477,Acer r. Magnificent Magenta,3/3.5''
+6477,Acer r. Magnificent Magenta,3/3.5''
+6478,Acer r. Frank Jr.,1.5/2''
+6479,Acer r. Franksred,1/1.5''
+6480,Acer r. Franksred,2/2.5''
+6480,Acer r. Franksred,2/2.5''
+6481,Acer r. Franksred,3/3.5''
+6481,Acer r. Franksred,3/3.5''
+6482,Acer saccharum Commemoration®,1/1.5''
+6483,Acer saccharum Bailsta,1/1.5''
+6484,Acer saccharum Green Mountain,1.5/2''
+6484,Acer saccharum Green Mountain,1.5/2''
+6485,Acer saccharum Green Mountain,2/2.5''
+6485,Acer saccharum Green Mountain,2/2.5''
+6486,Acer x. freemanii Armstrong,1.5/2''
+6486,Acer x. freemanii Armstrong,1.5/2''
+6487,Acer x. freemanii Bailston,1/1.5''
+6488,Amelanchier x gr. Autumn Bril,1/1.5'' TF
+6489,Amelanchier x gr. Autumn Bril,5/6'
+6489,Amelanchier x gr. Autumn Bril,5/6'
+6490,Amelanchier x gr. Autumn Bril,6/7'
+6490,Amelanchier x gr. Autumn Bril,6/7'
+6491,Amelanchier x gr. Autumn Bril,8/10'
+6493,Betula n. Heritage,1/1.5''
+6495,Betula n. Heritage,14/16'
+6496,Betula n. Heritage,16/18'
+6497,Betula n. Heritage,18/20'
+6499,Betula populifolia Whitespire,8/10'
+6500,Buxus x Green Mountain,2' PYRAMID
+6501,Buxus x Green Mountain,"30/36"" FLAT"
+6502,Buxus x Green Mountain,3' PYRAMID
+6503,Buxus m. var. j. Winter Gem,24/30''
+6504,Catalpa b. Aurea,4.5/5''
+6505,Catalpa x erubescens Purpurea,4.5/5''
+6506,Cercidiphyllum j. Claim Jumper,1.5/2''
+6506,Cercidiphyllum j. Claim Jumper,1.5/2''
+6507,Cercis c. Minnesota strain,1/1.5''
+6508,Chamaecyparis n. Pendula,6/7'
+6509,Cercis canadensis,1.5/2''
+6509,Cercis canadensis,1.5/2''
+6510,Cercis canadensis,3/3.5''
+6511,Cornus k. var. ch. Milky Way,3/3.5''
+6512,Cornus k. var. ch. Milky Way,8/10'
+6513,Cornus k. Scarlet Fire®,6/7'
+6514,Cornus k. Summer Fun,2/2.5'' TF
+6515,Cornus x Stellar Pink®,3/3.5''
+6516,Euonymus a. compactus,24/30''
+6517,Euonymus a. compactus,30/36''
+6518,Euonymus a. compactus,36/42''
+6519,Euonymus a. compactus,3/4'
+6519,Euonymus a. compactus,3/4'
+6520,Euonymus a. compactus,4/5'
+6520,Euonymus a. compactus,4/5'
+6521,Fagus grandifolia,2/2.5''
+6522,Fagus s. Purple Fountain,4/4.5''
+6523,Fagus s. Purple Fountain,8/10'
+6524,Fagus s. Riversii,6/7'
+6526,Ginkgo b. Autumn Gold,1/1.5''
+6527,Ginkgo b. Magyar,1/1.5''
+6528,Ginkgo b. Mariken,2/3'
+6529,Ginkgo b. Princeton Sentry,1/1.5''
+6530,Ginkgo b. Sky Tower,3/4'
+6531,Ginkgo b. Sky Tower,4/5'
+6532,Gleditsia t. Shademaster,2.5/3''
+6533,Gleditsia t. Skyline®,1/1.5''
+6534,Gleditsia t. Skyline®,2/2.5''
+6534,Gleditsia t. Skyline®,2/2.5''
+6535,Gleditsia t. Skyline®,2.5/3''
+6535,Gleditsia t. Skyline®,2.5/3''
+6537,Cornus k. x Rosy Teacup®,6/7'
+6538,Hamamelis virginiana,3/4'
+6538,Hamamelis virginiana,3/4'
+6539,Hamamelis x in. Arnold Promise,4/5'
+6540,Hydrangea p. Quick Fire® PW,5/6'TF 24-30
+6541,Hydrangea p. Quick Fire® PW,5/6'TF 36-42
+6542,Juniperus c. Spartan,4/5'
+6543,Juniperus c. Spartan,5/6'
+6543,Juniperus c. Spartan,5/6'
+6544,Liquidambar s. Moraine,2/2.5''
+6545,Liquidambar s. Moraine,2.5/3''
+6546,Liquidambar s. Slender Silhoue,9/10'
+6547,Liriodendron tulipifera,1/1.5''
+6548,Magnolia x Burgundy Star™,7/8' TF
+6550,Magnolia Sunsation,4/5'
+6551,Magnolia v. Green Shadow,3/4'
+6552,Magnolia v. Northern Belle,7/8'
+6553,Magnolia x soulangeana,5/6'
+6554,Magnolia x Vulcan,5/6'
+6555,Malus x Adirondack,1/1.5''
+6556,Malus x Donald Wyman,1.5/2''
+6557,Malus sargentii Firebird®,1/1.5''
+6559,Malus x Red Jade,2/2.5''
+6560,Malus x Royal Raindrops®,3/3.5''
+6561,Malus x Showtime™ PW,"2/2.5"""
+6561,Malus x Showtime™ PW,"2/2.5"""
+6563,Malus x Zumi var. calocarpa,1.5/2''
+6565,Picea abies Pendula,3/4'
+6566,Picea abies Pendula,4/5'
+6566,Picea abies Pendula,4/5'
+6567,Picea abies Pendula,5/6'
+6567,Picea abies Pendula,5/6'
+6570,Picea glauca Pendula,3/4'
+6571,Picea glauca,4/5'
+6574,Picea orientalis Gowdy,6/7'
+6575,Picea orientalis Nigra,6/7'
+6576,Picea orientalis Nigra,7/8'
+6582,Picea p. Baby Blue,3/4'
+6582,Picea p. Baby Blue,3/4'
+6583,Pinus parv. Glauca,8/10'
+6585,Pinus strobus,7/8'
+6585,Pinus strobus,7/8'
+6586,Pinus strobus,8/10'
+6586,Pinus strobus,8/10'
+6588,Pinus s. Angel Falls,2/3'
+6589,Pinus s. Blue Shag,24/30''
+6589,Pinus s. Blue Shag,24/30''
+6590,Pinus syl. Green Penguin,24/30''
+6591,Pinus s. Green Twist,5/6'
+6592,Pinus s. Pendula,4/5'
+6593,Prunus x sub. Higan,2/2.5''
+6593,Prunus x sub. Higan,2/2.5''
+6594,Prunus x sub. Higan,2.5/3''
+6595,Pyrus cal. Chanticleer pear,1/1.5''
+6596,Pyrus cal. Chanticleer pear,1.5/2''
+6597,Pyrus cal. Cleveland Select,2.5/3''
+6598,Pyrus cal. Cleveland Select,3/3.5''
+6599,Pyrus cal.Trinity,1.5/2''
+6600,Pyrus cal.Trinity,2/2.5''
+6601,Pyrus cal.Trinity,2.5/3''
+6601,Pyrus cal.Trinity,2.5/3''
+6604,Quercus coccinea,3/3.5''
+6605,Quercus robur x bicolor Long,6/8'
+6607,Stewartia pseudocamellia,5/6'
+6607,Stewartia pseudocamellia,5/6'
+6608,Syringa reticulata Ivory Silk,1/1.5'' TF
+6609,Syringa v. Albert F. Holden,2/3'
+6611,Syringa v. Congo,2/3'
+6612,Syringa v. Miss Ellen Willmott,2/3'
+6613,Syringa v. Miss Ellen Willmott,3/4'
+6614,Syringa v. Miss Ellen Willmott,4/5'
+6615,Syringa v. Miss Ellen Willmott,5/6'
+6615,Syringa v. Miss Ellen Willmott,5/6'
+6617,Syringa vulgaris Tiny Dancer™,2/3'
+6618,Taxus x media Beanpole,24/30''
+6618,Taxus x media Beanpole,24/30''
+6619,Thuja o. Degroot's Spire,4/5'
+6620,Thuja o. North Pole® PW,4/5'
+6620,Thuja o. North Pole® PW,4/5'
+6621,Ulmus amer. Lewis & Clark Pr®,1.5/2''
+6622,Viburnum trilobum Wentworth,2/3'
+6623,Viburnum trilobum Wentworth,3/4'
+6624,Syringa vulgaris Tiny Dancer™,3/4'
+6624,Syringa vulgaris Tiny Dancer™,3/4'
+6625,Syringa v. Yankee Doodle,6/7'
+6625,Syringa v. Yankee Doodle,6/7'
+6627,Taxus x media Hicksii,18/24''
+6627,Taxus x media Hicksii,18/24''
+6628,Taxus x media Hicksii,24/30''
+6628,Taxus x media Hicksii,24/30''
+6629,Taxus x media Hicksii,36/42''
+6630,Taxus x media Hicksii,4/5'
+6630,Taxus x media Hicksii,4/5'
+6631,Taxus x media Hicksii,5/6'
+6631,Taxus x media Hicksii,5/6'
+6632,Taxus x media Hicksii,6/7'
+6633,Taxus x media Hicksii,7/8'
+6634,Taxus x media Beanpole,30/36''
+6634,Taxus x media Beanpole,30/36''
+6636,Taxus x media Viridis,4/5'
+6637,Taxus x media Viridis,30/36''
+6637,Taxus x media Viridis,30/36''
+6638,Taxus x media Viridis,3/4'
+6639,Taxus x media Viridis,5/6'
+6640,Taxus x media Viridis,6/7'
+6645,Thuja o. Nigra Dark Green,3/4'
+6646,Thuja o. Nigra Dark Green,4/5'
+6646,Thuja o. Nigra Dark Green,4/5'
+6647,Thuja o. Nigra Dark Green,5/6'
+6647,Thuja o. Nigra Dark Green,5/6'
+6648,Thuja o. Nigra Dark Green,6/7'
+6648,Thuja o. Nigra Dark Green,6/7'
+6649,Thuja o. Nigra Dark Green,7/8'
+6649,Thuja o. Nigra Dark Green,7/8'
+6650,Thuja o. Nigra Dark Green,8/10'
+6650,Thuja o. Nigra Dark Green,8/10'
+6652,Thuja o. North Pole® PW,5/6'
+6652,Thuja o. North Pole® PW,5/6'
+6654,Thuja o. Techny,3/4'
+6657,Thuja o. Hetz Wintergreen,7/8'
+6657,Thuja o. Hetz Wintergreen,7/8'
+6658,Thuja x Green Giant,5/6'
+6658,Thuja x Green Giant,5/6'
+6659,Thuja p. Spring Grove® PW,2/3'
+68,Cornus kousa MS,10/12'
+6833,Acer r. Magnificent Magenta,3.5/4''
+6833,Acer r. Magnificent Magenta,3.5/4''
+6835,Forsythia x Lynwood Gold,8/10'
+6836,Fagus s. Purple Fountain,5/5.5''
+6837,Fagus s. Tricolor,"3/3.5"""
+6838,Catalpa b. Aurea,5/5.5''
+6839,Catalpa x erubescens Purpurea,5/5.5''
+6839,Catalpa x erubescens Purpurea,5/5.5''
+6842,Acer r. Autumn Radiance®,3.5/4''
+6844,Malus x Zumi var. calocarpa,2.5/3''
+6845,Malus x Showtime™ PW,"2.5/3"""
+6847,Malus x Royal Raindrops®,2/2.5''
+6847,Malus x Royal Raindrops®,2/2.5''
+6862,Amelanchier x. lamarckii,8/10'
+6862,Amelanchier x. lamarckii,8/10'
+6864,Fagus s. Riversii,"2.5/3"""
+6865,Fagus s. Riversii,"2/2.5"""
+6865,Fagus s. Riversii,"2/2.5"""
+6866,Acer r. Autumn Radiance®,"3/3.5"""
+6868,Fagus grandifolia,2.5/3''
+6869,Cornus kousa MS,7/8'
+6870,Catalpa speciosa,1.5/2''
+6870,Catalpa speciosa,1.5/2''
+6872,Cercis canadensis,2/2.5''
+6872,Cercis canadensis,2/2.5''
+6873,Prunus sar. Spring Wonder™ FE,"2/2.5"""
+6874,Quercus rubra,"4/4.5"""
+6875,Platanus Exclamation!™,"4/4.5"""
+6877,Acer x. freemanii Jeffersred,"4/4.5"""
+6877,Acer x. freemanii Jeffersred,"4/4.5"""
+6880,Betula n. Heritage,10/12'
+6893,Pyrus cal. Cleveland Select,"1.5/2"""
+6894,Platanus a. Bloodgood,"5/5.5"""
+6895,Quercus robur x bicolor Long,"3/3.5"""
+6895,Quercus robur x bicolor Long,"3/3.5"""
+6897,Hydrangea p. Quick Fire® PW,4/5'TF 20-24
+6898,Thuja x Green Giant,10/12'
+70,Ginkgo b. Autumn Gold,2/2.5''
+7000,Magnolia x Burgundy Star™,6/7' TF
+10645,Prunus Kwanzan,"3/3.5"""
+1486,Thuja o. Smaragd,8/10'
+1655,Malus x Prairifire,"2.5/3"""
+197,Taxus x media Hicksii,"30/36"""
+197,Taxus x media Hicksii,"30/36"""
+2849,Malus x Royal Raindrops®,"2.5/3"""
+3399,Syringa v. Yankee Doodle,6'
+4857,Salix alba Tristis Niobe,3.5/4''
+6341,Taxus x media Densiformis,5/6' WIDE
+6381,Taxus x media Densiformis,3/4' WIDE
+6558,Malus x Prairifire,1.5/2''
+6558,Malus x Prairifire,1.5/2''
+6568,Picea abies Pendula,6/7'
+6626,Tilia americana,3/3.5''
+6653,Thuja o. Smaragd,10/12'
+6834,Salix alba Tristis Niobe,4/4.5''
+6834,Salix alba Tristis Niobe,4/4.5''
+6848,Tilia americana,2.5/3''
+6861,Salix alba Tristis Niobe,2/2.5''
+6861,Salix alba Tristis Niobe,2/2.5''
+6892,Cornus k. var. ch. Milky Way,"1/1.5"""
+6919,Tsuga canadensis,3/4'
+7019,Pinus s. Pendula,8-10 '
+7027,Syringa vulgaris Charles Jolly,6/7'
+11031,Fern-Dennstaedtia punctilobula,1 GAL
+1280,Fern-Athyrium f. f. v. Lady,1 GAL
+1283,Fern-Matteuccia struthiopteris,1 GAL
+1816,Fern-Athyrium n. p. Ghost,1 GAL
+2296,Fern-Dryopteris ery. Brillance,1 GAL
+2677,Fern-Matteuccia struthiopter,2 GAL
+3620,Fern-Athyrium n. pictum,1 GAL
+4043,Fern-Athyrium n. p. Godzilla,2 GAL
+4205,Fern-Athyrium n. pictum,QUART
+5144,Fern-Osmunda cinnamonea,1 GAL
+5386,Fern-Athyrium n. pictum,2 GAL
+5776,Fern-Athyrium n. p. Godzilla,1 GAL
+6725,Fern-Polystichum acrostichoide,1 GAL
+7004,Fern-Athyrium n. Regal Red,1 GAL
+10032,Prunus d. Mount Royal Plum,5 gal
+10033,Prunus d. Mount Royal Plum,25 gal
+10034,Prunus d. Mount Royal Plum,15 gal
+10054,Malus dom. Honeycrisp,25 gal
+10055,Malus dom. Kinderkrisp,25 gal
+10056,Malus dom. Macintosh,25 gal
+10057,Malus dom. Royal Gala,25 gal
+10058,Malus dom. Winecrisp™,25 gal
+10175,Malus dom. Cortland,10 gal
+10176,Malus dom. Macoun,10 gal
+10177,Malus dom. Macintosh,7 gal
+10178,Malus dom. Winecrisp™,7 gal
+10179,Malus dom. Winecrisp™,10 gal
+10180,Pyrus Juicy Jewel Asian Pear,10 gal
+10181,Prunus Bailey Hardy,10 gal
+10182,Prunus cerasus 'Meteor',7 gal
+10183,Prunus e. Sweet Cherry Pie™ FE,7 gal
+10189,Prunus Northstar,10 GAL
+10211,Malus dom. Triumph,15 gal
+10397,Prunus d. Mount Royal Plum,"2/2.5"""
+10397,Prunus d. Mount Royal Plum,"2/2.5"""
+10475,Malus dom. Triumph,10 gal
+10479,Prunus Bailey Hardy,7 gal
+10931,Prunus cerasus 'Meteor',10 gal
+10999,Prunus 4-N-1 Combo,10 gal
+11126,Prunus d. Bruce Plum Tree,5 gal
+2701,Prunus d. Mount Royal Plum,10 GAL
+3637,Malus dom. Zestar!®,20 GAL
+3961,Malus dom. Kinderkrisp,10 GAL
+5727,Malus dom. Gala,15 GAL
+5728,Malus dom. Honeygold,15 GAL
+5729,Malus dom. Royal Gala,15 GAL
+5730,Malus dom. Winecrisp™,15 GAL
+5733,Pyrus com. Summercrisp,15 GAL
+6359,Malus dom. Triumph,7 GAL
+6360,Malus dom. Zestar!®,15 GAL
+6361,Prunus Bailey Hardy,15 GAL
+10229,Prunus Black Pearl Cherry Swee,7 gal
+10230,Prunus Hardired Nectarine,7 gal
+10753,Pyrus com. Kieffer Pear,10 gal
+10754,Pyrus com. Moonglow Pear,10 gal
+11127,Pyrus com. Bartlett,5 gal
+1000,Spiraea jap. Little Princess,3 GAL
+1001,Spiraea jap. Little Princess,7 GAL
+10011,Spiraea Double Play® Blue K PW,3 GAL
+10012,Hydrangea m. Bloomstruck® ES,5 gal
+10013,Clethra a. Summer Sparkler™,7 gal
+10015,Spiraea Double Play® Pink PW,3 GAL
+10016,Buxus x Green Mountain,5 gal
+10017,Hydrangea p. Bobo® PW,7 gal
+10018,Hydrangea p. Sweet Summer,3 GAL
+10019,Ilex v. Berry Heavy® Gold PW,7 GAL
+1002,Spiraea jap. Magic Carpet,3 GAL
+10020,Ligustrum vulgare Cheyenne,10 GAL
+10021,Aronia m. Low Scape Hedger® PW,3 GAL
+10022,Amelanchier x. lamarckii,15 gal
+10023,Hydrangea m. Bloomstruck® ES,2 GAL
+10024,Ilex glabra Strong Box® PW,2 GAL
+10026,Physocarpus o. Podaras 3,3 GAL
+10027,Physocarpus opulifolius,3 GAL
+10028,Pinus strobus,5 gal
+10029,Pinus strobus,3 GAL
+10030,Picea p. Sester Dwarf,2 GAL
+10037,Syringa Bloomerang® Dark P. PW,10 gal
+10038,Syringa v. Franks Fancy,3 GAL
+10039,Taxus x media Densiformis,5 gal
+1004,Spiraea jap. Neon Flash,3 GAL
+10041,Amelanchier x gr. Autumn Bril,15 gal
+10042,Rhododendron x Candy Lights,5 gal
+10043,Rhododendron x Cannons Double,5 gal
+10044,Rhododendron x Ribbon Candy,5 gal
+10045,Rhododendron x Tangerine Delig,5 gal
+10046,Picea abies,5 gal
+10052,Hydrangea p. Sweet Summer,7 gal
+10053,Juniperus c. Hetzii Columnaris,5 gal
+10059,Spiraea x van. Renaissance,7 gal
+1006,Spiraea thunbergii Ogon,3 GAL
+10060,Spiraea x vanhouttei,7 gal
+10061,Syringa meyeri Palibin,15 gal
+10062,Syringa pub. sb. pat. Miss Kim,20 gal
+1008,Spiraea n. Snowmound,3 GAL
+1011,Spiraea n. Snowmound,10 GAL
+1013,Spiraea syriacus Sundrop™ FE,3 GAL
+10131,Amelanchier x gr. Autumn Bril,10 gal
+10134,Hydrangea p. Phantom TF,10 gal
+10137,Syringa m. Flowerfesta® Pink,7 Gal TF
+10138,Syringa m. Flowerfesta® White,7 Gal TF
+1014,Spiraea x vanhouttei,3 GAL
+10161,Vaccinium corymbosum Jersey,3 GAL
+10162,Viburnum d. Autumn Jazz,7 gal
+10163,Hydrangea a. Incrediball® PW,5 gal
+10164,Viburnum d. Chicago Lustre,7 gal
+10165,Amelanchier x. lamarckii,7 gal
+10166,Cotinus x Grace,7 gal
+10167,Prunus x cistena,5 gal
+10168,Hydrangea m. Eclipse® FE,3 GAL
+10174,Vaccinium corymbosum Bluecrop,3 GAL
+1018,Spiraea x van. Renaissance,3 GAL
+10190,Taxus x media Everlow,3 GAL
+10200,Hydrangea p. Candelabra® BE,3 GAL
+10201,Aronia m. Autumn Magic,7 gal
+10202,Potentilla Lemon Meringue™ FE,3 GAL
+10203,Violet Pinwheels Creeping Phlo,3 GAL
+10204,Symphoricarpos x d. Kolmcan,3 GAL
+10209,Ginkgo b. Spring Grove,10 gal
+10215,Taxus x media Everlow,5 gal
+10216,Picea p. Sester Dwarf,5 gal
+10220,Juniperus c. Hetzii Columnaris,10 gal
+10221,Pinus strobus,15 gal
+10222,Picea abies,15 gal
+10232,Ilex v. Berry Poppins® PW,7 gal
+10234,Hydrangea p. Little Lamb PW,3 GAL
+10235,Ilex v. Little Goblin® Red PW,7 gal
+10236,Syringa pub. sb. pat. Miss Kim,15 gal
+10237,Juniperus c. Sea Green,7 gal
+10238,Aesculus parviflora,7 gal
+10239,Salix c. Iceberg Alley® FE,7 gal
+10240,Viburnum carlesii,5 gal
+10249,Ilex v. x Sparkleberry,7 gal
+1025,Syringa pub. sb. pat. Miss Kim,10 GAL
+10267,Syringa m. Flowerfesta® Pink,3 GAL
+1033,Syringa v. Miss Ellen Willmott,3 GAL
+10339,Heptacodium micionoides,4/5'
+10339,Heptacodium micionoides,4/5'
+10342,Juniperus c. Gin Fizz® PW,4/5'
+10342,Juniperus c. Gin Fizz® PW,4/5'
+1037,Syringa v. Ludwig Spaeth,3 GAL
+10451,Picea p. Bacheri,2 GAL
+10452,Picea p. Fat Albert,2 GAL
+10453,Picea p. Sester Dwarf,3 GAL
+10454,Thuja o. Nigra Dark Green,2 GAL
+10455,Thuja o. Hetz Wintergreen,2 GAL
+10456,Thuja o. Techny,2 GAL
+10457,Thuja o. Techny,3 GAL
+10458,Viburnum d. Autumn Jazz,3 GAL
+10459,Viburnum opulus Roseum,7 gal
+10460,Viburnum opulus Roseum,5 gal
+10461,Picea p. Baby Blue Eyes,2 GAL
+10463,Aronia m. Morton,3 GAL
+10464,Aronia m. Low Scape Snowfir®PW,3 GAL
+10465,Exochorda x macrantha Bailmoon,3 GAL
+10466,Buxus s. Varder Valley,3 GAL
+10467,Picea glauca Pendula,2 GAL
+10474,Ligustrum ovalifolium,3 GAL
+10476,Picea abies,10 gal
+10478,Tsuga canadensis,1 GAL
+1048,Syringa Bloomerang® Dark P. PW,3 GAL
+1049,Syringa Bloomerang® Dark P. PW,7 GAL
+10509,Carpinus b. Fastigiata,7 gal
+10524,GR-Pennisetum a. Lemon Squeeze,1 GAL
+1053,Taxus x media Densiformis,3 GAL
+1056,Taxus x media Viridis,3 GAL
+1060,Thuja o. Bobozam,3 GAL
+1075,Taxus x media Hicksii,5 GAL
+10797,Syringa Bloomerang® Pink PW,7 Gal TF
+10804,Paeonia I. Red Charm,3 GAL
+10805,Paeonia l. Sarah Bernhardt Pin,3 GAL
+1082,Viburnum trilobum Wentworth,5 GAL
+10915,GR-Pennisetum a. Lemon Squeeze,2 GAL
+10917,Thuja o. Nigra Dark Green,5 gal
+10918,Thuja o. Techny,5 gal
+10919,Forsythia x Lynwood Gold,7 gal
+1092,Juniperus c. Gold Star,3 GAL
+10920,Physocarpus o. Summer Wine® PW,7 gal
+10921,Hydrangea p. Limelight® PW,7 gal
+10924,Physocarpus o. Honeycomb®,3 GAL
+10925,Physocarpus o. Raspberry Lemo®,3 GAL
+10926,Styrax jap. Nightfall Snowbell,10 gal
+10935,Magnolia x Rose Marie,10 gal
+10937,Ligustrum amurense,15 gal
+10940,Taxus x media Hicksii,10 gal
+10954,Physocarpus o. Jefam FE,3 GAL
+10979,Hydrangea p. Limelight Pr.® PW,10 gal
+10980,Cephalanthus o. Bailoptics,3 GAL
+10982,Acer pal. Bloodgood,20 gal
+10986,Buddleia x Pugster® Amethyst,2 GAL
+10987,Buddleia x Pugster® Pinker,2 GAL
+10988,Viburnum pl. f. tom. Mariesii,10 gal
+10993,Ilex v. Little Goblin® Orange,7 gal
+1101,Taxus x media Viridis,7 GAL
+11037,Vaccinium corymbosum Chandler,3 GAL
+11038,Vaccinium corymbosum Legacy,3 GAL
+11041,Hydrangea arb. Flowerfull,3 GAL
+11050,Hydrangea p. Pinky Winky Prime,3 GAL
+11051,Prunus cistena Stay Classy,3 GAL
+11052,Pieris J. Interstella® PW,3 GAL
+11053,Thuja o. Full Speed A Hedge® A,2 GAL
+11055,Hydrangea p. Qck Fire Fab® PW,15 gal
+1106,Juniperus c. Gold Lace,3 GAL
+11063,Syringa v. Albert F. Holden,7 gal
+11081,Hydrangea p. Limelight Pr.® PW,10 Gal TF
+11092,Ilex v. Little Goblin® Guy PW,7 gal
+11093,Juniperus c. Spartan,3 GAL
+11094,Juniperus c. Gold Coast,3 GAL
+1114,Hydrangea q. Sike's Dwarf,3 GAL
+11199,Acer r. Frank Jr.,20 gal
+11200,Hydrangea p. Phantom,7 GAL
+1126,Picea a. Nidiformis,5 GAL
+1144,Ilex v. x Sparkleberry,3 GAL
+1766,Ilex m. Blue Maid,10 GAL
+1802,Salix p. Nana,3 GAL
+1880,Hydrangea q. Queen of Hearts,3 GAL
+1897,Physocarpus o. Monlo (Diablo),7 GAL
+2059,Rhus t. Tiger Eyes® Bailtiger,3 GAL
+2069,Hydrangea a. Incrediball® B PW,3 GAL
+2070,Hydrangea a. Invin.® Ruby PW,3 GAL
+2072,Hydrangea p. Kolmakilima BE,3 GAL
+2073,Physocarpus o. Dart's Gold,3 GAL
+2100,Chamaecyparis o. Gracilis,3 GAL
+2102,Chamaecyparis o. Nana Gracilis,3 GAL
+2116,Buxus m. Sprinter® PW,3 GAL
+2121,Hydrangea q. Gatsby Gal® PW,3 GAL
+2122,Hydrangea q. Gatsby Star® PW,3 GAL
+2124,Ilex v. Mr. Poppins® PW,3 GAL
+2125,Itea v. Scentlandia® PW,3 GAL
+2131,Fothergilla gardenii,2 GAL
+2132,Hydrangea q. Snow Queen,3 GAL
+2135,Taxus x media Everlow,2 GAL
+2145,Buxus x Chicagoland Green®,3 GAL
+2154,Thuja o. Fire Chief™,3 GAL
+2190,Cercis c. Minnesota Strain,10 GAL MS
+2214,Viburnum trilobum Wentworth,3 GAL
+2215,Rubus f. Chester Thornless,3 GAL
+2216,Rubus i. Heritage,3 GAL
+2231,Vaccinium corymbosum Patriot,3 GAL
+2235,Buxus m. var. j. Winter Gem,5 GAL
+2242,Physocarpus o. Jefam FE,7 GAL
+2338,Weigela Sonic Bloom® Pink PW,3 GAL
+2402,Cornus ston. Arctic Fire® PW,7 GAL
+2510,Viburnum d. Chicago Lustre,3 GAL
+269,Aesculus pavia,3 GAL
+2821,Hydrangea p. Bobo® PW,5 GAL
+2840,Forsythia x Northern Gold,3 GAL
+2856,Vaccinium corymbosum Bluecrop,2 GAL
+286,Aronia a. Brilliantissima,7 GAL
+290,Aronia m. Low Scape Mound® PW,3 GAL
+2945,Betula x. plet.Cesky Gold® PW®,3 GAL
+2950,Picea a. Nidiformis,7 GAL
+3025,Sambucus n. Golden Tower™,3 GAL
+3027,Physocarpus o. Center Glow,3 GAL
+3031,Amelanchier x gr. Autumn Bril,5 GAL
+3122,Hydrangea m. Summer Crush® ES,3 GAL
+3137,Spiraea x van. Renaissance,15 GAL
+3138,Hydrangea p. Grandiflora,7 GAL
+3184,Hydrangea p. Zinfin Doll® PW,7 GAL
+3194,Sambucus n. Black Lace® PW,7 GAL
+3195,Sambucus n. Eiffel 1 Black Tow,7 GAL
+3197,Hydrangea p. Flare™ BE,2 GAL
+3203,Spiraea jap. Poprocks® Pet BE,2 GAL
+3204,Weigela Electric Love® BE,2 GAL
+3211,Aronia m. Ground Hug ®PW,3 GAL
+3213,Hydrangea q. Gatsby Moon® PW,3 GAL
+3216,Juniperus c. Montana Moss® PW,3 GAL
+3221,Thuja o. Anna's Magic Ball® PW,3 GAL
+3222,Thuja Tater Tot® PW,3 GAL
+3223,Thuja o. Filips Magic Mo.® PW,3 GAL
+3226,Weigela My Monet Pple Eff.® PW,3 GAL
+3232,Euonymus a.o. Little Moses,3 GAL
+3313,Weigela Wine & Roses® PW,7 GAL
+333,Buxus m. Green Gem,3 GAL
+336,Buxus x Green Mountain,3 GAL
+337,Buxus x Green Mountain,7 GAL
+3385,Forsythia x i. Magical® Gold,7 GAL
+3417,Hydrangea p. L. Quick Fire® PW,7 GAL
+344,Buxus x Green Velvet,5 GAL
+345,Buxus x Green Velvet,7 GAL
+350,Buxus m. var. j. Winter Gem,3 GAL
+3532,Clethra a. Ruby Spice,7 GAL
+3558,Weigela Sonic Bloom® Pure Pink,3 GAL
+3619,Chamaecyparis o. Nana Gracilis,1 GAL
+3621,Hydrangea a. Invi. Limetta® PW,3 GAL
+3624,Hydrangea m. Bloomstruck® ES,7 GAL
+3625,Hydrangea m. Bloomstruck® ES,10 GAL
+371,Cephalanthus o.Sugar Shack® PW,3 GAL
+3733,Hydrangea p. Flare™ BE,5 GAL
+3751,Chamaecyparis p. Golden Mop,3 GAL
+3752,Pinus mugo Mops,3 GAL
+3764,Chamaecyparis o. Kosteri,3 GAL
+3776,Physocarpus o. Panther™ BE,2 GAL
+388,Chaenomeles Double Take® Pink,3 GAL
+402,Clethra a. Hummingbird,3 GAL
+403,Clethra a. Ruby Spice,3 GAL
+404,Clethra a. Sixteen Candles,3 GAL
+4048,Itea v. Merlot,3 GAL
+4049,Hydrangea m. Wedding Gown,3 GAL
+406,Cornus a. Ivory Halo®,7 GAL
+407,Cornus ser. Cardinal,3 GAL
+410,Cornus ston. Arctic Fire® PW,3 GAL
+412,Fothergilla gardenii,3 GAL
+414,Hydrangea a. Annabelle,3 GAL
+417,Hydrangea p. Bobo® PW,3 GAL
+419,Hydrangea a. Incrediball® PW,3 GAL
+420,Hydrangea a. Incrediball® PW,7 GAL
+421,Hydrangea p. Limelight® PW,3 GAL
+425,Hydrangea p. Little Lime® PW,3 GAL
+427,Hydrangea p. Little Lime® PW,7 GAL
+428,Hydrangea p. L. Quick Fire® PW,3 GAL
+430,Hydrangea petiolaris,3 GAL
+4307,Juniperus c. Nicks Compacta,3 GAL
+4314,Physocarpus o. Sum. Wine® B PW,3 GAL
+432,Hydrangea p. Phantom,3 GAL
+4323,Ilex v. Red Sprite,3 GAL
+4325,Syringa v. Yankee Doodle,3 GAL
+4328,Aesculus parviflora,3 GAL
+433,Hydrangea q. Pee Wee,3 GAL
+4336,Euonymus a. compactus,10 GAL
+4338,Chamaecyparis o. Compacta,3 GAL
+434,Hydrangea q. Ruby Slippers,3 GAL
+4340,Chamaecyparis o. Nana Lutea,3 GAL
+4347,Picea mariana Nana,3 GAL
+4349,Buxus x Green Velvet,2 GAL
+4351,Callicarpa x Pearl Glam®,3 GAL
+4353,Chaenomeles Double Take®Scarle,3 GAL
+4354,Chamaecyparis l. Pinpoint® Blu,3 GAL
+4355,Clethra a. Sugartina® Crystali,3 GAL
+4356,Cornus st. Arctic Fire® Yellow,3 GAL
+4358,Ilex v. Berry Heavy® PW,3 GAL
+4359,Ilex v. Little Goblin® Guy PW,3 GAL
+4360,Ilex v. Little Goblin® Red PW,3 GAL
+4363,Philadelphus c. Illuminati Arc,3 GAL
+4364,Philadelphus c. Illuminati Tow,3 GAL
+438,Ilex v. Red Sprite,7 GAL
+4385,Weigela Czechmark Trilogy® PW,3 GAL
+4388,Cotinus c. Winecraft Gold®PW,3 GAL
+4390,Heptacodium m.Temple of Bloom®,3 GAL
+4399,Viburnum c. Spice Baby™ PW,7 GAL
+440,Ilex v. Southern Gentleman,5 GAL
+4400,Salix p. Nana,7 GAL
+441,Ligustrum amurense,3 GAL
+4411,Spiraea jap. Empire™ Yeti,3 GAL
+4412,Pinus s. Green Twist,3 GAL
+4419,Pinus mugo var. pumilio,3 GAL
+4425,Rubus i. Latham,3 GAL
+4428,Vaccinium corymbosum Chippewa,3 GAL
+443,Ligustrum amurense,7 GAL
+4433,Juniperus h. Hughes,3 GAL
+445,Microbiota d. Celtic Pride® PW,3 GAL
+4453,Rosa r. Alba,3 GAL
+4460,Rosa x Blanc Double de Coubert,3 GAL
+4462,Clethra a. Hummingbird,10 GAL
+4473,Spiraea Double Play® Candy® PW,2 GAL
+4482,Rosa r. Dwarf Pavement,3 GAL
+4487,Cornus s. Bud's Yellow,3 GAL
+4489,Hydrangea p. Quick Fire® PW,10 GAL
+449,Rhus a. Gro-Low,3 GAL
+451,Sambucus n. Eiffel 1 Black Tow,3 GAL
+452,Stephanandra incisa Crispa,3 GAL
+453,Syringa meyeri Palibin,3 GAL
+4547,Potentilla f. Bella Bianca® BE,2 GAL
+455,Syringa meyeri Palibin,7 GAL
+456,Syringa pub. sb. pat. Miss Kim,3 GAL
+458,Syringa pub. sb. pat. Miss Kim,7 GAL
+461,Viburnum d. Blue Muffin® PW,3 GAL
+472,Viburnum trilobum,15 GAL
+476,Weigela Wine & Roses® PW,3 GAL
+495,Viburnum trilobum Wentworth,7 GAL
+496,Viburnum trilobum Wentworth,15 GAL
+506,Viburnum pl. f. tom. Mariesii,3 GAL
+513,Viburnum n. Brandywine™ PW,3 GAL
+5225,Taxus x media Densiformis,5 GAL
+5451,Forsythia x Northern Gold,5 GAL
+5453,Hibiscus s. Blue Angel™,3 GAL
+5456,Spiraea japonica var. alpina,2 GAL
+5457,Cercis c. Minnesota Strain,15 gal
+546,Chamaecyparis o. Tempelhof,4/5'
+553,Chamaecyparis p. Lemon Thread,3 GAL
+5620,Heptacodium m. Tianshan® FE,3 GAL
+5656,Pinus s. Blue Shag,5 GAL
+5682,Vaccinium corymbosum Bluecrop,5 GAL
+5693,Clethra a. Summer Sparkler™,3 GAL
+5695,Hydrangea m. Starfield™ BE,2 GAL
+5697,Sorbaria s. Cherry On Top™ BE,3 GAL
+5698,Spiraea Double Play® Doozie PW,3 GAL
+5700,Hydrangea p. Limelight Pr.® PW,3 GAL
+5713,Physocarpus o. Ginger Wine®,3 GAL
+5716,Viburnum c. Spice Baby™ PW,2 GAL
+5717,Weigela Mnight Wine Shine® PW,3 GAL
+5718,Weigela Very Fine Wine® PW,3 GAL
+5719,Aronia m. Viking,3 GAL
+572,Cornus a. Elegantissima,3 GAL
+5724,Hydrangea p. Qck Fire Fab® PW,3 GAL
+5725,Juniperus c. Gin Fizz® PW,3 GAL
+5726,Philadelphus c. Illuminati Tow,2 GAL
+573,Cornus a. Elegantissima,7 GAL
+575,Cornus a. Ivory Halo®,3 GAL
+5750,Hydrangea p. Fire Light® PW,10 GAL
+5752,Weigela Tuxedo™ BE,7 GAL
+5758,Cotinus c. Winecraft Gold®PW,7 GAL
+5759,Hydrangea m. Summer Crush® ES,7 GAL
+576,Cornus a. Ivory Halo®,5 GAL
+5760,Spiraea x vanhouttei,15 GAL
+5781,Juniperus squamata Blue Star,2 GAL
+5782,Forsythia x Northern Gold,10 GAL
+5784,Rubus f. Darrow,3 GAL
+5786,Hydrangea m. Kimono™ BE,3 GAL
+5787,Spiraea x bum. Anthony Waterer,7 GAL
+5795,Cotinus c. Ancot,3 GAL.
+5796,Salix c. Iceberg Alley® FE,3 GAL
+5802,Weigela My Monet Pple Eff.® PW,7 GAL
+5803,Salix i. Hakuro Nishiki,10 GAL
+5805,Ligustrum ovalifolium,7 GAL
+5808,Cornus a. Golden Prairie Fire,7 GAL
+5821,Hydrangea p. Candelabra® BE,10 GAL
+5822,Syringa meyeri Palibin,5 GAL
+5831,Buxus m. Green Gem,2 GAL
+5832,Buxus m. Green Gem,5 GAL
+5900,Euonymus a.o. Little Moses,5 GAL
+5901,Euonymus a.o. Little Moses,7 GAL
+5914,Picea orientalis Barnes,3 GAL
+5916,Cornus sericea,1 GAL
+5917,Pinus strobus,7 GAL
+5919,Rubus f. Black Satin,3 GAL
+598,Cornus ser. Baileyi,3 GAL
+6020,Hydrangea p. Little Hottie® FE,3 GAL
+6021,Potentilla f. Creme Brulee™ FE,3 GAL
+607,Cornus sericea,3 GAL
+619,Cotinus c. Royal Purple,3 GAL
+6242,Forsythia x Lynwood Gold,5 GAL
+6246,Syringa v. Congo,3 GAL
+6308,Physocarpus o. Red Baron,10 GAL
+634,Euonymus a. compactus,3 GAL
+6358,Syringa vulgaris Alba,3 GAL
+6363,Amelanchier x. lamarckii,5 GAL
+6365,Cornus racemosa,5 GAL
+6366,Cornus racemosa,7 GAL
+6367,Salix p. Nana,5 GAL
+638,Euonymus a. compactus,15 GAL
+6385,Hibiscus s. Blue Angel™,7 GAL
+6393,Diervilla Kodiak Fresh®PW,3 GAL
+6394,Buddleia x Pugster® Blue,3 GAL
+6395,Chamaecyparis l. Haywire®,3 GAL
+6396,Diervillia Kodiak® Orange PW,3 GAL
+6398,Hydrangea p. L. Lime Punch® PW,3 GAL
+6399,Hydrangea m. Let's D. iArr® PW,3 GAL
+6400,Hydrangea m. Lets D.C.Do!® PW,3 GAL
+6403,Kolkwitzia a. Jolene Jolen® PW,3 GAL
+6405,Viburnum p. Steady Eddy®,3 GAL
+6406,Weigela Spilled Wine® PW,3 GAL
+6407,Weigela Midnight Sun® PW,3 GAL
+6408,Hydrangea p. Fire L.Tidbit® PW,3 GAL
+6419,Buddleia x Miss Molly,3 GAL
+6422,Hydrangea s. Pink Dynamo™ BE,2 GAL
+6432,Pinus s. Green Twist,"24-30"""
+6433,Weigela Wine & Roses® PW,10 GAL
+6434,Sambucus n. Laced Up® PW,3 GAL
+6436,Weigela Tuxedo™ BE,3 GAL
+6437,Physocarpus o. Panther™ BE,5 GAL
+6438,Salix i. Flamingo,10 GAL
+6439,Hydrangea p. Qck Fire Fab® PW,7 GAL
+6440,Hydrangea p. Torch™ BE,2 GAL
+6443,Picea abies,7 GAL
+6447,Hydrangea p. Limelight Pr.® PW,7 GAL
+6448,Syringa m. p. Baby Kim® PW,5 GAL
+6458,Rhododendron x Candy Lights,3 GAL
+6459,Rhododendron x Cannons Double,3 GAL
+6460,Rhododendron x Ribbon Candy,3 GAL
+6461,Rhododendron x Tangerine Delig,3 GAL
+6462,Rhododendron x Westons Innoce,3 GAL
+6466,Viburnum pl. f. tom. Shasta,3 GAL
+647,Forsythia x Meadowlark,3 GAL
+648,Forsythia x Meadowlark,5 GAL
+649,Forsythia x Meadowlark,7 GAL
+650,Forsythia x Meadowlark,10 GAL
+6536,Ligustrum amurense,10 GAL
+655,Forsythia x ShowOff®PW,3 GAL
+656,Forsythia x ShowOff Starlet®PW,3 GAL
+660,Forsythia x i. Magical® Gold,3 GAL
+6663,Caryopteris x cl. Blue Mist,3 GAL
+6664,Syringa v. Franks Fancy,1 GAL
+6666,Hydrangea p. Fire L.Tidbit® PW,5 GAL
+6668,Hydrangea p. L. Lime Punch® PW,7 GAL
+6669,Viburnum d. Blue Muffin® PW,7 GAL
+6670,Forsythia x Lynwood Gold,10 GAL
+6689,Physocarpus opulifolius,5 GAL
+677,Hamamelis virginiana,3 GAL
+6785,Chamaecyparis p. Sun Gold,3 GAL
+6793,Weigela Afterglow™ BE,3 GAL
+6794,Itea v. Fizzy Mizzy® PW,3 GAL
+6795,Juniperus squamata Blue Star,1 GAL
+6796,Heptacodium micionoides,20 GAL
+6797,Chamaecyparis o. Nana Gracilis,2 GAL
+6798,Picea a. Little Gem,3 GAL
+6799,Picea a. Little Gem,7 GAL
+6918,Hydrangea p. Torch™ BE,3 GAL
+694,Hamamelis virginiana,5 GAL
+6985,Rosa x Lemon Drift®,3 GAL
+6987,Magnolia x a. Yellow Bird,2 GAL
+7013,Aronia a. Brilliantissima,3 GAL
+7015,Aronia a. Brilliantissima,7 GAL
+7016,Vaccinium corymbosum Duke,3 GAL
+703,Hydrangea m. Bloomstruck® ES,3 GAL
+10119,GR-Carex pensylvanica,1 GAL
+10120,GR-Deschampsia Ces. Goldtau,1 GAL
+10121,GR-Hakonechloa Macra,1 GAL
+10126,GR-Panicum v. Apache Rose,3 GAL
+10157,GR-Miscanthus s. Morning Light,3 GAL
+10188,GR-Miscanthus s. Strictus,2 GAL
+10226,GR-Festuca c. Elijah Blue,2 GAL
+10277,Liriope Muscari 'Variegata',1 GAL
+10279,GR-Miscanthus s. Strictus,3 GAL
+10420,GR-Pennisetum a. Little Bunny,1 GAL
+10442,GR-Miscanthus s. Rigoletto,2 GAL
+10449,GR-Miscanthus s. Strictus,3 GAL
+10607,GR-Miscanthus x Giganteus,3 GAL
+10624,GR-Schizachyrium Standing Ovat,3 GAL
+10701,GR-Pennisetum Lumen Gold,1 GAL
+10731,GR-Miscanthus s. Fire Dragon,3 GAL
+10732,GR-Pennisetum a. Little Bunny,3 GAL
+10756,GR-Panicum v. Cloud Nine,3 GAL
+10757,GR-Pennisetum a. Piglet,3 GAL
+10890,Liriope Spicata,18 cell Tray
+10908,GR-Festuca a. Perfect Edging,2 GAL
+10909,GR-Panicum v. Apache Rose,1 GAL
+10913,GR-Schizachyrium scoparium,1 GAL
+10969,GR-Miscanthus s. Gracillimus,5 gal
+10978,GR-Miscanthus s. Gracillimus,2 GAL
+10983,GR-Miscanthus s. Dixieland,2 GAL
+10985,GR-Miscanthus x Giganteus,7 gal
+11029,GR-Schizachyrium Standing Ovat,1 GAL
+11030,Liriope Spicata,1 GAL
+11035,GR-Pennisetum aloepurcuroides,2 GAL
+11070,GR-Miscanthus s. Morning Light,2 GAL
+11102,GR-Calamagrostis x Lightning S,3 GAL
+11114,GR-Miscanthus s. Gracillimus,7 gal
+11115,GR-Miscanthus s. Little Kitten,3 GAL
+11116,GR-Miscanthus s. Oktoberfest,3 GAL
+11117,GR-Miscanthus s. Purpurascens,3 GAL
+11150,GR-Miscanthus s. Little Kitten,2 GAL
+11152,GR-Pennisetum v. Prairie Winds,3 GAL
+1427,GR-Liriope m. Big Blue,1 GAL
+2684,GR-Hakonechloa m. Aureola,1 GAL
+4193,GR-Pennisetum Red Head,3 GAL
+5779,GR-Hakonechloa m. All Gold,1 GAL
+6387,GR-Miscanthus s. Gracillimus,3 GAL
+6388,GR-Miscanthus s. Adagio,3 GAL
+6389,GR-Pennisetum a. Cassian,3 GAL
+6920,GR-Liriope m. Big Blue,PINT
+6979,GR-Panicum v. Cheyenne Sky PW,3 GAL
+7030,GR-Calamagrostis Karl Foerster,2 GAL
+10010,GR-Pennisetum a. Hameln,1 GAL
+10051,GR-Panicum v. Shenandoah,3 GAL
+10241,GR-Miscanthus s. Graziella,3 GAL
+10938,GR-Pennisetum Desert Plains,3 GAL
+10939,GR-Panicum Niagara Falls PW,3 GAL
+10941,GR-Panicum v. Cheyenne Sky PW,1 GAL
+1303,GR-Miscanthus s. Variegatus,3 GAL
+1838,GR-Calamagrostis Karl Foerster,3 GAL
+1932,GR-Pennisetum a. Hameln,3 GAL
+3228,GR-Pennisetum a. Foxtrot,3 GAL
+4317,GR-Calamagrostis Avalanche,3 GAL
+6375,GR-Schizachyrium s. The Blues,2 GAL
+6380,GR-Pennisetum a. Hameln,2 GAL
+6386,GR-Miscanthus s. Morning Light,3 GAL
+6975,GR-Deschampsia Cespitosa,3 GAL
+10865,S-Ontario Boulders,Pallet
+10866,S-Ontario Boulders,Each
+10867,S-West Mountain Boulder,Pallet
+10868,S-West Mountain Boulder,Each
+10869,"S-NY Cobbles 8-14""",Pallet
+10870,S-Yukon Valley Black River Sto,Bag
+10871,Mexican Beach Pebbles,Pallet
+10872,S-NY Skippers,Pallet
+10873,S-Belgium Blocks Grey Regular,Pallet
+10874,S-Belgium Blocks Grey Regular,Each
+10875,"S-Seneca Boulder Sawn 40""",Each
+10876,S-Guillotine Seneca Boulder Gr,Each
+10142,Hosta Royal Crest,2 GAL
+10143,Hosta First Frost,1 GAL
+10144,Hosta Shadowland® Empress PW,1 GAL
+10153,Hosta Great Expectations,1 GAL
+10154,Hosta Patriot,2 GAL
+10661,Hosta Shadowland® Waterslid PW,1 GAL
+10831,Hosta Blue Angel,2 GAL
+10832,Hosta Minuteman,2 GAL
+10886,Hosta Shadowland® Coast to Coa,1 GAL
+10923,Hosta Shadowland Above the Clo,1 GAL
+11068,Hosta Frances Williams,1 GAL
+1424,Hosta Minuteman,1 GAL
+1832,Hosta Halcyon,2 GAL
+4078,Hosta Guacamole,1 GAL
+4079,Hosta Patriot,1 GAL
+4124,Hosta Blue Angel,1 GAL
+5153,Hosta Shadowland® Autumn Fr PW,1 GAL
+5154,Hosta Big Daddy,2 GAL
+5156,Hosta Shadowland® Hudson PW,1 GAL
+5157,Hosta Island Breeze,1 GAL
+5158,Hosta Liberty,2 GAL
+5160,Hosta s. Elegans,1 GAL
+5161,Hosta Sum & Substance,1 GAL
+6140,Hosta s. Elegans,2 GAL
+6675,Hosta Shadowland® Diamond PW,1 GAL
+6676,Hosta Krossa Regal,1 GAL
+6677,Hosta Abiqua Drinking Gourd,1 GAL
+6697,Hosta Shadowland® Empress PW,2 GAL
+6715,Hosta Guacamole,2 GAL
+6786,Hosta Krossa Regal,2 GAL
+6934,Hosta June,QUART
+6935,Hosta Patriot,QUART
+6966,Hosta Wind Beneath My Wings,2 GAL
+1535,Mulch - Color Enhanced Brown,YARD
+1617,Mulch - Color Enhanced Black,YARD
+1618,Mulch - Dark Premium,YARD
+1619,Mulch - Paddock Peat,YARD
+10007,Aster n. Kickin® Purple,2 GAL
+10008,Rudbeckia f. Goldblitz,1 GAL
+10009,Rudbeckia triloba,1 GAL
+10065,Helleborus HGC® Ice N Roses® P,1 GAL
+10066,Helleborus HGC® Ice N Roses® W,1 GAL
+10067,Helleborus HGC®  Pink Frost,1 GAL
+10116,Ajuga rep. Chocolate Chip (GC),cell
+10127,Digitalis p. Camelot Lavender,3 GAL
+10128,Monarda bradburiana,1 GAL
+10129,Phlox p. Luminary® Ultravio PW,1 GAL
+10130,Sedum spur. Rock Candy,1 GAL
+10145,Lamium m. White Nancy,1 GAL
+10146,Phlox s. Spring White,1 GAL
+10147,Sedum x Rock 'N Round® 'Bright,1 GAL
+10150,Aster n. Grape Crush,1 GAL
+10152,Digitalis h. Artic Fox Rose,1 GAL
+10155,Iris p. Variegata,1 GAL
+10158,Monarda BeeMine Red,1 GAL
+10160,Ligularia Little Rocket,1 GAL
+10184,Anemone Lucky Charm,1 GAL
+10185,Astilbe x c. Dark Side® PW,2 GAL
+10186,Rudbeckia f. Goldblitz,2 GAL
+10187,Veronica Magic Show® Ever Aft,1 GAL
+10194,Anemone Pocahontas,1 GAL
+10195,Echinacea p. Magnus,3 GAL
+10196,Phlox p. Sweet Summer Queen,1 GAL
+10197,Phlox p. Sweet Summer Candy,1 GAL
+10198,Platycodon g. Pop Star™ White,1 GAL
+10199,Amsonia tab. Storm Cloud,1 GAL
+10223,Phlox p. Volcano® White,1 GAL
+10225,GR-Andropogon g. Blackhawks,1 GAL
+10242,Coreopsis Li'l Bang® Enchanted,1 GAL
+10243,Coreopsis Li'l Red® Elf,2 GAL
+10244,Phlox x Opening Act White® PW,1 GAL
+10245,Rudbeckia fulgida Var. Fulgida,2 GAL
+10246,Rudbeckia t. Blackjack Gold,2 GAL
+10247,Rudbeckia t. Prairie Glow,2 GAL
+10251,Calluna v. County Wicklow,1 GAL
+10252,Calluna v. Winter Chocolate,1 GAL
+10253,Calluna v. Beauty Ladies Luca,1 GAL
+10254,Calluna v. Beauty Ladies Magda,1 GAL
+10255,Phlox p. Volcano® Lipstick,2 GAL
+10256,Phlox p. Volcano® White,2 GAL
+10257,Phlox s. Scarlet Flame,1 GAL
+10258,Phlox x Violet Pinwheels,1 GAL
+10259,Achillea m. Skysail Yellow,1 GAL
+10261,Ilex c. Schwoebel Upright,10 gal
+10268,Rudbeckia Viette's Little Suzy,1 GAL
+10270,Actaea simplex Brunette,1 GAL
+10444,Erigeron pul. Lynnhaven Carpet,1 GAL
+10445,Pachysandra t. Green Carpet,"3"""
+10446,Perovskia a. Denim 'n Lace® PW,2 GAL
+10447,Tierella Cordifolia,1 GAL
+10448,Tiarella cordifolia,1 GAL
+10450,Phlox p. Volcano® White,1 GAL
+10539,Achillea Pomegranate,1 GAL
+10540,Dianthus Classic Coral PW,1 GAL
+10541,Dianthus Paint the Town Fan®PW,1 GAL
+10542,Helleborus Illumi Lime,1 GAL
+10543,Thymus Mother of Thyme,24 Cell Tray
+10544,Thymus Red Creeping Thyme,24 Cell Tray
+10545,Sagina subulata,6-Pack
+10546,Sedum rupestre Angelina,6-Pack
+10547,Thymus serpyll. 'Magic Carpet',24 Cell Tray
+10548,Thymus Mother of Thyme,6-Pack
+10555,Ajuga rep. Chocolate Chip (GC),1 GAL
+10556,Astilbe x a .Deutschland,2 GAL
+10557,Astilbe x j. Rheinland,2 GAL
+10559,Coreopsis v. Creme Brulee,1 GAL
+10560,Helleborus HGC® Ice N Roses® R,1 GAL
+10561,Helleborus Mahogany Snow,1 GAL
+10562,Hydrangea q. Toy Soldier,3 GAL
+10575,Paeonia l. Sarah Bernhardt Pin,2 GAL
+10642,Heuchera Dressed Up Evening Go,1 GAL
+10655,Baptisia Blueberry Sundae® PW,2 GAL
+10656,Baptisia Sparkling Sapphir® PW,2 GAL
+10657,Coreopsis grand. Solar Jewel,2 GAL
+10658,Coreopsis grand. Solar Mellow,2 GAL
+10659,Coreopsis grand. Solar Moon,2 GAL
+10660,Fern-Athyrium Crested Surf PW,1 GAL
+10662,Lavandula x. i. Provence,2 GAL
+10663,Lavendula x. i. Eternal Elegan,"6"""
+10665,Phlox p. Luminary® Pink Lig PW,1 GAL
+10666,Yucca Color Guard,3 GAL
+10688,Asclepias incarnata,2 GAL
+10689,Asclepias i. Ice Ballet,2 GAL
+10690,Heuchera d. Silver Gumdrop,1 GAL
+10699,Astilbe Black Pearls,2 GAL
+10700,Geranium Intense,1 GAL
+10702,Lavandula x. i. Phenomenal®,2 GAL
+10703,Lupinus p. Westcountry Rachel,2 GAL
+10704,Asclepias incarnata,Qt.
+10705,Lamium m. Pink Pewter,Qt.
+10706,Leucanthemum s. Marshmallow,Qt.
+10707,Rudbeckia f. var. deamii,Qt.
+10708,Sedum spec. Autumn Fire,Qt.
+10709,Sempervivum arachn. Blue Ice,Qt.
+10710,Sempervivum Colorockz Coral Re,Qt.
+10711,Digitalis p. Dalmation Peach,1 GAL
+10712,Digitalis p. Camelot Lavender,1 GAL
+10713,Clematis Poseidon,"8"""
+10714,Clematis x. Lindsay™,"8"""
+10715,Clematis Boulevard Nubia™,"8"""
+10716,Iris v. Purple Flame,1 GAL
+10721,Cimicifuga Actaea Simplex Brun,1 GAL
+10739,Eutrochium maculatum,2 GAL
+10747,Asclepias i. Soulmate,2 GAL
+10750,Monarda d. Jacob Cline,2 GAL
+10751,Phlox s. Emerald Blue,2 GAL
+10752,Phlox s. Emerald Pink,2 GAL
+10758,Sedum x Sunsparkler® Lime Zing,1 GAL
+10761,Achillea m. Strawberry Seduct.,2 GAL
+10762,Delphinium d. Neva,1 GAL
+10763,Delphinium d. Shelby,1 GAL
+10764,Dianthus x. Fruit Punch® Spike,1 GAL
+10765,Dicentra spectabilis Alba,1 GAL
+10766,Digitalis grandiflora Carillon,1 GAL
+10767,Eryngium yuccifolium,1 GAL
+10768,Helenium Autumnale,2 GAL
+10769,Paeonia l. Monsieur Jules Elie,3 GAL
+10770,Penstemon digitalis,1 GAL
+10771,Phlox s. Candy Stripe,1 GAL
+10772,Phlox s. Spring Hot Pink,1 GAL
+10773,Tiarella x Cutting Edge,1 GAL
+10774,Voila Penny Orange Jump Up,1 GAL
+10775,Viola Penny Orange Jump Up,1 GAL
+10776,Stokesia Totally Stoked Whitec,1 GAL
+10778,Achillea Firefly Fushsia PW,1 GAL
+10779,Campanula c. Blue Waterfall,1 GAL
+10780,Coreopsis grand. Enchanted Eve,1 GAL
+10781,Delosperma Ocean Sunset™ Orang,1 GAL
+10782,Delosperma Ocean Sunset™ Viole,1 GAL
+10783,Dendranthema Harvest Igloo,1 GAL
+10784,Dendranthema Pumpkin Igloo,1 GAL
+10785,Eutrochium dub. Little Joe,2 GAL
+10786,Eutrochium dub. Phantom,2 GAL
+10787,Heucherella Catching Fire,2 GAL
+10788,Heucherella Pumpkin Spice,1 GAL
+10792,Echinacea PowWow® White,2 GAL
+10793,Echinacea PowWow® Wild Berry,2 GAL
+10794,Galium odoratum,2 GAL
+10795,Polemonium Golden Feathers,1 GAL
+10796,Rudbeckia f. var. deamii,1 GAL
+10813,Nepeta x f. Purrsian Blue,2 GAL
+10814,Nepeta m. Blue Wonder,2 GAL
+10815,Phlox s. Snowflakes,1 GAL
+10822,Lavandula x. i. Provence,"6"""
+10823,Allium Bobblehead,1 GAL
+10824,Brunnera m. Silver Heart,1 GAL
+10827,Dianthus Kahori® Pink,1 GAL
+10828,Dianthus Mountain Frost™ Pink,1 GAL
+10829,Dianthus Scent First® Passion,1 GAL
+10833,Phlox p. Flame® Coral,1 GAL
+10842,Fern-Dryopteris australis Dixi,1 GAL
+10844,Lilium Fantasiatic Orange,1 GAL
+10845,Lilium Fantasiatic Raspberry,1 GAL
+10846,Lilium Fantasiatic White,1 GAL
+10847,Lupinus Gallery Blue,2 GAL
+10848,Lupinus Gallery Red,2 GAL
+10849,Monarda x Sugar Buzz®Blue PW,2 GAL
+10850,Penstemon b. Mission Bells™ DR,1 GAL
+10852,Cornus canadensis,1 GAL
+10853,Asarum canadense,1 GAL
+10854,GR-Carex lax. Hobb Bunny Blue,1 GAL
+10856,Baptisia Lunar Eclipse,3 GAL
+10857,Baptisia Solar Flare,3 GAL
+10860,Geranium Johnsons Blue,2 GAL
+10883,Iris e. Moonlight Waves,2 GAL
+10884,Iris e. Pinkerton,2 GAL
+10885,Penstemon d. Blackbeard,1 GAL
+10891,Salvia Color Spires® Cristo PW,1 GAL
+10892,Salvia n. Perfect Profusion®PW,1 GAL
+10897,Achillea Firefly Red Pop PW,1 GAL
+10898,Achillea Pomegranate,2 GAL
+10899,Aruncus dioicus,3 GAL
+10900,Digitalis p. Camelot Rose,2 GAL
+10901,Digitalis p. Dalmation Peach,2 GAL
+10902,Echinacea Sombrero™ Poco White,1 GAL
+10903,Hibiscus m. Dark Mystery,2 GAL
+10904,Hibiscus m. Garnet Globes,2 GAL
+10905,Iris fulva,1 GAL
+10906,Knipholia Solar Flare PW,1 GAL
+10914,Yucca Color Guard,2 GAL
+10922,GR-Bouteloua Gracilis,1 GAL
+10927,Calamintha n. Montrose White,1 GAL
+10942,Baptisia Periwinkle Popsicle,2 GAL
+10944,Brunnera m. Garden Candy Sea,1 GAL
+10946,Coreopsis Li'l Bang® Starstruc,2 GAL
+10947,Erica x. darl. Kramers Red,2 GAL
+10948,Heuchera villosa,1 GAL
+10949,Hibiscus Summer® All Eyes on M,3 GAL
+10950,Hibiscus m. Berry Awesome® PW,3 GAL
+10951,Penstemon d. Husker Red,1 GAL
+10952,Perovskia a. Jelena,1 GAL
+10953,Perovskia a. Sage Advice PW,2 GAL
+10955,Fern-Polystichum polyblepharum,1 GAL
+10956,Fern-Polystichum acrostichoide,1 GAL
+10960,Thymus coccineus,"3"""
+10962,Hibiscus m. Summer® Cherry PW,3 GAL
+10963,Coreopsis a. Leading Lady™,1 GAL
+10964,Coreopsis UPTICK™ Cream,1 GAL
+10965,Digitalis p. Camelot Lavender,2 GAL
+10966,Digitalis x Pink Panther,1 GAL
+10967,Echinacea Summersong® Fire PW,1 GAL
+10968,Coreopsis UPTICK™ Yellow Red,1 GAL
+10970,Coreopsis UPTICK™ Gold,1 GAL
+10971,Perovskia a. Lisslitt - Lacey,1 GAL
+10977,Phlox x Opening Act Blush® PW,1 GAL
+10992,Rudbeckia f. Little Goldstar,2 GAL
+11023,Anemone Curtain Call Pink,1 GAL
+11024,Anemone Fall in Love Sweelty,1 GAL
+11025,Achillea Milly Rock Red,1 GAL
+11026,Achillea Milly Rock Yellow Ter,1 GAL
+11027,Aruncus x Goatee,1 GAL
+11028,Polygonatum o. Variegatum,1 GAL
+11033,Astilbe x c. Dark Side® PW,2 GAL
+11034,Echinacea x Artisan™ Red Ombre,1 GAL
+11042,Aster n. Kickin® Sapphire,2 GAL
+11043,Coreopsis Li'l Red® Elf,1 GAL
+11044,Echinacea p. Green Twister,2 GAL
+11045,Echinacea Sunmagic Vintage Pin,1 GAL
+11046,Echinacea Sunmagic Vintage Rub,1 GAL
+11047,Geranium m. Espresso,1 GAL
+11048,Heuchera d. Apple Twist PW,1 GAL
+11049,Rudbeckia x American Gold Rush,1 GAL
+11056,Hibiscus m. Edge of Night® PW,3 GAL
+11057,Hibiscus m. Summer® Holy PW,3 GAL
+11062,Thymus Mother of Thyme,18 cell Tray
+11064,Actinidia Arguta Issai,2 GAL
+11065,Aristolochia Macrophylla,2 GAL
+11066,Baptisia Blueberry Sundae® PW,1 GAL
+11073,EchinaceaSummersong Firefinch,1 GAL
+11074,Hedera helix,1 GAL
+11076,Coreopsis Li'l Bang® Darling C,1 GAL
+11077,Euphorbia Urge to Splurge,1 GAL
+11085,Perovskia a. Sage Advice PW,1 GAL
+11089,Sedum spur. John Creech,2 GAL
+11118,Paeonia x Bartzella,3 GAL
+11119,Paeonia x Cora Louise-Itoh,3 GAL
+11120,Paeonia x First Arrival,3 GAL
+11121,Paeonia x Scarlet Heaven,3 GAL
+11134,Achillea Little Moonshine,1 GAL
+11135,Achillea x Moonshine,1 GAL
+11136,Aquilegia Kirigami Blue & Whit,1 GAL
+11137,Aquilegia Kirigami Rose and Pi,1 GAL
+11138,Aquilegia Kirigami Yellow,1 GAL
+11141,Baptisia  a. Indigo Spires®,1 GAL
+11148,Ilex c. Schwoebel Upright,20 gal
+11184,Paeonia x Gordon E Simonson,3 GAL
+1273,Echinacea PowWow® White,1 GAL
+1276,Echinacea Sombrero™ Salsa Red,1 GAL
+1313,GR-Panicum v. Shenandoah,2 GAL
+1324,Hemerocallis Happy Returns,2 GAL
+1364,Nepeta x f. Walker's Low,2 GAL
+1365,Nepeta x f. Junior Walker,1 GAL
+1370,Phlox p. Flame® Coral,2 GAL
+1375,Sagina subulata,PINT
+1717,Geranium Rozanne,1 GAL
+1723,Lavandula a. Hidcote,1 GAL
+1724,Leucanthemum s. Becky,1 GAL
+1725,Nepeta x f. Walker's Low,1 GAL
+1726,Perovskia atriplicifolia,2 GAL
+1731,Veronica spicata Red Fox,1 GAL
+1747,Salvia Caradonna,1 GAL
+1779,Vinca minor,FLAT 24 CELL
+1780,Pachysandra terminalis,FLAT
+1817,Geranium Biokovo,1 GAL
+1905,Coreopsis v. Moonbeam,1 GAL
+1916,Lamium m. Purple Dragon,1 GAL
+1918,Leucanthemum s. Snowcap,1 GAL
+1951,Delphinium Magic Fountains Sky,2 GAL
+1955,Heuchera Plum Pudding,2 GAL
+1958,Monarda x Sugar Buzz® Rock PW,1 GAL
+1959,Perovskia a. Crazy Blue,2 GAL
+1961,Tiarella cord. Sugar & Spice,1 GAL
+2022,Echinacea PowWow® Wild Berry,1 GAL
+2025,Geranium Rozanne,2 GAL
+2164,Echinacea p. Purple Emperor,1 GAL
+2263,Anemone x hy. Honorine Jober,2 GAL
+2286,Heuchera Peach Flambe,1 GAL
+2289,Perovskia a. Blue Jean Baby,1 GAL
+2290,Salvia n. Rose Marvel,1 GAL
+2293,Sedum spec. Autumn Joy,2 GAL
+2659,Sempervivum arachn. Ruby Heart,QUART
+2662,Allium x Millenium,2 GAL
+2663,Amsonia tab. Blue Ice,1 GAL
+2664,Astilbe x a. Bridal Veil (Brau,1 GAL
+2665,Astilbe x a. Fanal,2 GAL
+2670,Delphinium Magic Fountain DK B,2 GAL
+2672,Digitalis p. Camelot Rose,3 GAL
+2676,Echinacea Sombrero™ Hot Coral,1 GAL
+2688,Lavandula x. i. Phenomenal®,1 GAL
+2689,Leucanthemum s. Whoops-a-Daisy,2 GAL
+2690,Lilium as Trendy Nicosia,2 GAL
+2691,Lilium as.Trendy Savannah,2 GAL
+2692,Lupinus p. Westcountry™ Des PW,2 GAL
+2693,Lupinus p. Westcountry™ Per PW,2 GAL
+2694,Monarda x Sugar Buzz® Pink PW,2 GAL
+2695,Perovskia a. Blue Jean Baby,2 GAL
+278,Agastache x Blue Fortune,2 GAL
+2872,Salvia Caradonna,2 GAL
+2873,Salvia n. May Night,2 GAL
+2874,Sedum spec. Autumn Fire,2 GAL
+2875,Stachys byzantina Fuzzy Wuzzy,1 GAL
+2876,Veronica spicata Blue Carpet,1 GAL
+2877,Veronica spicata Red Fox,2 GAL
+2878,Veronica spicata Royal Candles,2 GAL
+2884,Thymus coccineus,PINT
+2889,Heuchera Plum Pudding,1 GAL
+2890,Leucanthemum s. Snow Lady,1 GAL
+2891,Phlox s. Emerald Blue,1 GAL
+2894,Salvia n. East Friesland,2 GAL
+2895,Salvia n. May Night,1 GAL
+2896,Thymus coccineus,"4"""
+2984,Salvia Blue Hill Sage,2 GAL
+2986,Monarda x Sugar Buzz® Rock PW,2 GAL
+2988,Monarda x Sugar Buzz®Cherry,2 GAL
+2989,Lysimachia nummularia,1 GAL
+2991,Kniphofia u. Pyromania® Or PW,2 GAL
+2997,Brunnera m. Jack Frost,1 GAL
+3015,Alchemilla mollis,2 GAL
+3016,Astilbe x a. Snowdrift,1 GAL
+3018,Lavandula x. i. Phenomenal®,"6"""
+3020,Stachys byz. Helene von Stein,1 GAL
+3067,Lupinus p. Mini Gallery™,PINT
+3072,Hibiscus m. Berry Awesome® PW,2 GAL
+3161,Nepeta x f. Junior Walker,2 GAL
+3210,Sedum spec. Autumn Fire,1 GAL
+3717,Astilbe x a. Fanal,1 GAL
+3908,Artemesia s. Silvermound,1 GAL
+3909,Astilbe s. Hennie Graafland,1 GAL
+3912,Leucanthemum s. Becky,2 GAL
+3913,Monarda x Sugar Buzz®Cherry,1 GAL
+4042,Campanula g. Freya,2 GAL
+4065,Phlox s. Emerald Pink,1 GAL
+4077,Heuchera Dolce® Wildberry PW,1 GAL
+4081,Monarda Leading Lady Plum® PW,1 GAL
+4082,Perovskia a. Denim 'n Lace® PW,1 GAL
+4084,Salvia Color Spires® Back PW,1 GAL
+4085,Salvia n. Pink Profusion® PW,1 GAL
+4105,Monarda x Sugar Buzz®Blue Moon,1 GAL
+4106,Monarda d. Bubblegum Blast,1 GAL
+4109,Sedum rupestre Angelina,1 GAL
+4118,Phlox d. Blue Moon,QUART
+4119,Astilbe x Delft Lace,2 GAL
+4122,Coreopsis v. Zagreb,1 GAL
+4125,Salvia n. Snow Hill,2 GAL
+4127,Lavandula a. Munstead,"6""/TRAY"
+4130,Nepeta x f. Kit Kat,2 GAL
+4132,Sedum x Sunsparkler® Widfire,1 GAL
+4133,Sedum x SunSparkler® Firecrack,1 GAL
+4180,Alcea r. Sp.C ™  Carmine Rose,2 GAL
+4181,Alcea r. SprCeleb™ Lemon,2 GAL
+4186,Gaillardia Spintop Copper Sun,1 GAL
+4188,Hibiscus m. Head Over Heels®,2 GAL
+4190,Nepeta x f. Purrsian Blue,1 GAL
+4191,Lilium as. Matrix,2 GAL
+4192,Lilium as. Matrix Orange® DG,2 GAL
+4204,Echinacea p. White Swan,PINT
+4209,Nepeta x Cat's Pajamas PW®,1 GAL
+4249,Agastache x Blue Fortune,1 GAL
+4251,Aruncus x Misty Lace,2 GAL
+4252,Astilbe x Delft Lace,1 GAL
+4255,Geranium Johnsons Blue,1 GAL
+4257,Dianthus Vivid Bright Light,1 GAL
+4259,Echinacea Double Scoop™ Raspbe,1 GAL
+4260,Echinacea p. Prairie Splendor,1 GAL
+4262,Echinacea Sombrero™ Lemon,1 GAL
+4265,Hibiscus m. Summer® Cherry PW,2 GAL
+4266,Hibiscus m. Summer® Holy PW,2 GAL
+4267,Iris e. Wave Action,2 GAL
+4268,Geum f. p.Totallly Tangerine,1 GAL
+4296,Dianthus Star Single™ Peppermi,1 GAL
+4297,Hibiscus m. Az. Blue Satin® PW,3 GAL
+4443,Lavandula a. Hidcote,2 GAL
+5039,Coral Bells Christa,1 GAL
+5132,Alcea r. SpringCeleb™ Apricot,2 GAL
+5134,Alcea r. SprCeleb™ Purple,2 GAL
+5135,Amsonia hubrichtii,1 GAL
+5136,Aquilegia v. Clementine Blue,2 GAL
+5138,Aquilegia v. Clementine Red,2 GAL
+5139,Astilbe x Younique Raspberry,1 GAL
+5140,Brunnera  m. Sterling Silver,1 GAL
+5141,Dianthus Paint the Town Red®PW,1 GAL
+5142,Dianthus Pink Kisses®,1 GAL
+5147,Geum f. p. Blazing Sunset,2 GAL
+5151,Heuchera Primo® Black Pearl PW,1 GAL
+5152,Hibiscus m. Summer® French PW,2 GAL
+5163,Leucanthemum s.BananaCr. II PW,1 GAL
+5165,Polemonium r. Touch of Class,1 GAL
+5168,Salvia n. Violet Profusion® PW,1 GAL
+5258,Paeonia l. Sarah Bernhardt Red,2 GAL
+5434,Paeonia l. Karl Rosenfield,2 GAL
+5500,Chelone l.Tiny Tortuga,1 GAL
+5501,Eupatorium d. Little Joe,2 GAL
+5502,Sempervivum arachnoides Hen's,1 GAL
+5515,Delphinium Magic Fountains Mix,2 GAL
+5516,Dianthus Early Bird™ Radiance,1 GAL
+5518,Lavandula a. Sweet Romance®PW,1 GAL
+5537,Anemone x hy. Honorine Jober,1 GAL
+5542,Lavandula x. i. Sensational!®,1 GAL
+5546,Lavandula a. Hidcote,"6"""
+5547,Lavandula x. i. Phenomenal®,"6"""
+5551,Echinacea Sombrero™ Sangrita,1 GAL
+5558,Delphinium Magic Fountain Blue,2 GAL
+5562,Dianthus Frosty Fire,1 GAL
+5573,Geranium Album,1 GAL
+5579,Platycodon g. Astra Semi-Dbl B,QUART
+5580,Stachys byz. Silver Carpet,1 GAL
+5586,Platycodon g. Pop Star™ Pink,1 GAL
+5588,Platycodon g. Pop Star™ Blue,1 GAL
+5589,Perovskia a. Little Spire,2 GAL
+5590,Sedum spur. Flaming Carpet,1 GAL
+5604,Alcea r. Blacknight,1 GAL
+5607,Astilbe x j. Peach Blossom,1 GAL
+5612,Stachys off. Pink Cotton Candy,1 GAL
+5613,Salvia Blue Hill Sage,1 GAL
+5615,Artemisia s. Silvermound,2 GAL
+5636,Sedum x SunSparkler® Dazzleber,1 GAL
+5637,Allium x Millenium,1 GAL
+5638,Gaillardia x gr. Mesa Red,1 GAL
+5641,Lilium or. Stargazer,3 GAL
+5661,Anemone v. Robustissima,1 GAL
+5668,Perovskia a. Crazy Blue,1 GAL
+5738,Nepeta x f. Cat's Meow,1 GAL
+5743,Heuchera Primo® Peachberry Ice,1 GAL
+5748,Veronica Magic Show® Pink PoPW,1 GAL
+5763,Perovskia a. Little Spire,1 GAL
+5765,Rudbeckia f. Goldsturm,1 GAL
+5766,Salvia n. Snow Hill,1 GAL
+5769,Echinacea Cheyenne Spirit,1 GAL
+5778,Heuchera Palace Purple,1 GAL
+5792,Fern-Adiantum pedatum,1 GAL
+5814,Dicentra exima,2 QUART
+5817,Helleborus Winter Magic™ Snow,1 GAL
+5818,Lamium m. White Nancy,2 QUART
+5843,Sedum spec. Autumn Joy,1 GAL
+6047,Brunnera m. Jack Of Diamonds,1 GAL
+6048,Clematis kivistik Huvi™,1 GAL
+6049,Clematis Marie Louise Jensen™,1 GAL
+6054,Heuchera Grape Soda,1 GAL
+6055,Heuchera North Exposure™Sienna,1 GAL
+6057,Lupinus p. Westcountry™ Red PW,2 GAL
+6062,Delosperma Red Mt® Flame,1 GAL
+6063,Dianthus x. Fruit Punch® Class,1 GAL
+6134,Astilbe x j. Montgomery,2 GAL
+6135,Astilbe c. Visions in Red,2 GAL
+6142,Lavandula a. Munstead,1 GAL
+6143,Phlox p. Flame® Red,1 GAL
+6144,Sedum x Rock N' Round® Back PW,1 GAL
+6146,Sedum x Trailing Trio™,1 GAL
+6147,Sempervivum a. Supersemp® Onyx,1 GAL
+6148,Sempervivum a. Supersemp® Ruby,1 GAL
+6180,Baptisia x Lemon Meringue® PW,1 GAL
+6187,Paeonia l. Duchesse de Nemours,2 GAL
+6196,Geum f. p.Totallly Tangerine,2 GAL
+6198,Thymus serpyll. 'Wooly Mother',PINT.
+6201,Sedum rupestre Angelina,1 QT
+6229,Pachysandra terminalis,1/2 FLAT
+6259,Lavandula a. Super Blue,1 GAL
+6290,Lavandula a. Munstead,"6"""
+6291,Lavandula a. Super Blue,"6"""
+6294,Kniphofia u. First Sunrise,2 GAL
+6295,Campsis radicans f.  Flava,3 GAL
+6312,Sedum ka. Little Miss Sunshine,1 QT
+6313,Sempervivum arachn. Black,1 QT
+6314,Sempervivum arachn. Blue Ice,1 GAL
+6315,Hibiscus m. Evening Rose® PW,2 GAL
+6317,Lavandula x. i. Sensational!®,"6"""
+6323,Achillea m. New Vintage™ White,1 GAL
+6330,Anemone Curtain Call Rose,1 GAL
+6331,Sedum x Rock N' Round® Pop PW,1 GAL
+6332,Sedum x Rock N' Round® Pure PW,1 GAL
+6348,Digitalis p. Dalmation Peach,3 GAL
+6350,Echinacea Sombrero™ Summer Sol,1 GAL
+6351,Echinacea Color Coded® Yellow,1 GAL
+6424,Anemone Red Riding Hood,1 GAL
+6425,Aster n. Island Barbados®,1 GAL
+6426,Coreopsis v. Zagreb,2 GAL
+6428,Delphinium g. Blue Mirror,1 GAL
+6429,Heuchera Grape Timeless,1 GAL
+6430,Sedum x Rock N' Round® Bund PW,1 GAL
+6431,Sempervivum arachn. Blue Ice,1 GAL.
+6451,Astilbe x a. Snowdrift,2 GAL
+6453,Echinacea Sombrero™ Adobe Oran,1 GAL
+6672,Aster n. Purple Dome,1 GAL
+6673,Aster laevis Bluebird,1 GAL
+6678,Perovskia atriplicifolia,1 GAL
+6679,Salvia Color Spires® Pink PW,1 GAL
+6680,Sedum x Rock N' Round® Cora PW,1 GAL
+6683,Aster n. Pink Crush,1 GAL
+6684,Anemone Fantasy™Snow Angel,1 GAL
+6685,Liatris cylindracea,1 GAL
+6686,Sedum spur. Neon,1 GAL
+6687,Heuchera North Exposure™ Black,1 GAL
+6693,Anemone Whirlwind,1 GAL
+6695,Echinacea p. Ruby Star,1 GAL
+6696,Echinacea Lakota™ Fire,1 GAL
+6698,Liatris spicata Kobold Origina,2 GAL
+6700,Phlox p. Bambini® Desire,1 GAL
+6701,Phlox p. Bambini® Lucky Lilac,1 GAL
+6702,Phlox p. Flame® Blue,1 GAL
+6703,Phlox p. Flame® Purple,1 GAL
+6704,Phlox p. Flame® White,1 GAL
+6705,Phlox p. Garden Girls™ Party P,2 GAL
+6706,Phlox p. Ditomsur Candy Store®,1 GAL
+6707,Phlox p. Luminary® Backligh PW,2 GAL
+6708,Phlox p. Luminary® Opalesce PW,2 GAL
+6709,Phlox p. Nicky,2 GAL
+6710,Phlox x Amethyst pearl,2 GAL
+6711,Phlox x Opening Act Blush® PW,2 GAL
+6712,Phlox x Opening Act Pink® PW,2 GAL
+6713,Sedum x Rock N' Round® Pure PW,1 GAL
+6714,Echinacea Cheyenne Spirit,2 GAL
+6724,Allium lust. Summer Beauty,1 GAL
+6728,Bergenia c. Miss Piggy® PW,1 GAL.
+6729,Geranium s. Max Frei,1 GAL
+6738,Paeonia x Duchesse De Lorraine,3 GAL
+6739,Paeonia x Julia Rose,3 GAL
+6740,Paeonia x Mock Orange Yellow,3 GAL
+6741,Paeonia x Pink Double Dandy,3 GAL
+6881,Achillea m. Sunny Seduction,1 GAL
+6882,Allium x Medusa,2 GAL
+6883,Aquilegia Kirigami Blue & Whit,2 GAL
+6884,Aquilegia Kirigami Red & White,2 GAL
+6885,Aquilegia v. Dble Red & White,2 GAL
+6886,Eupatorium r. Chocolate,2 GAL
+6887,Geranium x Apple Blossom,1 GAL
+6888,Heuchera North Exposure™ Red,1 GAL
+6889,Leucanthemum s. Marshmallow,1 GAL
+6890,Lupinus p. Westcountry™ Sal PW,2 GAL
+6891,Lupinus p. Westcountry™ Teq PW,2 GAL
+6917,Lamium m. Orchid Frost,PINT
+6921,Lysimachia nummularia,PINT
+6922,Phlox s. Emerald Blue,PINT
+6923,Phlox s. Emerald Pink,PINT
+6924,Sagina subulata,PINT.
+6925,Sedum rupestre Angelina,PINT
+6926,Sedum spur. John Creech,PINT
+6927,Sedum spur. Tricolor,PINT
+6928,Thymus serpyll. 'Magic Carpet',6 PACK
+6929,Veronica spicata Blue Carpet,PINT
+6930,Echinacea Cheyenne Spirit,QUART
+6931,Echinacea PowWow® White,QUART
+6932,Echinacea PowWow® Wild Berry,QUART
+6936,Lamium m. Purple Dragon,QUART
+6937,Lavandula a. Hidcote,QUART
+6938,Lavandula a. Munstead,QUART
+6939,Lavandula x. i. Phenomenal®,QUART
+6940,Nepeta x f. Kitten Around,QUART
+6941,Nepeta x f. Purrsian Blue,QUART
+6942,Rudbeckia f. Goldsturm,QUART
+6943,Sedum x SunSparkler® Firecrack,QUART
+6944,Sedum spur. Little Chicky,QUART
+6945,Lupinus p. Westcountry™ Man PW,2 GAL
+6946,Sedum tern.Tiny Towers,QUART
+6947,Baptisia x  Amer. Goldfinch®,2 GAL
+6948,Baptisia x Decadence® Blue PW,2 GAL
+6949,Dicentra Pink Diamonds,1 GAL
+6950,Geranium Spiked Punch™,1 GAL
+6951,Heuchera Dolce®Cherry Truffles,1 GAL
+6952,Heuchera Smoke & Mirrors,1 GAL
+6954,Polygonatum o. Variegatum,2 GAL.
+6955,Tiarella cord. Angel Wings™,1 GAL
+6956,Clematis Westerplatte,1 GAL
+6959,Sedum spur. John Creech,24 CELL TRAY
+6961,Geranium Spiked Punch™,QUART
+6962,Lavandula x. i. Sensational!®,2 GAL
+6963,Lavandula a. Super Blue,2 GAL
+6964,Achillea m. New Vintage™ Red,1 GAL
+6965,Astilbe x a. Moccachino,2 GAL
+6967,Ligularia x Bottle Rocket® PW,1 GAL.
+6968,Sedum ka. Little Miss Sunshine,1 GAL
+6969,Sedum sieblodii,1 GAL
+6978,Campsis radicans f. Flava,2 GAL
+6980,Paeonia I. Red Charm,2 GAL
+6988,Aquilegia v. Winky Dbl Red,2 GAL
+6990,Alcea f. Chater's Double,QUART
+6991,Echinacea p. Prairie Splendor,QUART
+6992,Monarda d. Petite Delight,QUART
+6993,Stachys monieri Hummelo,QUART
+6994,Astilbe s. Hennie Graafland,2 GAL
+6995,Geranium x Apple Blossom,2 GAL
+6996,Tiarella cord. Fingerpaint,1 GAL
+7001,Alchemilla ser. Gold Strike,1 GAL
+7002,Amsonia h String Theory® PW,1 GAL
+7003,Amsonia x Starstruck,1 GAL
+7005,Echinacea p. Bright Star,1 GAL
+7006,Monarda d. Jacob Cline,1 GAL
+7007,Monarda x Upscale® Red Velv PW,1 GAL
+7008,Phlox p. Luminary® Backligh PW,1 GAL
+7009,Phlox p. Luminary® Ultravio PW,1 GAL
+7010,Sedum x SunSparkler® Cherry,1 GAL
+7020,Allium x Millenium,QUART
+7021,Echinacea x  Artisan™ Orange,QUART
+7022,Echinacea x Artisan™ Red Ombre,QUART
+7023,Echinacea Sombrero™ Hot Coral,QUART
+7024,Kniphofia u. Flamenco Mix,2 GAL
+3723,Vinca minor,1 GAL
+1574,M-Potting Soil,CUBIC YARD
+10006,Ilex m. Blue Prince,"5 GAL 18/24"""
+10031,Picea p. Globosa,2 GAL
+10117,Planting - No Guarantee,Each
+10139,Cercis c. Flame Thrower®,7 Gal TF
+10141,Hemerocallis Rainbow Rhythm®,2 GAL
+10148,Cercis c. Rising Star,7 Gal TF
+10149,Sambucus c. Adams,3 GAL
+10151,Cotinus x Grace,7 gal
+10156,Itea v. Merlot,3 GAL
+10159,Viburnum pl. f. tom. Popcorn,7 gal
+10218,Nyssa s. Wild Fire,20 gal
+10219,Magnolia s.Centennial Blush FE,3 GAL
+10224,Viburnum Summer Snowflake,3 GAL
+10227,Ilex crenata Steeds,3 GAL
+10228,Prunus Contender Peach,7 gal
+10248,Vaccinium corymb.Pink Lemonade,3 GAL
+10250,Buxus m. var. j. Wintergreen,10 gal
+10260,Chamaecyparis p. Golden Mop,"5 Gal 18/24"""
+10262,Ilex crenata Steeds,"10 Gal 42/48"""
+10263,Ilex crenata Steeds,20 gal
+10264,Viburnum rhytidophyllum,7 gal
+10266,Kalmia latifolia Olympic Fire,5 gal
+10269,Viburnum pl. f. tom. Shasta,10 gal
+10271,Rhododendron Hino Crimson,3 GAL
+10272,Rhododendron Stewartstonian,5 gal
+10273,Caryopteris x Beyond Midnight,2 GAL
+10275,Hamamelis Vernalis,3 GAL
+10276,Ilex glabra Shamrock,5 gal
+10294,Amelanchier x gr. Autumn Bril,BR
+10299,Buxus m. Green Gem,"24/30"""
+10309,Chamaecyparis o. Nana Gracilli,2/3'
+10309,Chamaecyparis o. Nana Gracilli,2/3'
+10344,Picea omorika,7/8'
+10441,Hydrangea petiolaris,2 GAL
+10443,Ilex v. Mr. Poppins® PW,2 GAL
+10481,Picea pungens Glauca,7/8'
+10482,Picea omorika,8/10'
+10483,Acer j. Aconitifolium,"2/2.5"""
+10484,Acer p. v. d. Orangeola,3/4'w stnd
+10485,Acer p. v. d. Tamukeyama,5/6'w stnd
+10486,Acer p. v. d. Waterfall,4/5'w stnd
+10487,Acer pal. Kiyohime,4/5'w stnd
+10488,Acer pal. Ryusen,"2/2.5"" stnd"
+10489,Acer pal. Twomblys Red Sentin,4/5'
+10490,Aesculus parviflora,3/4'
+10491,Metasequoia glyp. Soul Fire,10/12'
+10492,Taxodium d. Peve Minaret,9/10'
+10493,Viburnum pl. f. tom. Popcorn,4/5'
+10494,Viburnum Summer Snowflake,6/7'
+10495,Hamamelis x in. Arnold Promise,3/4'
+10496,Acer pal. Bloodgood,"2.5/3"""
+10497,Acer pal. Moonfire,"2.5/3"""
+10498,Acer pal. Trompenberg,"15 Gal 6"""
+10499,Viburnum rhytidophyllum,7/8'
+10501,Coast of Maine Penobscot,1CF
+10502,Coast of Maine Quoddy - Lobste,1CF
+10503,Coast of Maine Acid-Loving,20qt
+10504,Acer r. Frank Jr.,15 gal
+10505,Acer r. October Glory,15 GAL
+10506,Buxus x Green Velvet,6 GAL
+10507,Buxus x Green Mountain,6 GAL
+10508,Buxus s. Aureo Var. Cone,7 gal
+10510,Cercis c. Black Pearl,BR
+10511,Cercis c. Vanilla Twist,15 gal
+10512,Cercis c. Midnight Express®,"2/2.5"""
+10513,Cercis c. Hearts of Gold,15 gal
+10514,Malus dom. Granny Smith Esp,"1"" Esp"
+10515,Cercis c. Pink Pom Poms,15 gal
+10516,Juniperus c. Blue Point,6gal
+10517,Picea abies Cupressina,4/5'
+10518,Juniperus c. Spartan,6 GAL
+10519,Juniperus v. Taylor,15 gal
+10520,Acer pal. Bloodgood TF,5/6'
+10521,Pieris x. Brouwers Beauty,"18/21"""
+10522,Rhododendron cat. Album,"24/30"""
+10523,Rhododendron x P.J.M.,6 GAL
+10525,Rhus a. Gro-Low,3 GAL
+10526,Cephalotaxus h. Fastigiata,3.5/4'
+10527,Chamaecyparis n. Glauca Pendul,8/10'
+10528,Cornus k. Samaritan®,5/6'
+10529,Cotinus x Grace,8/10'
+10530,Hydrangea p. Van. Straw.™ FE,6/7' stnd
+10531,Juniper c. Rosefield Perfect,7/8'
+10532,Juniper c. Torulosa,7/8'
+10533,Juniperus c. Trautman,7/8'
+10534,Juniper s. Candelabra,10/12'
+10535,Juniperus v. Taylor,9/10'
+10536,Picea p. Montgomery,3/3.5'w
+1054,Taxus x media Everlow,"7 GAL 30/36"""
+10552,Thuja x Green Giant,5 gal
+10553,Rhododendron cat. Album,"21/24"""
+10554,Rhododendron Purpureum Elegans,"21/24"""
+10558,Rhododendron Stewartstonian,3 GAL
+10563,Ilex crenata Sky Pencil,"7 gal 30/36"""
+10564,Ilex crenata Steeds,"15 gal 42/48"""
+10565,Ilex glabra Shamrock,"3 gal 18/24"""
+10566,Ilex m. Centennial Girl,"15 gal 42/48"""
+10567,Ligustrum ovalifolium,10 gal
+10568,Lindera Benzoin,5 gal
+10569,Pieris j. Scarlet O'Hara,3 GAL
+10570,Rhododendron Roseum Elegans,5 gal
+10571,Spiraea Double Play® Doozie PW,3 GAL
+10572,Viburnum x carlcephalum,7 gal
+10573,Weigela Spilled Wine® PW,5 gal
+10574,Rhododendron Delaware Valley W,3 GAL
+10577,Acer r. October Glory,10 gal
+10578,Acer r. Franksred,10 gal
+10579,Vaccinium corymb. Northcountry,3 GAL
+10580,Vaccinium corymbosum Patriot,3 GAL
+10581,Buxus m. Sprinter® PW,7 gal
+10582,Buxus m. var. j. Wintergreen,7 gal
+10583,Buxus NewGen Freedom,3 GAL
+10584,Cercis canadensis,10 GAL
+10585,Cercis c. Forest Pansy,10 gal
+10586,Cercis c. Golden Falls,10 gal
+10587,Cercis c. The Rising Sun,10 gal
+10588,Cercis c. var. alba,10 gal
+10589,Cercis c. Merlot,10 gal
+10590,Cornus k. Satomi,10 gal
+10591,Cotinus c. Royal Purple,7 gal
+10592,Euonymus a. compactus,3 GAL
+10593,GR-Helictotrichon s. Blue Oat,2 GAL
+10594,Hydrangea p. Grandiflora TF,7 Gal TF
+10595,Hydrangea q. Jetstream,3 GAL
+10596,Hydrangea q. Ruby Slippers,10 gal
+10597,Hydrangea q. Snow Queen,3 GAL
+10598,Hydrangea q. Snow Queen,10 gal
+10599,Juniperus scop. Wichita Blue,3 GAL
+10600,Juniperus v. Taylor,10 gal
+10601,Liriodendron t. Emerald City,15 gal
+10602,Magnolia x Ann,10 gal
+10603,Magnolia x Jane,10 gal
+10604,Magnolia x Leonard Messel,10 gal
+10605,Malus dom. Honeycrisp,5 gal
+10606,GR-Miscanthus s. Variegatus,3 GAL
+10608,Myrica pensylvanica,7 gal
+10609,Picea glauca Conica,15 gal
+10610,Picea glauca Conica,15 gal
+10611,Pieris j. Mountain Fire,7 gal
+10612,Platanus Exclamation!™,15 gal
+10613,Prunus avium Bing Cherry,7 gal
+10614,Prunus 'Redhaven' Peach,5 gal
+10615,Prunus x Okame,10 gal
+10616,Quercus bicolor,15 gal
+10617,Quercus palustris,10 gal
+10618,Quercus rubra,10 gal
+10619,Rhododendron Roseum Elegans,7 gal
+10620,Rhododendron maximum Pink,7 gal
+10621,Rhododendron Nova Zembla,7 gal
+10622,Rhus t. Tiger Eyes® Bailtiger,3 GAL
+10623,Rhus t. Tiger Eyes® Bailtiger,6gal
+10625,Thuja plicata Forever Goldy®,7 gal
+10626,Tsuga canadensis,7 gal
+10627,Viburnum carlesii Tessa,7 gal
+10628,Cercis c. Golden Falls,"2/2.5"""
+10629,Chamaecyparis o. Chirimen,3/4'
+10630,Hibiscus s. Aphrodite,5/6'
+10631,Juniperus v. Emerald Sentinel,8/10'
+10632,Juniperus v. Taylor,7 gal
+10633,Prunus persica Elberta Peach,7 gal
+10634,Weigela Spilled Wine® PW,3 GAL
+10635,Buxus Cranberry Creek,3 GAL
+10636,Buxus NewGen Freedom,5 gal
+10637,Buxus Newgen Independence,3 GAL
+10638,Cornus s. Midwinter Fire,3 GAL
+10639,Cotoneaster apiculatus,2 GAL
+10640,Helleborus Frostkiss Vibey Vel,1 GAL
+10641,Heucherella Fun and Games Eye,1 GAL
+10643,Hydrangea arb. Flowerfull,3 GAL
+10651,Juniperus c. Sea Green,"30/36"""
+10652,Ligustrum amurense,5/6'
+10653,Ligustrum amurense,4/5'
+10654,Thuja x Green Giant,5/6'
+10667,Vaccinium angustifolium,3 GAL
+10668,Picea omorika,10/12'
+10669,Abies balsa. Piccolo,3 GAL
+10670,Abies korea. Golden Glow,6 GAL
+10671,Abies nordm. Golden Spreader,6 GAL
+10672,Abies procera Glauca,6 GAL
+10673,Buxus semp. Variegata,6 GAL
+10674,Chamaecyparis p. Blue Moon,3 GAL
+10675,Enkianthus c. Jan's Red Iseli,3 GAL
+10676,Juniperus c. Trautman,3 GAL
+10677,Juniperus h. Gold Strike,3 GAL
+10678,Juniperus squamata Blue Star,"3 Gal 24"" Std"
+10680,Picea abies Elegans,6 GAL
+10681,Picea abies Pendula,6 GAL
+10682,Picea abies Pumila,6gal
+10683,Picea glauca Rainbows End®,3 GAL
+10684,Wisteria f. Grande Diva Jessye,6 GAL
+10692,Hypericum kalm.Sunny Boulev®,2 GAL
+10693,Itea v. Fizzy Mizzy® PW,3 GAL
+10694,Leucothoe axillaris,3 GAL
+10695,Rhus a. Gro-Low,2 GAL
+10697,Abies p. Glauca Prostrate Form,6 GAL
+10717,Rhododendron Holden's Red,2 GAL
+10718,Stylophorum Diphyllum,1 GAL
+10719,Syringa x Hyacinth Royal Purpl,3 GAL
+10720,Ilex glabra Compacta,5 gal
+10722,Amelanchier canadensis,7 gal
+10723,Aronia a. Brilliantissima,3 GAL
+10724,Clethra a. Sixteen Candles,5 gal
+10725,Hamamelis virginiana,10 gal
+10726,Hydrangea arb. Haas Halo,3 GAL
+10730,Cornus kousa TF,10 GAL
+10733,Pinus cembra,5 gal
+10734,Pinus mugo var. pumilio,10 gal
+10735,Schizophragma h. Flirty Girl,3 GAL
+10740,Potentilla f. Happy Face® HePW,3 GAL
+10741,Hydrangea petiolaris,3 GAL
+10742,Cercis canadensis MS,8/10'
+10743,Cercis canadensis MS,10/12'
+10744,Quercus alba,2/2.5''
+10744,Quercus alba,2/2.5''
+10745,Quercus bicolor,"2/2.5"""
+10746,Acer griseum,10 gal
+10748,Rhododendron Blaauw's Pink,3 GAL
+10749,Betula n. Heritage,BR
+10755,Fothergilla x Mount Airy,5 gal
+10759,Thuja x Junior Giant,3 GAL
+10760,Chamaecyparis p. Soft Serve Go,3 GAL
+10789,Hibiscus s. Purple Pillar® PW,3 GAL
+10790,Penstemon d. Midnight Masq. PW,2 GAL
+10791,Rosa florib. Julia Child,3 GAL
+10807,Rhododendron x Mandarin Lights,2 GAL
+10808,Chamaecyparis o. Gracilis,5 gal
+10809,Chamaecyparis o. Nana Gracilis,7 gal
+10810,Chamaecyparis o. Nana,5 gal
+10811,Delphinium New Zealand Blue La,1 GAL
+10812,Dianthus P.P. Funky Fushsia,1 GAL
+10825,Calycanthus Floridus,3 GAL
+10826,Calycanthus f. Hartlage Wine,3 GAL
+10830,Euonymus kiaut. Manhattan,"5 Gal 18/24"""
+10834,Buxus x Green Velvet,3 GAL
+10835,Buddleia x Miss Violet,3 GAL
+10836,Clethra a. Sixteen Candles,7 gal
+10840,Hydrangea m. Wee Bit Grumpy PW,3 GAL
+10841,Ilex glabra Densa,3 GAL
+10843,Hydrangea arb. Haas Halo,2 GAL
+10851,Philadelphus x Minnesota Snowf,1 GAL
+10855,Aesculus parviflora,7 gal
+10858,Cornus a. Ivory Halo®,5 GAL
+10859,Deutzia gracilis,3 GAL
+10861,Kolkwitzia a. Pink Cloud,3 GAL
+10862,Leucothoe f. Girard's Rainbow,3 GAL
+10863,Wisteria m. Blue Moon,7 gal
+10864,Buxus x Green Velvet,1 GAL
+10881,Fothergilla gardenii,3 GAL
+10882,Hibiscus s. Aphrodite,3 GAL
+10887,Hypericum p. Hidcote,3 GAL
+10888,Kalmia latifolia Keepsake,3 GAL
+10889,Vaccinium angustifolium,1 GAL
+10907,Aronia m. Low Scape Mound® PW,"8"""
+10910,Parthenocissus tricuspidata,1 GAL
+10911,Rosa x Oso Easy Italian Ice® P,2 GAL
+10912,Rosa x Oso Easy Hot Paprika® P,2 GAL
+10943,Betula populifolia Whitespire,BR
+10945,Chaenomeles Dbl Take Peach,2 GAL
+10957,Rosa x Oso Easy Ice Bay® PW,2 GAL
+10958,Rosa The Fairy,3 GAL
+10959,Thuja o. Fire Chief™,3 GAL
+10961,Thymus praecox Elfin,"3"""
+10972,Rhododendron x P.J.M. Elite,3 GAL
+10973,Spiraea x bum Goldmound,3 GAL
+10974,Buddleia d. Psychedelic Sky™,3 GAL
+10975,Buddleia d. Trippy Pink,3 GAL
+10976,Hydrangea a. Annabelle,6 GAL
+10984,Caryopteris x cl. Dark Knight,2 GAL
+10989,Hydrangea p. Quick Fire® PW,5 gal
+10990,Juniperus h. Wiltoni,3 GAL
+10991,Rosa x Knock Out Orange Glow,2 GAL
+11002,Cercis c. Ruby Falls,"2/2.5"""
+11032,Myrica Pensylvanica - MALE,7 gal
+11036,Viburnum pl. f. tom. Mariesii,10 gal
+11054,Hydrangea p. Limelight Pr.® PW,BR
+11058,Juniperus procumbens Nana,3 GAL
+11059,Rhododendron Roseum Pink,5 gal
+11060,Rhododendron x P.J.M. Elite,5 gal
+11061,Taxus x media Densiformis,10 gal
+11067,Cornus fl. Cherokee Brave,7 gal
+11069,Lonicera s. Major Wheeler,1 GAL
+11072,Cornus fl. Cherokee Princess,7 gal
+11075,Rosa x Knock Out Orange Glow,3 GAL
+11078,Hydrangea a. Incrediball Storm,3 GAL
+11079,Potentilla f. Happy Face® Y PW,2 GAL
+11080,Potentilla f. Happy Face® HePW,2 GAL
+11083,Fothergilla x int. Blue Shadow,2 GAL
+11084,Juniperus v. Blue Arrow,4.5/5'
+11086,Potentilla f. Abbotswood,3 GAL
+11087,Potentilla f. Happy Face® W PW,3 GAL
+11090,Abies balsamea v. phanerolepis,6/7'
+11097,Aesculus parviflora,5 gal
+11100,Betula papyrifera,10 gal
+11101,Buxus m. Sprinter® PW,10 gal
+11104,Chamaecyparis o. Kosteri,10 gal
+11105,Chamaecyparis o. Tempelhof,10 gal
+11106,Chamaecyparis p. Gold Thread,3 GAL
+11107,Cornus a. Ivory Halo®,3 GAL
+11108,Cornus a. Ivory Halo®,5 GAL
+11109,Cotinus c. Velveteeny,3 GAL
+11110,Juniperus scop. Moonglow,7 gal
+11111,Juniperus scop. Moonglow,10 gal
+11112,Juniperus scop. Wichita Blue,6gal
+11113,Magnolia x loebneri Merrill,10 gal
+11122,Picea abies Little Gem,5 gal
+11123,Picea p. Globosa,6 GAL
+11124,Picea p. Globosa On Standard,5 gal
+11125,Pinus mugo var. pumilio,5 gal
+11129,Salix i. Hakuro Nishiki,3 GAL
+11130,Salix i. Hakuro Nishiki,7 GAL
+11131,Tsuga canadensis Jeddeloh,7 gal
+11132,Wisteria f. Longwood Purple,7 gal
+11133,Wisteria m. Summer Cascade FE,3 GAL
+11139,Rhododendron Rosebud,5 gal
+11140,Rhododendron Tradition,3 GAL
+11142,Buxus x Green Velvet,7 GAL
+11143,Chamaecyparis o. Gracilis Comp,3 GAL
+11144,Helleborus 'Ice'N'Roses Bennot,1 GAL
+11145,Helleborus 'Ice'N'Roses PinkPr,1 GAL
+11146,Helleborus 'Ice'N'Roses Rosali,1 GAL
+11147,"Helleborus 'Berry Smoothie""",1 GAL
+11149,Juniperus Blue Pacific,3 GAL
+11151,Miscanthus sinensis ' Little Z,2 GAL
+11153,Heuchera 'Stainless Steel',1 GAL
+11154,Chamaecyparis o. Gracilis Comp,5/6'
+11155,Cornus kousa va. Chinensis,"2/2.5"""
+11156,Magnolia x Ann,8/10'
+11157,Magnolia x loebneri Merrill,8/10'
+11158,Acer p. Bloodgood,15 Gal 4.5/5'
+11159,Acer p. Bloodgood,15 Gal 5/6'
+11160,Acer pal. Trompenberg,15 Gal 5/6'
+11161,Acer Plat. Crimson Sentry,15 gal
+11162,Apple Semi Dwarf Firestorm,20 Gal ESPAL
+11163,Apple Semi Dwarf Fuji,20 Gal ESPAL
+11164,Apple Semi Dwarf Honeycrisp,20 Gal ESPAL
+11165,Buxus Semp Elegantis Cone,6 GAL
+11166,Hydrangea AR Candy Bubblegum,5 gal
+11167,Wisteria f. 'Amethyst Falls',15 Gal STK
+11168,Wisteria m. Betty Mathews,15 Gal STK
+11169,Pyrus com. RED Bartlett ESP,20 Gal ESPAL
+11170,Acer p. Crimson Queen,6gal
+11171,Acer p. Katsura,20 gal
+11172,Acer p. Katsura,15 gal
+11173,Acer p. 'Mikawa yatsubusa',15 gal
+11174,Acer p. 'Mikawa yatsubusa',6 GAL
+11175,Acer p. 'Rhode Island Red',6 GAL
+11176,Acer s. 'Aureum' BLANK ORANGE,20 gal
+11177,Acer s. 'Aureum' BLANK ORANGE,20 gal
+11178,Acer x pse Ice Dragon,20 gal
+11179,Acer x pse Ice Dragon,6 GAL
+11181,Chamaecyparis o. 'Iseli Green',5/6' B&B
+11182,Chamaecyparis o. 'Iseli Green',3/4'
+11185,Paeon x. 'Sequestered Sunshine,3 GAL
+11186,Paeon x. 'Vanilla Manila',3 GAL
+11187,Paeon x. 'Gold Drift',6 GAL
+11188,Picea o. 'Skylands',10 gal
+11189,Pinus mugo 'Valley Cushion',6 GAL
+11190,Pinus mugo 'Fukuzumi',6 GAL
+11204,Cercidiphyllum japonicum,7/8' LB
+11205,Cornus k. Lustgarten Weeping,5/6'
+11206,Acer p. v. d. Tamukeyama,6/7' stnd
+1162,Acer pal. Bloodgood,"2/2.5""C"
+1187,Fagus s. Tortuosa,"2.5/3"""
+1495,Acer saccharum Green Mountain,"2.5/3"""
+1551,Pinus s. Blue Shag,6 GAL
+1552,Pinus s. Blue Shag,10 GAL
+1553,Pinus s. Mini Twists,6 GAL
+1558,Tsuga canadensis Jeddeloh,6 GAL
+1621,Malus sargentii Firebird®,"2"""
+1685,Ilex m. Blue Maid,4/5'
+1703,Carpinus betulus,BR
+1707,Pinus strobus,10/12'
+1753,Rosa x Double Knock Out® Red,3 GAL
+1754,Rosa x Knock Out® Red,3 GAL
+1755,Rosa x Knock Out® Peachy,3 GAL
+1756,Rosa x Double Knock Out® Pink,3 GAL
+1758,Rosa x Knockout® Pink,3 GAL
+1765,Buxus x Green Mountain,10 gal
+2080,Carpinus b. Fastigiata,BR
+2120,Hydrangea a. Invin.Mini Ma® PW,3 GAL
+2445,Hydrangea q. Snow Queen,5 GAL
+2547,Cornus k. Satomi,"2/2.5"""
+2559,Pinus parv. Glauca Brevifolia,4/5'
+2729,Chamaecyparis p. Golden Mop,3 GAL
+2730,Buxus x Green Mound,10 GAL
+2881,Rosa x Knock Out® Coral,3 GAL
+2885,Fagus s. Purple Fountain,"2/2.5"""
+291,Aronia m. Autumn Magic,3 GAL
+2940,Cotoneaster a. Tom Thumb,2 GAL
+2979,Itea v. Little Henry® PW,3 GAL
+2981,Clethra a. Hummingbird,3 GAL
+3166,Hibiscus s. Blue Chiffon® PW,3 GAL
+3212,Cotinus c. Winecraft Black®PW,3 GAL
+3227,Pinus s. Nana,6 GAL
+3500,Rhamnus f. Fine Line® PW,3 GAL
+3534,Clethra a. Hummingbird,7 GAL
+368,Caryopteris x cl. Dark Knight,3 GAL
+3808,Picea p. Montgomery,"24/30"""
+3822,Chamaecyparis o. Crippsii,6/7'
+3828,Chamaecyparis t. Glauca,8/10'
+3832,Cornus k. Scarlet Fire®,"2/2.5"""
+3834,Cornus kousa TF,"2.5/3"""
+3836,Cornus x Stellar Pink®,"2/2.5"""
+3838,Ginkgo b. Elmwood,"2.5/3"""
+3838,Ginkgo b. Elmwood,"2.5/3"""
+3841,Hibiscus s. Lavender Chiff® PW,4/5'
+3842,Hibiscus s. Diana,5/6'
+3844,Hydrangea p. Phantom TF,6/7' STND
+3850,Magnolia x Galaxy,"3/3.5"""
+3855,Picea glauca Pendula,"6/7"" B/B"
+3858,Picea o. Nigra Compact,3/3.5' W
+3865,Salix i. Hakuro Nishiki,8/10' STND
+3871,Viburnum pl. f. tom. Shasta,5/6'
+3882,Chamaecyparis o. Kosteri,6 GAL
+3883,Chamaecyparis o. Nana Gracilli,6 GAL
+3887,Celtis occidentalis,"3/3.5"""
+3896,Rhododendron Cunningham's Wh,3 GAL
+3902,Malus dom. Gala,"1.5"" ESP"
+3903,Malus dom. Macintosh,"1.5"" Esp."
+3915,Chamaecyparis o. Nana Lutea,6 GAL
+3921,Juniperus c. Trautman,5/6'
+3926,Picea orientalis Firefly,3 GAL
+3929,Picea p. Globosa,10 GAL
+3930,Picea p. Procumbens,6 GAL
+3931,Picea p. Sester Dwarf,6 GAL
+3936,Taxus c. nana Aurescens,6 GAL
+3937,Tsuga canad. Cole's Prostrate,6 GAL
+3938,Tsuga canadensis gracilis,6 GAL
+3939,Tsuga diversifolia Loowit,3 GAL
+3954,Pyrus com. Bartlett ESP,20 gal
+3957,Syringa meyeri Palibin,10 GAL TF
+3995,Picea orientalis Gowdy,3 GAL
+3996,Picea p. Christina,6 GAL
+4275,Thuja x Green Giant,15 GAL 4/5'
+4283,Rhododendron y. v. poukhanense,3 GAL
+4357,Ilex glabra Gem Box® PW,2 GAL
+5169,Rosa x Petite Knock Out®,2 GAL
+5187,Chamaecyparis t. Glauca Pendul,7-8'
+5196,Pinus s. Vercurve,4/4.5' W
+5199,Viburnum pl. f. tom. Shasta,4/5'
+5215,Buxus x Green Mountain,10 GAL 2/2.5'
+5244,Viburnum pl. f. tom. Mariesii,4/5'
+5262,Thuja x Green Giant,7 GAL
+5344,Cotinus x Grace,7/8'
+5400,Rhododendron Nova Zembla,"10GAL 30/36"""
+5506,Thuja x Green Giant,3 GAL
+5514,Clematis sp. Jolly Good™,2 GAL
+5530,Taxus x media Densiformis,"15"""
+5532,Hydrangea q. Alice,3 GAL
+5540,Deutzia Yuki Cherry Blossom®PW,3 GAL
+5554,Lupinus p. Staircase™ Orange,"8"""
+5560,Clethra a. Hummingbird,"3 GAL 15/18"""
+5566,Rosa x Petite Knock Out®,3 GAL TF
+5597,Picea a. Formanek,7 GAL
+5643,Buddleia d. Flutterby® Pink,3 GAL
+5644,Hibiscus s. Diana,3 GAL
+5663,Clethra a. Ruby Spice,7 GAL
+5666,Ilex m. Blue Princess,5 GAL
+568,Clethra a. Vanilla Spice® PW,3 GAL
+5772,Hydrangea a. Invin. Wee White®,2 GAL
+5775,Syringa meyeri Palibin,7 GAL STD
+5799,Cotinus c. Royal Purple,10 GAL
+6050,Buddleia x Pugster® Amethyst,3 GAL
+6075,Acer pal. Bloodgood,"2/2.5""LB"
+6076,Heptacodium micionoides,7/8'
+6077,Sambucus n. Black Lace® PW,4/5'
+6089,Malus dom. Spartan,"1.5"" Esp."
+6091,Fagus s. Purple Fountain,7/8'
+6099,Pinus s. Nana,"18/24"""
+6102,Thuja x Green Giant,4/5'
+6105,Picea a. Formanek,10 GAL
+6109,Cornus fl. Appalachian Snow,"1.75/2"""
+6110,Cornus k. x Rosy Teacup®,"2/2.5"""
+6115,Malus x Donald Wyman,"2/2.5"""
+6115,Malus x Donald Wyman,"2/2.5"""
+6118,Pinus n. Oregon Green,4/5'
+6119,Pinus s. Vercurve,3.5/4' W
+6120,Stewartia pseudocamellia,7/8'
+6121,Chamaecyparis p. Golden Mop,6 GAL
+6126,Picea p. Globosa,3 GAL
+6128,Picea p. Montgomery,10 gal
+6131,Chamaecyparis o. Nana Gracilli,15 GAL
+6168,Fagus s. Tricolor,4/5'
+630,Diervilla Kodiak® Black PW,3 GAL
+6316,Hibiscus s. Helene,3 GAL
+6322,Hydrangea p. L. Quick Fire® PW,BR
+6333,Hibiscus s. Lavender Chiff® PW,3 GAL
+6334,Picea orientalis Gowdy,7/8'
+6335,Chamaecyparis o. Nana Gracilli,10'
+636,Euonymus a. compactus,7 GAL
+6362,Prunus Black Tartarian Cherry,7 gal
+6382,Myrica cerifera,3 GAL
+6392,Buddleia x Pugster® Pinker,3 GAL
+6420,Clematis terniflora,3 GAL
+6445,Pinus s. Vercurve,5 GAL
+6452,Thuja o. Smaragd,7 GAL
+661,Fothergilla x Mount Airy,3 GAL
+6681,Picea abies,7/8'
+6681,Picea abies,7/8'
+6682,Picea abies,8/10'
+6682,Picea abies,8/10'
+6716,Crataegus v. Winter King,BR
+6730,Viburnum pl. f. tom. Mariesii,5 GAL
+6733,Fagus s. Purple Fountain,10/12'
+6744,Sciadopitys v. Winter Green,15 GAL
+6749,Chamaecyparis n. Pendula,10-12'
+6750,Chionanthus virgincus,6/7'
+6751,Cornus fl. Appalachian Snow,"2-2.5"""
+6752,Cornus fl. Cherokee Chief,"2.5-3"""
+6753,Cornus k. Summer Fun,6-7' T/F
+6755,Fothergilla x int. Blue Shadow,2.5/3'
+6756,Hamamelis x in. Arnold Promise,4/5'
+6757,Hibiscus s. Blue Chiffon® PW,4-5'
+6758,Hydrangea p. Limelight® PW,6-7' STND
+6764,Picea p. Globosa,3-3.5'
+6765,Pinus n. Oregon Green,7 gal
+6766,Pinus s. Nana,3.5-4'
+6768,Styrax jap. Evening Light,6/7'
+6769,Styrax jap. Fragrant Fountain,6/7'
+6773,Tsuga canadensis Sargentii,3-4'
+6774,Viburnum d. Blue Muffin® PW,5/6'
+6775,Viburnum pl. f. tom. Popcorn,5/6'
+6787,Picea abies,10/12'
+6801,Pinus cembra Prairie States®,4/5'
+6802,Pinus longaeva Joe's Bess,3-4' B&B
+6806,Chamaecyparis n. Pendula,3 GAL
+6808,Acer p. v. d. Tamukeyama,3/4'W STND
+6810,Acer saccharum Bailsta,"3.5/4"""
+6811,Aesculus parviflora,BR
+6813,Carpinus b. Fastigiata,"2.5/3"""
+6814,Chamaecyparis n. Pendula,8-10'
+6815,Cornus fl. Cherokee Princess,"2.5-3"""
+6816,Cornus k. Samaritan®,"2.5/3"""
+6817,Fagus s. Dawyck Purple,"2.5/3"""
+6818,Ginkgo b. Spring Grove,5/6'
+6819,Hamamelis x in. Diane,4/5'
+6820,Hibiscus s. Blue Chiffon® PW,BR
+6821,Juniperus scop. Wichita Blue,8-10'
+6822,Nyssa s. Wild Fire,"2/2.5"""
+6823,Pinus syl. Jericho,3.5/4'
+6824,Pinus syl. Jericho,3/3.5
+6826,Pinus s. Nana,3-3.5'
+6827,Pinus s. Nana,4-4.5'
+6828,Thuja o. Smaragd,9-10'
+6829,Thuja o. Yellow Ribbon,3 GAL
+6830,Chamaecyparis o. Nana Gracilli,"5/6"""
+6831,Heptacodium micionoides,7/8'
+6832,Heptacodium micionoides,5/6'
+6846,Acer saccharum Bailsta,"2.5/3"""
+6854,Buxus x Green Velvet,"10GAL 21/24"""
+6855,Ilex m. Blue Princess,10GAL 3/4'
+6856,Pieris j. Katsura,3 GAL
+6858,Rhododendron English Roseum,"10GAL 36/42"""
+6859,Rhododendron x P.J.M.,"30/36"" B&B"
+6860,Rhododendron Roseum Elegans,"10GAL 36/42"""
+6878,Quercus rubra,"2.5/3"""
+6879,Quercus palustris,"2.5/3"""
+6899,Cornus k. Samaritan®,6/7'
+6901,Ilex m. Blue Maid,5/6'
+6902,Thuja x Green Giant,14/16'
+6904,Magnolia x acuminata Lois,"2.5/3"""
+6907,Rhododendron y. v. poukhanense,"5 GAL 21/24"""
+6908,Chamaecyparis p. Golden Mop,"3 GAL 12/15"""
+6909,Deutzia Yuki Snowflake®PW,3 GAL
+6910,Ilex crenata Sky Pencil,5 GAL 2.5/3'
+6912,Ilex m. Blue Princess,"5 GAL 18/24"""
+6913,Rhododendron English Roseum,3 GAL
+6914,Vaccinium corymbosum Bluecrop,3 GAL
+6915,Dianthus Pink Kisses®,3 GAL
+6957,Tsuga canadensis,8/10'
+6957,Tsuga canadensis,8/10'
+6960,Ajuga rep. Burgundy Glow,24 CELL TRAY
+6970,Buddleia x Miss Molly,3 GAL
+6971,Ilex glabra Shamrock,2 GAL
+6972,Rhododendron English Roseum,5 GAL
+6977,Rhododendron y. v. poukhanense,5 GAL
+6981,Rhododendron Purpureum Elegans,3 GAL
+6982,Rhododendron y. Yaku Princess,2 GAL
+6983,Rosa r. Alba,3 GAL
+6986,Wisteria f. Longwood Purple,3 GAL
+6989,Acer pal. Bloodgood,7' SCREEN
+6997,Buddleia d. Flutterby® White,3 GAL
+6998,Ilex m. Blue Prince/Princess,3 GAL
+6999,Thuja o. Smaragd,3 GAL
+7017,Ilex m. Blue Prince,5 GAL
+7025,Hydrangea m. Bloomstruck® ES,3 GAL
+7026,Hydrangea m. Summer Crush® ES,3 GAL
+10076,# Crusher Run - Item 4 - Stone,Ton
+10101,# Pea Stone,Ton
+10102,# Stone Dust,Ton
+10105,#2 Round Stone,Ton
+10106,#1 Crushed Stone Blue,Ton
+10109,#1 Round Stone,Ton
+10233,#2 Crushed Stone Blue,Ton
+10537,"Native Round Stone 1/4""",Ton
+10538,"Native Round Stone 3/8""",Ton
+10068,Tarp - 12' x 16',12' X 16'
+10069,Tarp - 16' x 20',16' X 20'
+10070,Tarp - 16' x 25',16' X 25'
+10082,Coast of Maine Raised Bed Mix,2CF
+10083,Coast of Maine Manure Compost,1CF
+10084,Coast of Maine Potting Soil,2CF
+10085,Espoma Bio-Tone Starter,4#
+10086,Espoma Garden Tone,4#
+10087,Espoma Holly Tone,4#
+10088,Espoma Plant Tone,4#
+10089,Espoma 10-10-10 Garden Food,6.75#
+10090,M-Arber Bio Fungicide,16 oz
+10091,M-Arber Bio Insecticide,16 oz
+10092,M-Arber Spray Bottle,32 oz.
+10093,M-Bonide Captain Jack Citrus,Qt.
+10094,M-Bonide Captain Jack Dust,1.5LB
+10096,Espoma Garden Lime,5#
+10097,Espoma Azalea Tone,8#
+10098,Espoma Organic Lawn Food,28#
+10099,Lambert Organic All Purpose Mi,1CF
+10100,Lambert Peat Moss,2.2CF
+10107,Espoma Bio-Tone Starter,25#
+10110,Coast of Maine Fish Bone Meal,3 lbs.
+10111,Espoma Tree Tone,4#
+10112,Espoma Tree Tone,18#
+10113,M-Black Ground Cover 300',3'
+10114,M-Black Ground Cover 300',4'
+10115,M-Black Ground Cover 300',6'
+10122,SOD,10 sq. ft.
+10124,Coast of Maine Potting Soil,1CF
+10125,"M-Bamboo Green Dyed 4'x3/8""",Each
+10500,Coast of Maine Castline Raised,2CF
+10736,Espoma Holly Tone,8#
+10737,Espoma Plant Tone,18#
+10738,Espoma Holly Tone,18#
+10816,M- Systemica Hose End,Hose End
+10817,M-Systemica Ready to use,Ready to Use
+10818,M-SNS 217 Spider Mite Control,Ready to Use
+10819,M-SNS PC Insecticide,Ready to Use
+10820,M-SNS DC Disease & Fungal Cont,Ready to Use
+10821,M-SNS 244 Fungicide,Ready to Use
+10877,Espoma Soil Acidifier,6#
+10878,Espoma Bio-Tone Starter,18#
+10879,Espoma Bio-Tone Starter,8#
+10916,M-Deer Defeat Ready to Use,1 Gallon RTU
+11020,M-Black Ground Cover 300',10'
+11021,M-Black Ground Cover 300',12'
+11022,M-Black Ground Cover 300',15'
+1787,Tarp - 16' x 20',16' X 20'
+1804,M-Harrells Fertilizer,50LB BAG
+1847,Tarp - 10' x 14',10' X 14'
+1900,M-Deer Defeat,16 OZ
+1901,M-Deer Defeat,GALLON
+1980,M-Green Web Tie,250 FT
+2111,Edging Deco - Corners,"4"""
+2865,Edging Deco - Tapered End,"4"""
+3617,M-Green Web Tie,500 FT
+3725,Tarp - 12' x 18',12' X 18'
+3727,Tarp - 12' x 25',12' X 25'
+3728,Tarp - 12' x 14',12' X 14'
+3729,Tarp - 12' x 16',12' X 16'
+3792,M-Sisal Twine 3ply Treated,EACH
+6288,M-Pro-Mix Premium Potting Mix,2 CU.FT.
+6289,M-Pro-Mix Premium Garden Mix,2 CU.FT.
+632,Edging Deco - Bronze,8'
+6790,Straw Bale,BALE
+11203,Organic Compost,EACH
+1609,Top Soil - Garden Mix,Ton
+10191,Helianthhus a. SunBelievable,"10"" Deco"
+10192,Sweet Potato - Sloar Tower Bla,"10"" Deco"
+10193,Thunbergia TowerPower Red,"10"" Deco"
+155,Pinus s. Pendula,10'
