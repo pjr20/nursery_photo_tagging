@@ -517,9 +517,9 @@ function parseCSV(text) {
   const lines = text.trim().split(/\r?\n/);
   if (lines.length < 2) { toast('CSV appears empty', '⚠️'); return null; }
   const headers = parseLine(lines[0]).map(h => h.trim().toLowerCase());
-  const ni = findCol(headers, ['name','item name','description','plant name','common name','product name','item description']);
-  const si = findCol(headers, ['size','container','uom','unit','gallon','pot size','container size','sizing','pkg']);
-  const ki = findCol(headers, ['sku','item #','item number','item no','code','upc','barcode','product id','productid','id','item id']);
+  const ni = findCol(headers, ['name','item name','description','plant name','common name','product name','item description','descr']);
+  const si = findCol(headers, ['size','container','uom','unit','gallon','pot size','container size','sizing','pkg','stk_unit']);
+  const ki = findCol(headers, ['sku','item #','item number','item no','code','upc','barcode','product id','productid','id','item id','item_no']);
   if (ni === -1) { toast('No "Name" column found in CSV', '⚠️'); return null; }
   const out = [];
   for (let i = 1; i < lines.length; i++) {
@@ -647,7 +647,7 @@ function mkFilename() {
   const ang  = angleIdx > 0 ? `_angle${angleIdx+1}` : '';
   return `${slug(selected.name)}${selected.size?'_'+slug(selected.size):''}${ang}_${date}`;
 }
-function slug(s){ return (s||'').trim().replace(/['"]/g,'').replace(/[^\w\s-]/g,'').replace(/\s+/g,'').replace(/-+/g,'-'); }
+function slug(s){ return (s||'').trim().replace(/'/g,'ft').replace(/"/g,'in').replace(/[^\w\s-]/g,'').replace(/\s+/g,'').replace(/-+/g,'-'); }
 function pad(n){ return String(n).padStart(2,'0'); }
 
 // ═══════════════════════════════════════════════════
