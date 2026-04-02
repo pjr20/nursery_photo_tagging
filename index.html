@@ -271,6 +271,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-b);background:var(-
             <div class="strip-name" id="cap-name">—</div>
             <div class="strip-size" id="cap-size">—</div>
             <div class="strip-sku" id="cap-sku"></div>
+            <div class="strip-sku" id="cap-loc" style="color:rgba(255,255,255,0.5);margin-top:2px"></div>
           </div>
           <button class="strip-back" onclick="backToSearch()">← Back</button>
         </div>
@@ -520,12 +521,14 @@ function parseCSV(text) {
   const ni = findCol(headers, ['name','item name','description','plant name','common name','product name','item description','descr']);
   const si = findCol(headers, ['size','container','uom','unit','gallon','pot size','container size','sizing','pkg','stk_unit']);
   const ki = findCol(headers, ['sku','item #','item number','item no','code','upc','barcode','product id','productid','id','item id','item_no']);
+  const ai = findCol(headers, ['alt_lookup','alt lookup','alternate lookup','alt','upc','upc code','barcod','barcode']);
+  const li = findCol(headers, ['loc_id','location','loc','zone','area','section','row']);
   if (ni === -1) { toast('No "Name" column found in CSV', '⚠️'); return null; }
   const out = [];
   for (let i = 1; i < lines.length; i++) {
     const c = parseLine(lines[i]);
     const n = (c[ni] || '').trim(); if (!n) continue;
-    out.push({ name:n, size:(si!==-1?(c[si]||'').trim():''), sku:(ki!==-1?(c[ki]||'').trim():'') });
+    out.push({ name:n, size:(si!==-1?(c[si]||'').trim():''), sku:(ki!==-1?(c[ki]||'').trim():''), alt:(ai!==-1?(c[ai]||'').trim():''), loc:(li!==-1?(c[li]||'').trim():'') });
   }
   return out;
 }
@@ -607,7 +610,7 @@ function renderResults(list) {
       <div class="result-emoji">${emoji(p.name)}</div>
       <div class="result-info">
         <div class="result-name">${esc(p.name)}</div>
-        <div class="result-meta">${[p.size, p.sku?'ID: '+p.sku:''].filter(Boolean).join(' · ')}</div>
+        <div class="result-meta">${[p.size, p.sku?'ID: '+p.sku:'', p.loc?'📍 '+p.loc:''].filter(Boolean).join(' · ')}</div>
       </div>
       <div class="result-arrow">›</div>
     </div>`;
@@ -624,6 +627,7 @@ function selectProduct(idx) {
   document.getElementById('cap-name').textContent  = selected.name;
   document.getElementById('cap-size').textContent  = selected.size || 'No size listed';
   document.getElementById('cap-sku').textContent   = selected.sku ? 'ID: ' + selected.sku : '';
+  document.getElementById('cap-loc').textContent   = selected.loc ? '📍 ' + selected.loc : '';
   document.getElementById('fn-display').textContent = mkFilename() + '.jpg';
   resetCapture();
   showScreen('capture');
@@ -885,7 +889,9 @@ function handleCode(code) {
   const stripped = code.replace(/[^a-zA-Z0-9-]/g,'');
   const match = products.find(p =>
     p.sku === code || p.sku === stripped ||
-    p.sku.replace(/[^a-zA-Z0-9]/g,'') === stripped
+    p.sku.replace(/[^a-zA-Z0-9]/g,'') === stripped ||
+    p.alt === code || p.alt === stripped ||
+    p.alt.replace(/[^a-zA-Z0-9]/g,'') === stripped
   );
   if (match) {
     selectProduct(products.indexOf(match));
