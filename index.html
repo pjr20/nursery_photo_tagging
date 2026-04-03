@@ -160,6 +160,40 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-b);background:var(-
 
 .upload-fallback{width:100%;padding:14px;border-radius:var(--radius-sm);border:1.5px dashed var(--border);background:white;font-family:var(--font-b);font-size:13px;font-weight:600;color:var(--text-mid);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
 
+/* FULLSCREEN CAMERA OVERLAY */
+.cam-overlay{
+  position:fixed;inset:0;background:#000;z-index:80;
+  display:none;flex-direction:column;
+}
+.cam-overlay.open{display:flex}
+.cam-overlay-video{flex:1;width:100%;object-fit:cover;display:block}
+.cam-overlay-bar{
+  background:rgba(0,0,0,0.85);
+  padding:max(env(safe-area-inset-bottom),16px) 24px 24px;
+  display:flex;align-items:center;justify-content:center;gap:24px;
+  flex-shrink:0;
+}
+.cam-overlay-shutter{
+  width:72px;height:72px;border-radius:50%;
+  background:white;border:4px solid rgba(255,255,255,0.4);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:transform .12s;
+}
+.cam-overlay-shutter:active{transform:scale(0.88)}
+.cam-overlay-shutter-inner{width:54px;height:54px;border-radius:50%;background:white;border:3px solid #333}
+.cam-overlay-btn{
+  width:48px;height:48px;border-radius:50%;
+  background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;cursor:pointer;
+}
+.cam-overlay-close{
+  position:absolute;top:max(env(safe-area-inset-top),16px);left:16px;
+  background:rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.2);
+  border-radius:20px;padding:8px 16px;color:white;font-size:13px;
+  font-weight:600;font-family:var(--font-b);cursor:pointer;
+}
+
 /* SCANNER MODAL */
 .scan-modal{position:fixed;inset:0;background:rgba(0,0,0,0.93);z-index:100;display:none;flex-direction:column;align-items:center;justify-content:center}
 .scan-modal.open{display:flex}
@@ -329,6 +363,19 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-b);background:var(-
   </div>
 
 </div><!-- /shell -->
+
+<!-- FULLSCREEN CAMERA OVERLAY -->
+<div class="cam-overlay" id="cam-overlay">
+  <video id="cam-overlay-video" autoplay playsinline muted></video>
+  <button class="cam-overlay-close" onclick="closeCamOverlay()">✕ Cancel</button>
+  <div class="cam-overlay-bar">
+    <div class="cam-overlay-btn" onclick="triggerUpload()">🖼️</div>
+    <div class="cam-overlay-shutter" onclick="captureFromOverlay()">
+      <div class="cam-overlay-shutter-inner"></div>
+    </div>
+    <div class="cam-overlay-btn" onclick="flipCamOverlay()">🔄</div>
+  </div>
+</div>
 
 <!-- SCANNER MODAL -->
 <div class="scan-modal" id="scan-modal">
@@ -635,7 +682,7 @@ function selectProduct(idx) {
 
 function resetCapture() {
   photoBlob = null; stopCam();
-  show('cam-ph'); hide('cam-zone'); hide('shutter-row');
+  show('cam-ph'); hide('cam-zone'); hide('shutter-row'); document.getElementById('cam-overlay').classList.remove('open');
   hide('upload-fallback'); hide('preview-area'); hide('save-confirm');
 }
 
@@ -660,34 +707,47 @@ function pad(n){ return String(n).padStart(2,'0'); }
 async function startCamera() {
   try {
     camStream = await navigator.mediaDevices.getUserMedia({
-      video:{ facingMode:facing, width:{ideal:2560}, height:{ideal:1920} }, audio:false
+      video:{ facingMode:facing, width:{ideal:1920}, height:{ideal:1920} }, audio:false
     });
-    document.getElementById('cam-video').srcObject = camStream;
-    hide('cam-ph'); show('cam-zone'); show('shutter-row'); show('upload-fallback');
-    document.getElementById('shutter-row').style.display = 'flex';
+    const vid = document.getElementById('cam-overlay-video');
+    vid.srcObject = camStream;
+    document.getElementById('cam-overlay').classList.add('open');
   } catch(e) {
     toast('Camera unavailable — use photo library', '📁');
     hide('cam-ph'); show('upload-fallback');
   }
 }
 
-async function flipCamera() {
-  facing = facing === 'environment' ? 'user' : 'environment';
-  stopCam(); await startCamera();
+function closeCamOverlay() {
+  document.getElementById('cam-overlay').classList.remove('open');
+  stopCam();
 }
+
+async function flipCamOverlay() {
+  facing = facing === 'environment' ? 'user' : 'environment';
+  stopCam();
+  await startCamera();
+}
+
+function captureFromOverlay() {
+  const vid = document.getElementById('cam-overlay-video');
+  const cvs = document.getElementById('cam-canvas');
+  cvs.width = vid.videoWidth || 1920;
+  cvs.height = vid.videoHeight || 1920;
+  const ctx = cvs.getContext('2d');
+  ctx.drawImage(vid, 0, 0, cvs.width, cvs.height);
+  closeCamOverlay();
+  hide('cam-ph'); hide('upload-fallback');
+  compress(cvs);
+}
+
+// flipCamera replaced by flipCamOverlay
 
 function stopCam() {
   if (camStream) { camStream.getTracks().forEach(t=>t.stop()); camStream = null; }
 }
 
-function capturePhoto() {
-  const vid = document.getElementById('cam-video');
-  const cvs = document.getElementById('cam-canvas');
-  cvs.width = vid.videoWidth; cvs.height = vid.videoHeight;
-  cvs.getContext('2d').drawImage(vid, 0, 0);
-  stopCam(); hide('cam-zone'); hide('shutter-row');
-  compress(cvs);
-}
+// capturePhoto replaced by captureFromOverlay
 
 function triggerUpload() { document.getElementById('photo-upload').click(); }
 
