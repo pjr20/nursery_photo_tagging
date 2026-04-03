@@ -1,7 +1,7 @@
-// Maple Lane Photo Tool — Service Worker
+// Nursery Flow — Service Worker
 // Handles offline caching of the app shell
 
-const CACHE = 'ml-photos-v2';
+const CACHE = 'nursery-flow-v1';
 const SHELL = ['/', '/index.html', '/manifest.json'];
 
 self.addEventListener('install', e => {
