@@ -1,1968 +1,997 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="ML Photos">
-  <meta name="theme-color" content="#1e3a1a">
-  <link rel="manifest" href="/manifest.json">
-  <title>Maple Lane · Photo Capture</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,600;1,300&family=DM+Sans:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-  <style>
-    :root {
-      --sage-dark: #1e3a1a;
-      --sage: #3d6b35;
-      --sage-light: #7aab6e;
-      --sage-pale: #c4dbbe;
-      --cream: #f4f0e6;
-      --cream-dark: #e8e2d4;
-      --soil: #6b4c35;
-      --gold: #c8a84b;
-      --gold-pale: #f5eac8;
-      --terra: #c4623a;
-      --white: #fefcf8;
-      --text: #1a2e18;
-      --text-mid: #4a6344;
-      --text-muted: #7a9674;
-      --border: rgba(61, 107, 53, 0.18);
-      --shadow-sm: 0 2px 8px rgba(30, 58, 26, 0.10);
-      --shadow: 0 6px 24px rgba(30, 58, 26, 0.14);
-      --shadow-lg: 0 16px 48px rgba(30, 58, 26, 0.20);
-      --radius: 18px;
-      --radius-sm: 12px;
-      --ease: cubic-bezier(0.4, 0, 0.2, 1);
-      --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-      --font-d: 'Fraunces', Georgia, serif;
-      --font-b: 'DM Sans', sans-serif;
-      --font-m: 'DM Mono', monospace;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent
-    }
-
-    html,
-    body {
-      height: 100%;
-      overflow: hidden;
-      font-family: var(--font-b);
-      background: var(--sage-dark);
-      color: var(--text)
-    }
-
-    .shell {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      background: var(--cream)
-    }
-
-    /* Testing */
-    /* HEADER */
-    .hdr {
-      background: var(--sage-dark);
-      padding: max(env(safe-area-inset-top), 14px) 18px 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-shrink: 0;
-      z-index: 20;
-    }
-
-    .hdr-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px
-    }
-
-    .hdr-leaf {
-      width: 36px;
-      height: 36px;
-      background: rgba(255, 255, 255, 0.11);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      font-size: 18px
-    }
-
-    .hdr-title {
-      font-family: var(--font-d);
-      font-size: 17px;
-      font-weight: 600;
-      color: #fff;
-      line-height: 1
-    }
-
-    .hdr-sub {
-      font-size: 10px;
-      color: rgba(255, 255, 255, 0.45);
-      letter-spacing: 0.4px;
-      margin-top: 2px
-    }
-
-    .hdr-right {
-      display: flex;
-      align-items: center;
-      gap: 8px
-    }
-
-    .hdr-chip {
-      background: rgba(255, 255, 255, 0.11);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 8px;
-      padding: 7px 12px;
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      font-family: var(--font-b);
-      transition: background .2s;
-      white-space: nowrap
-    }
-
-    .hdr-chip:hover {
-      background: rgba(255, 255, 255, 0.2)
-    }
-
-    .hdr-count {
-      font-family: var(--font-m);
-      font-size: 10px;
-      background: rgba(122, 171, 110, 0.25);
-      border-radius: 5px;
-      padding: 2px 7px;
-      color: rgba(255, 255, 255, 0.7)
-    }
-
-    /* STATUS BAR */
-    .status-bar {
-      background: var(--sage-dark);
-      padding: 0 18px 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-shrink: 0
-    }
-
-    .status-pill {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.6)
-    }
-
-    .status-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--sage-light)
-    }
-
-    .status-dot.stale {
-      background: var(--gold)
-    }
-
-    .status-dot.err {
-      background: var(--terra)
-    }
-
-    .status-refresh {
-      font-size: 11px;
-      color: rgba(255, 255, 255, 0.45);
-      cursor: pointer;
-      font-family: var(--font-m);
-      padding: 3px 8px;
-      border-radius: 5px;
-      transition: color .2s;
-      background: none;
-      border: none
-    }
-
-    .status-refresh:hover {
-      color: rgba(255, 255, 255, 0.8)
-    }
-
-    .status-refresh.spinning {
-      display: inline-block;
-      animation: spin .8s linear infinite
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg)
-      }
-    }
-
-    /* SCREENS */
-    .screen {
-      display: none;
-      flex-direction: column;
-      flex: 1;
-      overflow: hidden
-    }
-
-    .screen.active {
-      display: flex
-    }
-
-    .scroll-body {
-      flex: 1;
-      overflow-y: auto;
-      overflow-x: hidden;
-      -webkit-overflow-scrolling: touch
-    }
-
-    .scroll-body::-webkit-scrollbar {
-      display: none
-    }
-
-    /* SEARCH SCREEN */
-    .search-wrap {
-      padding: 14px 16px 0;
-      flex-shrink: 0
-    }
-
-    .search-box {
-      position: relative
-    }
-
-    .search-box input {
-      width: 100%;
-      padding: 13px 16px 13px 44px;
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-b);
-      font-size: 15px;
-      color: var(--text);
-      background: white;
-      outline: none;
-      transition: border-color .2s, box-shadow .2s;
-      box-shadow: var(--shadow-sm)
-    }
-
-    .search-box input:focus {
-      border-color: var(--sage);
-      box-shadow: 0 0 0 3px rgba(61, 107, 53, 0.10)
-    }
-
-    .search-box input::placeholder {
-      color: var(--text-muted)
-    }
-
-    .s-icon {
-      position: absolute;
-      left: 13px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 18px;
-      pointer-events: none
-    }
-
-    .s-clear {
-      position: absolute;
-      right: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      color: var(--text-muted);
-      font-size: 18px;
-      cursor: pointer;
-      padding: 2px;
-      line-height: 1;
-      display: none
-    }
-
-    .scan-bar {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 16px 14px;
-      flex-shrink: 0
-    }
-
-    .scan-btn {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--sage);
-      color: white;
-      border: none;
-      border-radius: var(--radius-sm);
-      padding: 12px 18px;
-      font-family: var(--font-b);
-      font-size: 13px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all .15s;
-      flex: 1;
-      justify-content: center;
-      box-shadow: var(--shadow-sm)
-    }
-
-    .scan-btn:active {
-      transform: scale(0.97)
-    }
-
-    .scan-hint {
-      font-size: 11px;
-      color: var(--text-muted);
-      font-weight: 500;
-      line-height: 1.4;
-      text-align: right;
-      flex: 1
-    }
-
-    .results-list {
-      padding: 0 16px 100px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px
-    }
-
-    .result-card {
-      background: white;
-      border-radius: var(--radius-sm);
-      border: 1.5px solid var(--border);
-      padding: 13px 15px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      cursor: pointer;
-      transition: all .15s var(--ease);
-      box-shadow: var(--shadow-sm)
-    }
-
-    .result-card:active {
-      border-color: var(--sage);
-      transform: scale(0.99)
-    }
-
-    .result-emoji {
-      font-size: 26px;
-      width: 40px;
-      text-align: center;
-      flex-shrink: 0
-    }
-
-    .result-info {
-      flex: 1;
-      min-width: 0
-    }
-
-    .result-name {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis
-    }
-
-    .result-meta {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 2px;
-      font-family: var(--font-m)
-    }
-
-    .result-arrow {
-      color: var(--text-muted);
-      font-size: 20px;
-      flex-shrink: 0
-    }
-
-    .empty-state {
-      padding: 48px 24px;
-      text-align: center
-    }
-
-    .empty-icon {
-      font-size: 42px;
-      margin-bottom: 12px
-    }
-
-    .empty-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--text)
-    }
-
-    .empty-sub {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-top: 6px;
-      line-height: 1.5
-    }
-
-    /* CAPTURE SCREEN */
-    .capture-wrap {
-      padding: 14px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      padding-bottom: 40px
-    }
-
-    .plant-strip {
-      background: var(--sage-dark);
-      border-radius: var(--radius);
-      padding: 16px 18px;
-      display: flex;
-      align-items: center;
-      gap: 14px
-    }
-
-    .strip-emoji {
-      font-size: 30px;
-      flex-shrink: 0
-    }
-
-    .strip-info {
-      flex: 1;
-      min-width: 0
-    }
-
-    .strip-name {
-      font-family: var(--font-d);
-      font-size: 19px;
-      font-weight: 600;
-      color: white;
-      line-height: 1.2;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis
-    }
-
-    .strip-size {
-      font-family: var(--font-m);
-      font-size: 11px;
-      color: rgba(255, 255, 255, 0.55);
-      margin-top: 3px
-    }
-
-    .strip-sku {
-      font-size: 10px;
-      color: rgba(255, 255, 255, 0.35);
-      margin-top: 1px
-    }
-
-    .strip-back {
-      background: rgba(255, 255, 255, 0.11);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 8px;
-      padding: 8px 12px;
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 12px;
-      font-weight: 600;
-      font-family: var(--font-b);
-      cursor: pointer;
-      flex-shrink: 0;
-      white-space: nowrap
-    }
-
-    .filename-card {
-      background: white;
-      border-radius: var(--radius-sm);
-      border: 1.5px solid var(--border);
-      padding: 12px 15px;
-      box-shadow: var(--shadow-sm)
-    }
-
-    .fn-label {
-      font-size: 10px;
-      font-weight: 700;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      margin-bottom: 5px
-    }
-
-    .fn-value {
-      font-family: var(--font-m);
-      font-size: 12px;
-      color: var(--sage-dark);
-      font-weight: 500;
-      word-break: break-all;
-      line-height: 1.4
-    }
-
-    .fn-note {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 5px
-    }
-
-    /* Camera */
-    .cam-ph {
-      border-radius: var(--radius);
-      border: 2px dashed var(--border);
-      background: var(--cream-dark);
-      aspect-ratio: 4/3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      cursor: pointer;
-      transition: all .2s
-    }
-
-    .cam-ph:active {
-      background: rgba(61, 107, 53, 0.08);
-      border-color: var(--sage)
-    }
-
-    .cam-ph-icon {
-      font-size: 42px
-    }
-
-    .cam-ph-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--sage)
-    }
-
-    .cam-ph-sub {
-      font-size: 12px;
-      color: var(--text-muted);
-      text-align: center;
-      padding: 0 24px
-    }
-
-    .cam-zone {
-      border-radius: var(--radius);
-      overflow: hidden;
-      position: relative;
-      aspect-ratio: 4/3;
-      background: #000;
-      display: none;
-      box-shadow: var(--shadow)
-    }
-
-    #cam-video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block
-    }
-
-    #cam-canvas {
-      display: none
-    }
-
-    .cam-corners {
-      position: absolute;
-      inset: 0;
-      pointer-events: none
-    }
-
-    .cam-corners::before,
-    .cam-corners::after,
-    .cam-corners span::before,
-    .cam-corners span::after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      border-color: rgba(255, 255, 255, 0.75);
-      border-style: solid
-    }
-
-    .cam-corners::before {
-      top: 10px;
-      left: 10px;
-      border-width: 2px 0 0 2px;
-      border-radius: 3px 0 0 0
-    }
-
-    .cam-corners::after {
-      top: 10px;
-      right: 10px;
-      border-width: 2px 2px 0 0;
-      border-radius: 0 3px 0 0
-    }
-
-    .cam-corners span::before {
-      bottom: 10px;
-      left: 10px;
-      border-width: 0 0 2px 2px;
-      border-radius: 0 0 0 3px
-    }
-
-    .cam-corners span::after {
-      bottom: 10px;
-      right: 10px;
-      border-width: 0 2px 2px 0;
-      border-radius: 0 0 3px 0
-    }
-
-    .shutter-row {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      gap: 22px
-    }
-
-    .shutter {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      background: white;
-      border: 4px solid var(--sage);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: var(--shadow-lg);
-      transition: transform .12s
-    }
-
-    .shutter:active {
-      transform: scale(0.90)
-    }
-
-    .shutter-inner {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: var(--sage);
-      transition: background .12s
-    }
-
-    .shutter:active .shutter-inner {
-      background: var(--sage-dark)
-    }
-
-    .side-btn {
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      background: white;
-      border: 1.5px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      cursor: pointer;
-      box-shadow: var(--shadow-sm);
-      transition: transform .12s
-    }
-
-    .side-btn:active {
-      transform: scale(0.90)
-    }
-
-    .prev-zone {
-      border-radius: var(--radius);
-      overflow: hidden;
-      position: relative;
-      box-shadow: var(--shadow)
-    }
-
-    #prev-img {
-      width: 100%;
-      display: block
-    }
-
-    .prev-badge {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: rgba(30, 58, 26, 0.82);
-      backdrop-filter: blur(6px);
-      border-radius: 7px;
-      padding: 5px 10px;
-      font-family: var(--font-m);
-      font-size: 11px;
-      color: white
-    }
-
-    .action-row {
-      display: flex;
-      gap: 10px
-    }
-
-    .act-btn {
-      flex: 1;
-      padding: 15px;
-      border-radius: var(--radius-sm);
-      border: none;
-      font-family: var(--font-b);
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all .15s var(--ease);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 7px
-    }
-
-    .act-primary {
-      background: var(--sage);
-      color: white;
-      box-shadow: var(--shadow)
-    }
-
-    .act-primary:active {
-      background: var(--sage-dark);
-      transform: translateY(1px)
-    }
-
-    .act-secondary {
-      background: var(--cream-dark);
-      color: var(--text)
-    }
-
-    .save-confirm {
-      background: rgba(122, 171, 110, 0.10);
-      border: 1.5px solid var(--sage-light);
-      border-radius: var(--radius-sm);
-      padding: 13px 15px;
-      display: flex;
-      align-items: center;
-      gap: 12px
-    }
-
-    .save-confirm h4 {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--sage-dark)
-    }
-
-    .save-confirm p {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 2px;
-      font-family: var(--font-m);
-      word-break: break-all
-    }
-
-    .upload-fallback {
-      width: 100%;
-      padding: 14px;
-      border-radius: var(--radius-sm);
-      border: 1.5px dashed var(--border);
-      background: white;
-      font-family: var(--font-b);
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-mid);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px
-    }
-
-    /* SCANNER MODAL */
-    .scan-modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.93);
-      z-index: 100;
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center
-    }
-
-    .scan-modal.open {
-      display: flex
-    }
-
-    .scan-vp {
-      width: 270px;
-      height: 270px;
-      border-radius: 16px;
-      overflow: hidden;
-      background: #000;
-      position: relative
-    }
-
-    #scan-video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover
-    }
-
-    .scan-frame {
-      position: absolute;
-      inset: 0;
-      border: 2px solid rgba(255, 255, 255, 0.15);
-      border-radius: 14px
-    }
-
-    .scan-c {
-      position: absolute;
-      inset: 0
-    }
-
-    .scan-c::before {
-      content: '';
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      width: 22px;
-      height: 22px;
-      border-top: 3px solid var(--sage-light);
-      border-left: 3px solid var(--sage-light);
-      border-radius: 3px 0 0 0
-    }
-
-    .scan-c::after {
-      content: '';
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      width: 22px;
-      height: 22px;
-      border-top: 3px solid var(--sage-light);
-      border-right: 3px solid var(--sage-light);
-      border-radius: 0 3px 0 0
-    }
-
-    .scan-c span {
-      position: absolute;
-      inset: 0;
-      display: block
-    }
-
-    .scan-c span::before {
-      content: '';
-      position: absolute;
-      bottom: 12px;
-      left: 12px;
-      width: 22px;
-      height: 22px;
-      border-bottom: 3px solid var(--sage-light);
-      border-left: 3px solid var(--sage-light);
-      border-radius: 0 0 0 3px
-    }
-
-    .scan-c span::after {
-      content: '';
-      position: absolute;
-      bottom: 12px;
-      right: 12px;
-      width: 22px;
-      height: 22px;
-      border-bottom: 3px solid var(--sage-light);
-      border-right: 3px solid var(--sage-light);
-      border-radius: 0 0 3px 0
-    }
-
-    .scan-line {
-      position: absolute;
-      left: 14px;
-      right: 14px;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--sage-light), transparent);
-      animation: scanLine 1.8s ease-in-out infinite
-    }
-
-    @keyframes scanLine {
-      0% {
-        top: 18%;
-        opacity: 0
-      }
-
-      15% {
-        opacity: 1
-      }
-
-      85% {
-        opacity: 1
-      }
-
-      100% {
-        top: 78%;
-        opacity: 0
-      }
-    }
-
-    .scan-label {
-      color: rgba(255, 255, 255, 0.65);
-      font-size: 13px;
-      text-align: center;
-      max-width: 230px;
-      line-height: 1.5;
-      margin-top: 20px
-    }
-
-    .scan-close-btn {
-      margin-top: 22px;
-      padding: 12px 32px;
-      background: rgba(255, 255, 255, 0.10);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 10px;
-      color: white;
-      font-family: var(--font-b);
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer
-    }
-
-    /* SETTINGS SHEET */
-    .setup-modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(20, 40, 18, 0.7);
-      backdrop-filter: blur(4px);
-      z-index: 90;
-      display: none;
-      align-items: flex-end;
-      justify-content: center
-    }
-
-    .setup-modal.open {
-      display: flex
-    }
-
-    .setup-sheet {
-      background: var(--cream);
-      border-radius: 24px 24px 0 0;
-      width: 100%;
-      max-width: 520px;
-      padding: 24px 20px;
-      padding-bottom: max(env(safe-area-inset-bottom), 24px);
-      max-height: 88vh;
-      overflow-y: auto
-    }
-
-    .setup-handle {
-      width: 40px;
-      height: 4px;
-      background: var(--border);
-      border-radius: 2px;
-      margin: 0 auto 20px
-    }
-
-    .setup-title {
-      font-family: var(--font-d);
-      font-size: 22px;
-      font-weight: 600;
-      margin-bottom: 4px
-    }
-
-    .setup-sub {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 20px
-    }
-
-    .setup-sec {
-      margin-bottom: 20px
-    }
-
-    .setup-sec-label {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      margin-bottom: 10px
-    }
-
-    .url-row {
-      display: flex;
-      gap: 8px
-    }
-
-    .url-input {
-      flex: 1;
-      padding: 12px 14px;
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-m);
-      font-size: 12px;
-      color: var(--text);
-      background: white;
-      outline: none;
-      transition: border-color .2s
-    }
-
-    .url-input:focus {
-      border-color: var(--sage)
-    }
-
-    .url-input::placeholder {
-      color: var(--text-muted);
-      font-family: var(--font-b);
-      font-size: 13px
-    }
-
-    .url-save {
-      padding: 12px 16px;
-      background: var(--sage);
-      color: white;
-      border: none;
-      border-radius: var(--radius-sm);
-      font-family: var(--font-b);
-      font-size: 13px;
-      font-weight: 700;
-      cursor: pointer;
-      white-space: nowrap
-    }
-
-    .setup-note {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 8px;
-      line-height: 1.5
-    }
-
-    .quality-row {
-      display: flex;
-      gap: 8px
-    }
-
-    .q-btn {
-      flex: 1;
-      padding: 12px 8px;
-      border-radius: 10px;
-      border: 1.5px solid var(--border);
-      background: white;
-      font-family: var(--font-b);
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--text);
-      cursor: pointer;
-      text-align: center;
-      transition: all .15s;
-      line-height: 1.3
-    }
-
-    .q-btn span {
-      font-size: 10px;
-      font-weight: 400;
-      color: var(--text-muted);
-      display: block;
-      margin-top: 2px
-    }
-
-    .q-btn.active {
-      background: var(--sage);
-      color: white;
-      border-color: var(--sage)
-    }
-
-    .q-btn.active span {
-      color: rgba(255, 255, 255, 0.7)
-    }
-
-    .manual-btn {
-      width: 100%;
-      padding: 14px;
-      border: 1.5px dashed var(--border);
-      border-radius: var(--radius-sm);
-      background: white;
-      font-family: var(--font-b);
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-mid);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: all .2s
-    }
-
-    .manual-btn:hover {
-      border-color: var(--sage);
-      background: rgba(61, 107, 53, 0.04)
-    }
-
-    .info-box {
-      background: var(--gold-pale);
-      border: 1.5px solid var(--gold);
-      border-radius: var(--radius-sm);
-      padding: 13px 15px;
-      font-size: 12px;
-      color: var(--soil);
-      line-height: 1.6
-    }
-
-    .setup-done-btn {
-      width: 100%;
-      padding: 15px;
-      background: var(--sage-dark);
-      color: white;
-      border: none;
-      border-radius: var(--radius-sm);
-      font-family: var(--font-b);
-      font-size: 15px;
-      font-weight: 700;
-      cursor: pointer;
-      margin-top: 8px
-    }
-
-    /* LOADING */
-    .loading-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(30, 58, 26, 0.5);
-      backdrop-filter: blur(2px);
-      z-index: 50;
-      display: none;
-      align-items: center;
-      justify-content: center
-    }
-
-    .loading-overlay.open {
-      display: flex
-    }
-
-    .loading-card {
-      background: white;
-      border-radius: var(--radius);
-      padding: 28px 32px;
-      text-align: center;
-      box-shadow: var(--shadow-lg)
-    }
-
-    .loading-spin {
-      font-size: 32px;
-      animation: spin .9s linear infinite;
-      display: block;
-      margin-bottom: 10px
-    }
-
-    .loading-text {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text)
-    }
-
-    /* TOAST */
-    .toast {
-      position: fixed;
-      bottom: max(env(safe-area-inset-bottom, 16px), 20px);
-      left: 50%;
-      transform: translateX(-50%) translateY(130%);
-      background: var(--sage-dark);
-      color: white;
-      padding: 11px 18px;
-      border-radius: 11px;
-      font-size: 13px;
-      font-weight: 600;
-      z-index: 200;
-      transition: transform 0.28s var(--spring);
-      white-space: nowrap;
-      box-shadow: var(--shadow-lg);
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      pointer-events: none
-    }
-
-    .toast.show {
-      transform: translateX(-50%) translateY(0)
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ML Photos">
+<meta name="theme-color" content="#1e3a1a">
+<link rel="manifest" href="/manifest.json">
+<title>Maple Lane · Photo Capture</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,600;1,300&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sage-dark:  #1e3a1a;
+  --sage:       #3d6b35;
+  --sage-light: #7aab6e;
+  --sage-pale:  #c4dbbe;
+  --cream:      #f4f0e6;
+  --cream-dark: #e8e2d4;
+  --soil:       #6b4c35;
+  --gold:       #c8a84b;
+  --gold-pale:  #f5eac8;
+  --terra:      #c4623a;
+  --white:      #fefcf8;
+  --text:       #1a2e18;
+  --text-mid:   #4a6344;
+  --text-muted: #7a9674;
+  --border:     rgba(61,107,53,0.18);
+  --shadow-sm:  0 2px 8px rgba(30,58,26,0.10);
+  --shadow:     0 6px 24px rgba(30,58,26,0.14);
+  --shadow-lg:  0 16px 48px rgba(30,58,26,0.20);
+  --radius:     18px;
+  --radius-sm:  12px;
+  --ease:       cubic-bezier(0.4,0,0.2,1);
+  --spring:     cubic-bezier(0.34,1.56,0.64,1);
+  --font-d: 'Fraunces', Georgia, serif;
+  --font-b: 'DM Sans', sans-serif;
+  --font-m: 'DM Mono', monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overflow:hidden;font-family:var(--font-b);background:var(--sage-dark);color:var(--text)}
+.shell{width:100%;height:100%;display:flex;flex-direction:column;background:var(--cream)}
+
+/* HEADER */
+.hdr{
+  background:var(--sage-dark);
+  padding:max(env(safe-area-inset-top),14px) 18px 14px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-shrink:0;z-index:20;
+}
+.hdr-logo{display:flex;align-items:center;gap:10px}
+.hdr-leaf{width:36px;height:36px;background:rgba(255,255,255,0.11);border-radius:10px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.18);font-size:18px}
+.hdr-title{font-family:var(--font-d);font-size:17px;font-weight:600;color:#fff;line-height:1}
+.hdr-sub{font-size:10px;color:rgba(255,255,255,0.45);letter-spacing:0.4px;margin-top:2px}
+.hdr-right{display:flex;align-items:center;gap:8px}
+.hdr-chip{background:rgba(255,255,255,0.11);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:7px 12px;color:rgba(255,255,255,0.85);font-size:12px;font-weight:600;cursor:pointer;font-family:var(--font-b);transition:background .2s;white-space:nowrap}
+.hdr-chip:hover{background:rgba(255,255,255,0.2)}
+.hdr-count{font-family:var(--font-m);font-size:10px;background:rgba(122,171,110,0.25);border-radius:5px;padding:2px 7px;color:rgba(255,255,255,0.7)}
+
+/* STATUS BAR */
+.status-bar{background:var(--sage-dark);padding:0 18px 12px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.status-pill{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:rgba(255,255,255,0.6)}
+.status-dot{width:6px;height:6px;border-radius:50%;background:var(--sage-light)}
+.status-dot.stale{background:var(--gold)}
+.status-dot.err{background:var(--terra)}
+.status-refresh{font-size:11px;color:rgba(255,255,255,0.45);cursor:pointer;font-family:var(--font-m);padding:3px 8px;border-radius:5px;transition:color .2s;background:none;border:none}
+.status-refresh:hover{color:rgba(255,255,255,0.8)}
+.status-refresh.spinning{display:inline-block;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* SCREENS */
+.screen{display:none;flex-direction:column;flex:1;overflow:hidden}
+.screen.active{display:flex}
+.scroll-body{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+.scroll-body::-webkit-scrollbar{display:none}
+
+/* SEARCH SCREEN */
+.search-wrap{padding:14px 16px 0;flex-shrink:0}
+.search-box{position:relative}
+.search-box input{width:100%;padding:13px 16px 13px 44px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-b);font-size:15px;color:var(--text);background:white;outline:none;transition:border-color .2s,box-shadow .2s;box-shadow:var(--shadow-sm)}
+.search-box input:focus{border-color:var(--sage);box-shadow:0 0 0 3px rgba(61,107,53,0.10)}
+.search-box input::placeholder{color:var(--text-muted)}
+.s-icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);font-size:18px;pointer-events:none}
+.s-clear{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--text-muted);font-size:18px;cursor:pointer;padding:2px;line-height:1;display:none}
+
+.scan-bar{display:flex;align-items:center;gap:10px;padding:10px 16px 14px;flex-shrink:0}
+.scan-btn{display:flex;align-items:center;gap:8px;background:var(--sage);color:white;border:none;border-radius:var(--radius-sm);padding:12px 18px;font-family:var(--font-b);font-size:13px;font-weight:700;cursor:pointer;transition:all .15s;flex:1;justify-content:center;box-shadow:var(--shadow-sm)}
+.scan-btn:active{transform:scale(0.97)}
+.scan-hint{font-size:11px;color:var(--text-muted);font-weight:500;line-height:1.4;text-align:right;flex:1}
+
+.results-list{padding:0 16px 100px;display:flex;flex-direction:column;gap:8px}
+.result-card{background:white;border-radius:var(--radius-sm);border:1.5px solid var(--border);padding:13px 15px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:all .15s var(--ease);box-shadow:var(--shadow-sm)}
+.result-card:active{border-color:var(--sage);transform:scale(0.99)}
+.result-emoji{font-size:26px;width:40px;text-align:center;flex-shrink:0}
+.result-info{flex:1;min-width:0}
+.result-name{font-size:14px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.result-meta{font-size:11px;color:var(--text-muted);margin-top:2px;font-family:var(--font-m)}
+.result-arrow{color:var(--text-muted);font-size:20px;flex-shrink:0}
+
+.empty-state{padding:48px 24px;text-align:center}
+.empty-icon{font-size:42px;margin-bottom:12px}
+.empty-title{font-size:15px;font-weight:700;color:var(--text)}
+.empty-sub{font-size:13px;color:var(--text-muted);margin-top:6px;line-height:1.5}
+
+/* CAPTURE SCREEN */
+.capture-wrap{padding:14px 16px;display:flex;flex-direction:column;gap:12px;padding-bottom:40px}
+
+.plant-strip{background:var(--sage-dark);border-radius:var(--radius);padding:16px 18px;display:flex;align-items:center;gap:14px}
+.strip-emoji{font-size:30px;flex-shrink:0}
+.strip-info{flex:1;min-width:0}
+.strip-name{font-family:var(--font-d);font-size:19px;font-weight:600;color:white;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.strip-size{font-family:var(--font-m);font-size:11px;color:rgba(255,255,255,0.55);margin-top:3px}
+.strip-sku{font-size:10px;color:rgba(255,255,255,0.35);margin-top:1px}
+.strip-back{background:rgba(255,255,255,0.11);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:8px 12px;color:rgba(255,255,255,0.8);font-size:12px;font-weight:600;font-family:var(--font-b);cursor:pointer;flex-shrink:0;white-space:nowrap}
+
+.filename-card{background:white;border-radius:var(--radius-sm);border:1.5px solid var(--border);padding:12px 15px;box-shadow:var(--shadow-sm)}
+.fn-label{font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:5px}
+.fn-value{font-family:var(--font-m);font-size:12px;color:var(--sage-dark);font-weight:500;word-break:break-all;line-height:1.4}
+.fn-note{font-size:11px;color:var(--text-muted);margin-top:5px}
+
+/* Camera */
+.cam-ph{border-radius:var(--radius);border:2px dashed var(--border);background:var(--cream-dark);aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:all .2s}
+.cam-ph:active{background:rgba(61,107,53,0.08);border-color:var(--sage)}
+.cam-ph-icon{font-size:42px}
+.cam-ph-title{font-size:15px;font-weight:700;color:var(--sage)}
+.cam-ph-sub{font-size:12px;color:var(--text-muted);text-align:center;padding:0 24px}
+
+.cam-zone{border-radius:var(--radius);overflow:hidden;position:relative;aspect-ratio:4/3;background:#000;display:none;box-shadow:var(--shadow)}
+#cam-video{width:100%;height:100%;object-fit:cover;display:block}
+#cam-canvas{display:none}
+.cam-corners{position:absolute;inset:0;pointer-events:none}
+.cam-corners::before,.cam-corners::after,.cam-corners span::before,.cam-corners span::after{content:'';position:absolute;width:20px;height:20px;border-color:rgba(255,255,255,0.75);border-style:solid}
+.cam-corners::before {top:10px;left:10px;border-width:2px 0 0 2px;border-radius:3px 0 0 0}
+.cam-corners::after  {top:10px;right:10px;border-width:2px 2px 0 0;border-radius:0 3px 0 0}
+.cam-corners span::before{bottom:10px;left:10px;border-width:0 0 2px 2px;border-radius:0 0 0 3px}
+.cam-corners span::after {bottom:10px;right:10px;border-width:0 2px 2px 0;border-radius:0 0 3px 0}
+
+.shutter-row{display:none;align-items:center;justify-content:center;gap:22px}
+.shutter{width:70px;height:70px;border-radius:50%;background:white;border:4px solid var(--sage);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-lg);transition:transform .12s}
+.shutter:active{transform:scale(0.90)}
+.shutter-inner{width:52px;height:52px;border-radius:50%;background:var(--sage);transition:background .12s}
+.shutter:active .shutter-inner{background:var(--sage-dark)}
+.side-btn{width:46px;height:46px;border-radius:50%;background:white;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform .12s}
+.side-btn:active{transform:scale(0.90)}
+
+.prev-zone{border-radius:var(--radius);overflow:hidden;position:relative;box-shadow:var(--shadow)}
+#prev-img{width:100%;display:block}
+.prev-badge{position:absolute;top:10px;right:10px;background:rgba(30,58,26,0.82);backdrop-filter:blur(6px);border-radius:7px;padding:5px 10px;font-family:var(--font-m);font-size:11px;color:white}
+
+.action-row{display:flex;gap:10px}
+.act-btn{flex:1;padding:15px;border-radius:var(--radius-sm);border:none;font-family:var(--font-b);font-size:14px;font-weight:700;cursor:pointer;transition:all .15s var(--ease);display:flex;align-items:center;justify-content:center;gap:7px}
+.act-primary{background:var(--sage);color:white;box-shadow:var(--shadow)}
+.act-primary:active{background:var(--sage-dark);transform:translateY(1px)}
+.act-secondary{background:var(--cream-dark);color:var(--text)}
+
+.save-confirm{background:rgba(122,171,110,0.10);border:1.5px solid var(--sage-light);border-radius:var(--radius-sm);padding:13px 15px;display:flex;align-items:center;gap:12px}
+.save-confirm h4{font-size:13px;font-weight:700;color:var(--sage-dark)}
+.save-confirm p{font-size:11px;color:var(--text-muted);margin-top:2px;font-family:var(--font-m);word-break:break-all}
+
+.upload-fallback{width:100%;padding:14px;border-radius:var(--radius-sm);border:1.5px dashed var(--border);background:white;font-family:var(--font-b);font-size:13px;font-weight:600;color:var(--text-mid);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+
+/* SCANNER MODAL */
+.scan-modal{position:fixed;inset:0;background:rgba(0,0,0,0.93);z-index:100;display:none;flex-direction:column;align-items:center;justify-content:center}
+.scan-modal.open{display:flex}
+.scan-vp{width:270px;height:270px;border-radius:16px;overflow:hidden;background:#000;position:relative}
+#scan-video{width:100%;height:100%;object-fit:cover}
+.scan-frame{position:absolute;inset:0;border:2px solid rgba(255,255,255,0.15);border-radius:14px}
+.scan-c{position:absolute;inset:0}
+.scan-c::before{content:'';position:absolute;top:12px;left:12px;width:22px;height:22px;border-top:3px solid var(--sage-light);border-left:3px solid var(--sage-light);border-radius:3px 0 0 0}
+.scan-c::after {content:'';position:absolute;top:12px;right:12px;width:22px;height:22px;border-top:3px solid var(--sage-light);border-right:3px solid var(--sage-light);border-radius:0 3px 0 0}
+.scan-c span{position:absolute;inset:0;display:block}
+.scan-c span::before{content:'';position:absolute;bottom:12px;left:12px;width:22px;height:22px;border-bottom:3px solid var(--sage-light);border-left:3px solid var(--sage-light);border-radius:0 0 0 3px}
+.scan-c span::after {content:'';position:absolute;bottom:12px;right:12px;width:22px;height:22px;border-bottom:3px solid var(--sage-light);border-right:3px solid var(--sage-light);border-radius:0 0 3px 0}
+.scan-line{position:absolute;left:14px;right:14px;height:2px;background:linear-gradient(90deg,transparent,var(--sage-light),transparent);animation:scanLine 1.8s ease-in-out infinite}
+@keyframes scanLine{0%{top:18%;opacity:0}15%{opacity:1}85%{opacity:1}100%{top:78%;opacity:0}}
+.scan-label{color:rgba(255,255,255,0.65);font-size:13px;text-align:center;max-width:230px;line-height:1.5;margin-top:20px}
+.scan-close-btn{margin-top:22px;padding:12px 32px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);border-radius:10px;color:white;font-family:var(--font-b);font-size:14px;font-weight:600;cursor:pointer}
+
+/* SETTINGS SHEET */
+.setup-modal{position:fixed;inset:0;background:rgba(20,40,18,0.7);backdrop-filter:blur(4px);z-index:90;display:none;align-items:flex-end;justify-content:center}
+.setup-modal.open{display:flex}
+.setup-sheet{background:var(--cream);border-radius:24px 24px 0 0;width:100%;max-width:520px;padding:24px 20px;padding-bottom:max(env(safe-area-inset-bottom),24px);max-height:88vh;overflow-y:auto}
+.setup-handle{width:40px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 20px}
+.setup-title{font-family:var(--font-d);font-size:22px;font-weight:600;margin-bottom:4px}
+.setup-sub{font-size:13px;color:var(--text-muted);margin-bottom:20px}
+.setup-sec{margin-bottom:20px}
+.setup-sec-label{font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:10px}
+.url-row{display:flex;gap:8px}
+.url-input{flex:1;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font-m);font-size:12px;color:var(--text);background:white;outline:none;transition:border-color .2s}
+.url-input:focus{border-color:var(--sage)}
+.url-input::placeholder{color:var(--text-muted);font-family:var(--font-b);font-size:13px}
+.url-save{padding:12px 16px;background:var(--sage);color:white;border:none;border-radius:var(--radius-sm);font-family:var(--font-b);font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap}
+.setup-note{font-size:11px;color:var(--text-muted);margin-top:8px;line-height:1.5}
+.quality-row{display:flex;gap:8px}
+.q-btn{flex:1;padding:12px 8px;border-radius:10px;border:1.5px solid var(--border);background:white;font-family:var(--font-b);font-size:13px;font-weight:700;color:var(--text);cursor:pointer;text-align:center;transition:all .15s;line-height:1.3}
+.q-btn span{font-size:10px;font-weight:400;color:var(--text-muted);display:block;margin-top:2px}
+.q-btn.active{background:var(--sage);color:white;border-color:var(--sage)}
+.q-btn.active span{color:rgba(255,255,255,0.7)}
+.manual-btn{width:100%;padding:14px;border:1.5px dashed var(--border);border-radius:var(--radius-sm);background:white;font-family:var(--font-b);font-size:13px;font-weight:600;color:var(--text-mid);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .2s}
+.manual-btn:hover{border-color:var(--sage);background:rgba(61,107,53,0.04)}
+.info-box{background:var(--gold-pale);border:1.5px solid var(--gold);border-radius:var(--radius-sm);padding:13px 15px;font-size:12px;color:var(--soil);line-height:1.6}
+.setup-done-btn{width:100%;padding:15px;background:var(--sage-dark);color:white;border:none;border-radius:var(--radius-sm);font-family:var(--font-b);font-size:15px;font-weight:700;cursor:pointer;margin-top:8px}
+
+/* LOADING */
+.loading-overlay{position:fixed;inset:0;background:rgba(30,58,26,0.5);backdrop-filter:blur(2px);z-index:50;display:none;align-items:center;justify-content:center}
+.loading-overlay.open{display:flex}
+.loading-card{background:white;border-radius:var(--radius);padding:28px 32px;text-align:center;box-shadow:var(--shadow-lg)}
+.loading-spin{font-size:32px;animation:spin .9s linear infinite;display:block;margin-bottom:10px}
+.loading-text{font-size:14px;font-weight:600;color:var(--text)}
+
+/* TOAST */
+.toast{position:fixed;bottom:max(env(safe-area-inset-bottom,16px),20px);left:50%;transform:translateX(-50%) translateY(130%);background:var(--sage-dark);color:white;padding:11px 18px;border-radius:11px;font-size:13px;font-weight:600;z-index:200;transition:transform 0.28s var(--spring);white-space:nowrap;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:7px;pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0)}
+</style>
 </head>
-
 <body>
-  <div class="shell">
+<div class="shell">
 
-    <!-- HEADER -->
-    <div class="hdr">
-      <div class="hdr-logo">
-        <div class="hdr-leaf">🌿</div>
-        <div>
-          <div class="hdr-title">Maple Lane</div>
-          <div class="hdr-sub">PHOTO CAPTURE TOOL</div>
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="hdr-logo">
+      <div class="hdr-leaf">🌿</div>
+      <div>
+        <div class="hdr-title">Maple Lane</div>
+        <div class="hdr-sub">PHOTO CAPTURE TOOL</div>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <span class="hdr-count" id="hdr-count">—</span>
+      <button class="hdr-chip" onclick="openSetup()">⚙ Settings</button>
+    </div>
+  </div>
+
+  <!-- STATUS BAR -->
+  <div class="status-bar">
+    <div class="status-pill">
+      <div class="status-dot" id="status-dot"></div>
+      <span id="status-text">Loading…</span>
+    </div>
+    <button class="status-refresh" id="refresh-btn" onclick="fetchRemote(true)">↻ Refresh</button>
+  </div>
+
+  <!-- SCREEN: SEARCH -->
+  <div class="screen active" id="screen-search">
+    <div class="search-wrap">
+      <div class="search-box">
+        <span class="s-icon">🔍</span>
+        <input type="search" id="search-input" placeholder="Plant name, size, or barcode ID…"
+               oninput="onSearch(this.value)" autocomplete="off" autocorrect="off" autocapitalize="off">
+        <button class="s-clear" id="s-clear" onclick="clearSearch()">✕</button>
+      </div>
+    </div>
+    <div class="scan-bar">
+      <button class="scan-btn" onclick="openScanner()">📷 &nbsp;Scan Barcode Tag</button>
+      <div class="scan-hint">UPC / EAN linear barcodes<br>printed by CounterPoint</div>
+    </div>
+    <div class="scroll-body">
+      <div class="results-list" id="results-list"></div>
+    </div>
+  </div>
+
+  <!-- SCREEN: CAPTURE -->
+  <div class="screen" id="screen-capture">
+    <div class="scroll-body">
+      <div class="capture-wrap">
+
+        <div class="plant-strip">
+          <div class="strip-emoji" id="cap-emoji">🌿</div>
+          <div class="strip-info">
+            <div class="strip-name" id="cap-name">—</div>
+            <div class="strip-size" id="cap-size">—</div>
+            <div class="strip-sku" id="cap-sku"></div>
+            <div class="strip-sku" id="cap-loc" style="color:rgba(255,255,255,0.5);margin-top:2px"></div>
+          </div>
+          <button class="strip-back" onclick="backToSearch()">← Back</button>
         </div>
-      </div>
-      <div class="hdr-right">
-        <span class="hdr-count" id="hdr-count">—</span>
-        <button class="hdr-chip" onclick="openSetup()">⚙ Settings</button>
-      </div>
-    </div>
 
-    <!-- STATUS BAR -->
-    <div class="status-bar">
-      <div class="status-pill">
-        <div class="status-dot" id="status-dot"></div>
-        <span id="status-text">Loading…</span>
-      </div>
-      <button class="status-refresh" id="refresh-btn" onclick="fetchRemote(true)">↻ Refresh</button>
-    </div>
-
-    <!-- SCREEN: SEARCH -->
-    <div class="screen active" id="screen-search">
-      <div class="search-wrap">
-        <div class="search-box">
-          <span class="s-icon">🔍</span>
-          <input type="search" id="search-input" placeholder="Plant name, size, or barcode ID…"
-            oninput="onSearch(this.value)" autocomplete="off" autocorrect="off" autocapitalize="off">
-          <button class="s-clear" id="s-clear" onclick="clearSearch()">✕</button>
+        <div class="filename-card">
+          <div class="fn-label">Filename</div>
+          <div class="fn-value" id="fn-display">—</div>
+          <div class="fn-note">📥 Downloads to device · syncs automatically via Google Drive app</div>
         </div>
-      </div>
-      <div class="scan-bar">
-        <button class="scan-btn" onclick="openScanner()">📷 &nbsp;Scan Barcode Tag</button>
-        <div class="scan-hint">UPC / EAN linear barcodes<br>printed by CounterPoint</div>
-      </div>
-      <div class="scroll-body">
-        <div class="results-list" id="results-list"></div>
-      </div>
-    </div>
 
-    <!-- SCREEN: CAPTURE -->
-    <div class="screen" id="screen-capture">
-      <div class="scroll-body">
-        <div class="capture-wrap">
+        <div class="cam-ph" id="cam-ph" onclick="startCamera()">
+          <div class="cam-ph-icon">📷</div>
+          <div class="cam-ph-title">Open Camera</div>
+          <div class="cam-ph-sub">Or use the button below to pick from your library</div>
+        </div>
 
-          <div class="plant-strip">
-            <div class="strip-emoji" id="cap-emoji">🌿</div>
-            <div class="strip-info">
-              <div class="strip-name" id="cap-name">—</div>
-              <div class="strip-size" id="cap-size">—</div>
-              <div class="strip-sku" id="cap-sku"></div>
-              <div class="strip-sku" id="cap-loc" style="color:rgba(255,255,255,0.5);margin-top:2px"></div>
-            </div>
-            <button class="strip-back" onclick="backToSearch()">← Back</button>
+        <div class="cam-zone" id="cam-zone">
+          <video id="cam-video" autoplay playsinline muted></video>
+          <canvas id="cam-canvas"></canvas>
+          <div class="cam-corners"><span></span></div>
+        </div>
+
+        <div class="shutter-row" id="shutter-row">
+          <div class="side-btn" onclick="flipCamera()">🔄</div>
+          <div class="shutter" onclick="capturePhoto()"><div class="shutter-inner"></div></div>
+          <div class="side-btn" onclick="triggerUpload()">🖼️</div>
+        </div>
+
+        <input type="file" id="photo-upload" accept="image/*" onchange="handleUpload(this)" style="display:none">
+        <button class="upload-fallback" id="upload-fallback" onclick="triggerUpload()" style="display:none">
+          🖼️ &nbsp;Choose Photo from Library
+        </button>
+
+        <!-- Preview -->
+        <div id="preview-area" style="display:none;flex-direction:column;gap:12px">
+          <div class="prev-zone">
+            <img id="prev-img" alt="">
+            <div class="prev-badge" id="prev-badge"></div>
           </div>
-
-          <div class="filename-card">
-            <div class="fn-label">Filename</div>
-            <div class="fn-value" id="fn-display">—</div>
-            <div class="fn-note">📥 Downloads to device · syncs automatically via Google Drive app</div>
+          <div class="action-row">
+            <button class="act-btn act-secondary" onclick="retake()">↩ Retake</button>
+            <button class="act-btn act-primary" onclick="savePhoto()">⬇ Save Photo</button>
           </div>
-
-          <div class="cam-ph" id="cam-ph" onclick="startCamera()">
-            <div class="cam-ph-icon">📷</div>
-            <div class="cam-ph-title">Open Camera</div>
-            <div class="cam-ph-sub">Or use the button below to pick from your library</div>
+          <div class="save-confirm" id="save-confirm" style="display:none">
+            <span style="font-size:22px">✅</span>
+            <div><h4>Saved!</h4><p id="save-fn"></p></div>
           </div>
-
-          <div class="cam-zone" id="cam-zone">
-            <video id="cam-video" autoplay playsinline muted></video>
-            <canvas id="cam-canvas"></canvas>
-            <div class="cam-corners"><span></span></div>
-          </div>
-
-          <div class="shutter-row" id="shutter-row">
-            <div class="side-btn" onclick="flipCamera()">🔄</div>
-            <div class="shutter" onclick="capturePhoto()">
-              <div class="shutter-inner"></div>
-            </div>
-            <div class="side-btn" onclick="triggerUpload()">🖼️</div>
-          </div>
-
-          <input type="file" id="photo-upload" accept="image/*" onchange="handleUpload(this)" style="display:none">
-          <button class="upload-fallback" id="upload-fallback" onclick="triggerUpload()" style="display:none">
-            🖼️ &nbsp;Choose Photo from Library
+          <button class="act-btn act-secondary" style="width:100%" onclick="anotherAngle()">
+            📷 &nbsp;Shoot Another Angle (same plant)
           </button>
-
-          <!-- Preview -->
-          <div id="preview-area" style="display:none;flex-direction:column;gap:12px">
-            <div class="prev-zone">
-              <img id="prev-img" alt="">
-              <div class="prev-badge" id="prev-badge"></div>
-            </div>
-            <div class="action-row">
-              <button class="act-btn act-secondary" onclick="retake()">↩ Retake</button>
-              <button class="act-btn act-primary" onclick="savePhoto()">⬇ Save Photo</button>
-            </div>
-            <div class="save-confirm" id="save-confirm" style="display:none">
-              <span style="font-size:22px">✅</span>
-              <div>
-                <h4>Saved!</h4>
-                <p id="save-fn"></p>
-              </div>
-            </div>
-            <button class="act-btn act-secondary" style="width:100%" onclick="anotherAngle()">
-              📷 &nbsp;Shoot Another Angle (same plant)
-            </button>
-          </div>
-
         </div>
+
       </div>
-    </div>
-
-  </div><!-- /shell -->
-
-  <!-- SCANNER MODAL -->
-  <div class="scan-modal" id="scan-modal">
-    <div class="scan-vp">
-      <video id="scan-video" autoplay playsinline muted></video>
-      <div class="scan-frame"></div>
-      <div class="scan-c"><span></span></div>
-      <div class="scan-line"></div>
-    </div>
-    <div class="scan-label">Point the camera at the barcode on the plant tag</div>
-    <button class="scan-close-btn" onclick="closeScanner()">Cancel</button>
-  </div>
-
-  <!-- SETTINGS SHEET -->
-  <div class="setup-modal" id="setup-modal" onclick="if(event.target===this)closeSetup()">
-    <div class="setup-sheet">
-      <div class="setup-handle"></div>
-      <div class="setup-title">Settings</div>
-      <div class="setup-sub">Product list source and photo options</div>
-
-      <div class="setup-sec">
-        <div class="setup-sec-label">Product List URL</div>
-        <div class="url-row">
-          <input class="url-input" id="url-input" type="url" placeholder="https://your-site.com/plants.csv">
-          <button class="url-save" onclick="saveURL()">Save & Fetch</button>
-        </div>
-        <div class="setup-note">
-          Host your CSV at any public URL. The app fetches it silently in the background on each launch —
-          staff always see the latest list without doing anything.
-          <br><br>
-          <strong style="color:var(--text-mid)">CSV columns needed:</strong>
-          <em>Name</em> (required) · <em>Size</em> · <em>SKU / Product ID</em> — column order doesn't matter, extra
-          columns are ignored.
-        </div>
-      </div>
-
-      <div class="setup-sec">
-        <div class="setup-sec-label">Load CSV Manually</div>
-        <button class="manual-btn" onclick="document.getElementById('manual-csv').click()">📂 &nbsp;Choose CSV
-          File</button>
-        <input type="file" id="manual-csv" accept=".csv,.txt" onchange="handleManualCSV(this)" style="display:none">
-        <div class="setup-note">Use this as a fallback anytime, or while you're getting a URL set up.</div>
-      </div>
-
-      <div class="setup-sec">
-        <div class="setup-sec-label">Photo File Size Target</div>
-        <div class="quality-row">
-          <button class="q-btn" data-kb="300" onclick="setQuality(this,300)">300 KB<span>Email-safe</span></button>
-          <button class="q-btn active" data-kb="500" onclick="setQuality(this,500)">500 KB<span>Balanced
-              ✓</span></button>
-          <button class="q-btn" data-kb="900" onclick="setQuality(this,900)">900 KB<span>High quality</span></button>
-        </div>
-      </div>
-
-      <div class="setup-sec">
-        <div class="setup-sec-label">Google Drive Sync Notes</div>
-        <div class="info-box">
-          📱 <strong>iPhone:</strong> Photos download to your Files app with the correct filename.
-          Open Google Drive → ＋ → Upload → find it in Downloads.<br><br>
-          🤖 <strong>Android:</strong> If the Drive app syncs your Downloads folder, the photo appears automatically.
-          Otherwise tap Share → Drive from your Files/Photos app.
-        </div>
-      </div>
-
-      <button class="setup-done-btn" onclick="closeSetup()">Done</button>
     </div>
   </div>
 
-  <!-- LOADING -->
-  <div class="loading-overlay" id="loading">
-    <div class="loading-card">
-      <span class="loading-spin">🌿</span>
-      <div class="loading-text" id="loading-text">Loading…</div>
-    </div>
+</div><!-- /shell -->
+
+<!-- SCANNER MODAL -->
+<div class="scan-modal" id="scan-modal">
+  <div class="scan-vp">
+    <video id="scan-video" autoplay playsinline muted></video>
+    <div class="scan-frame"></div>
+    <div class="scan-c"><span></span></div>
+    <div class="scan-line"></div>
   </div>
+  <div class="scan-label">Point the camera at the barcode on the plant tag</div>
+  <button class="scan-close-btn" onclick="closeScanner()">Cancel</button>
+</div>
 
-  <!-- TOAST -->
-  <div class="toast" id="toast"></div>
+<!-- SETTINGS SHEET -->
+<div class="setup-modal" id="setup-modal" onclick="if(event.target===this)closeSetup()">
+  <div class="setup-sheet">
+    <div class="setup-handle"></div>
+    <div class="setup-title">Settings</div>
+    <div class="setup-sub">Product list source and photo options</div>
 
-  <script>
-    // ═══════════════════════════════════════════════════
-    //  ⚙ PLUG YOUR CSV URL IN HERE WHEN YOU HAVE ONE
-    //  e.g. 'https://maplelane.com/data/plants.csv'
-    //  Leave as '' to use manual upload only
-    // ═══════════════════════════════════════════════════
-    const DEFAULT_URL = 'https://nursery-photo-tagging.vercel.app/public/plants.csv';
+    <div class="setup-sec">
+      <div class="setup-sec-label">Product List URL</div>
+      <div class="url-row">
+        <input class="url-input" id="url-input" type="url" placeholder="https://your-site.com/plants.csv">
+        <button class="url-save" onclick="saveURL()">Save & Fetch</button>
+      </div>
+      <div class="setup-note">
+        Host your CSV at any public URL. The app fetches it silently in the background on each launch —
+        staff always see the latest list without doing anything.
+        <br><br>
+        <strong style="color:var(--text-mid)">CSV columns needed:</strong>
+        <em>Name</em> (required) · <em>Size</em> · <em>SKU / Product ID</em> — column order doesn't matter, extra columns are ignored.
+      </div>
+    </div>
 
-    const CACHE_KEY = 'ml_products_v1';
-    const TS_KEY = 'ml_products_ts';
-    const URL_KEY = 'ml_csv_url';
-    const KB_KEY = 'ml_quality_kb';
-    const CACHE_TTL = 4 * 60 * 60 * 1000; // 4 hours
+    <div class="setup-sec">
+      <div class="setup-sec-label">Load CSV Manually</div>
+      <button class="manual-btn" onclick="document.getElementById('manual-csv').click()">📂 &nbsp;Choose CSV File</button>
+      <input type="file" id="manual-csv" accept=".csv,.txt" onchange="handleManualCSV(this)" style="display:none">
+      <div class="setup-note">Use this as a fallback anytime, or while you're getting a URL set up.</div>
+    </div>
 
-    let products = [];
-    let selected = null;
-    let photoBlob = null;
-    let camStream = null;
-    let scanStream = null;
-    let barcodeDetector = null;
-    let targetKB = 500;
-    let facing = 'environment';
-    let angleIdx = 0;
+    <div class="setup-sec">
+      <div class="setup-sec-label">Photo File Size Target</div>
+      <div class="quality-row">
+        <button class="q-btn" data-kb="300" onclick="setQuality(this,300)">300 KB<span>Email-safe</span></button>
+        <button class="q-btn active" data-kb="500" onclick="setQuality(this,500)">500 KB<span>Balanced ✓</span></button>
+        <button class="q-btn" data-kb="900" onclick="setQuality(this,900)">900 KB<span>High quality</span></button>
+      </div>
+    </div>
 
-    // ── BOOT ──
-    document.addEventListener('DOMContentLoaded', () => {
-      const kb = localStorage.getItem(KB_KEY);
-      if (kb) {
-        targetKB = parseInt(kb);
-        document.querySelectorAll('.q-btn').forEach(b =>
-          b.classList.toggle('active', parseInt(b.dataset.kb) === targetKB));
-      }
-      const savedURL = localStorage.getItem(URL_KEY) || DEFAULT_URL;
-      document.getElementById('url-input').value = savedURL;
-      initProducts();
-      renderEmpty();
-    });
+    <div class="setup-sec">
+      <div class="setup-sec-label">Google Drive Sync Notes</div>
+      <div class="info-box">
+        📱 <strong>iPhone:</strong> Photos download to your Files app with the correct filename.
+        Open Google Drive → ＋ → Upload → find it in Downloads.<br><br>
+        🤖 <strong>Android:</strong> If the Drive app syncs your Downloads folder, the photo appears automatically.
+        Otherwise tap Share → Drive from your Files/Photos app.
+      </div>
+    </div>
 
-    // ═══════════════════════════════════════════════════
-    //  PRODUCT LIST: cache-first, background refresh
-    // ═══════════════════════════════════════════════════
-    async function initProducts() {
-      const cached = localStorage.getItem(CACHE_KEY);
-      if (cached) {
-        try {
-          products = JSON.parse(cached);
-          setStatus('cached');
-          updateCount();
-        } catch (_) { }
-      }
+    <button class="setup-done-btn" onclick="closeSetup()">Done</button>
+  </div>
+</div>
 
-      const url = (localStorage.getItem(URL_KEY) || DEFAULT_URL).trim();
-      if (!url) { if (!cached) setStatus('no-url'); return; }
+<!-- LOADING -->
+<div class="loading-overlay" id="loading">
+  <div class="loading-card">
+    <span class="loading-spin">🌿</span>
+    <div class="loading-text" id="loading-text">Loading…</div>
+  </div>
+</div>
 
-      const age = Date.now() - parseInt(localStorage.getItem(TS_KEY) || '0');
-      if (!cached) {
-        showLoading('Fetching product list…');
-        await fetchRemote(false, url);
-        hideLoading();
-      } else if (age > CACHE_TTL) {
-        fetchRemote(false, url); // silent background update
-      } else {
-        setStatus('fresh');
-      }
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ═══════════════════════════════════════════════════
+//  ⚙ PLUG YOUR CSV URL IN HERE WHEN YOU HAVE ONE
+//  e.g. 'https://maplelane.com/data/plants.csv'
+//  Leave as '' to use manual upload only
+// ═══════════════════════════════════════════════════
+const DEFAULT_URL = 'https://nursery-photo-tagging.vercel.app/public/plants.csv';
+
+const CACHE_KEY  = 'ml_products_v1';
+const TS_KEY     = 'ml_products_ts';
+const URL_KEY    = 'ml_csv_url';
+const KB_KEY     = 'ml_quality_kb';
+const CACHE_TTL  = 4 * 60 * 60 * 1000; // 4 hours
+
+let products = [];
+let selected = null;
+let photoBlob = null;
+let camStream = null;
+let scanStream = null;
+let barcodeDetector = null;
+let targetKB = 500;
+let facing = 'environment';
+let angleIdx = 0;
+
+// ── BOOT ──
+document.addEventListener('DOMContentLoaded', () => {
+  const kb = localStorage.getItem(KB_KEY);
+  if (kb) {
+    targetKB = parseInt(kb);
+    document.querySelectorAll('.q-btn').forEach(b =>
+      b.classList.toggle('active', parseInt(b.dataset.kb) === targetKB));
+  }
+  const savedURL = localStorage.getItem(URL_KEY) || DEFAULT_URL;
+  document.getElementById('url-input').value = savedURL;
+  initProducts();
+  renderEmpty();
+});
+
+// ═══════════════════════════════════════════════════
+//  PRODUCT LIST: cache-first, background refresh
+// ═══════════════════════════════════════════════════
+async function initProducts() {
+  const cached = localStorage.getItem(CACHE_KEY);
+  if (cached) {
+    try {
+      products = JSON.parse(cached);
+      setStatus('cached');
+      updateCount();
+    } catch(_) {}
+  }
+
+  const url = (localStorage.getItem(URL_KEY) || DEFAULT_URL).trim();
+  if (!url) { if (!cached) setStatus('no-url'); return; }
+
+  const age = Date.now() - parseInt(localStorage.getItem(TS_KEY) || '0');
+  if (!cached) {
+    showLoading('Fetching product list…');
+    await fetchRemote(false, url);
+    hideLoading();
+  } else if (age > CACHE_TTL) {
+    fetchRemote(false, url); // silent background update
+  } else {
+    setStatus('fresh');
+  }
+}
+
+async function fetchRemote(manual = false, urlOverride = null) {
+  const url = urlOverride || (localStorage.getItem(URL_KEY) || DEFAULT_URL).trim();
+  if (!url) { if (manual) toast('No URL set — open Settings', '⚙'); return; }
+  const rb = document.getElementById('refresh-btn');
+  rb.classList.add('spinning');
+  if (manual) showLoading('Refreshing product list…');
+  try {
+    const r = await fetch(url, { cache: 'no-cache' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const parsed = parseCSV(await r.text());
+    if (parsed && parsed.length) {
+      products = parsed;
+      localStorage.setItem(CACHE_KEY, JSON.stringify(products));
+      localStorage.setItem(TS_KEY, Date.now().toString());
+      setStatus('fresh');
+      updateCount();
+      if (manual) { toast(`${products.length} products refreshed`); hideLoading(); }
     }
+  } catch(e) {
+    setStatus('err');
+    if (manual) { toast('Could not reach URL', '⚠️'); hideLoading(); }
+  }
+  rb.classList.remove('spinning');
+}
 
-    async function fetchRemote(manual = false, urlOverride = null) {
-      const url = urlOverride || (localStorage.getItem(URL_KEY) || DEFAULT_URL).trim();
-      if (!url) { if (manual) toast('No URL set — open Settings', '⚙'); return; }
-      const rb = document.getElementById('refresh-btn');
-      rb.classList.add('spinning');
-      if (manual) showLoading('Refreshing product list…');
-      try {
-        const r = await fetch(url, { cache: 'no-cache' });
-        if (!r.ok) throw new Error('HTTP ' + r.status);
-        const parsed = parseCSV(await r.text());
-        if (parsed && parsed.length) {
-          products = parsed;
-          localStorage.setItem(CACHE_KEY, JSON.stringify(products));
-          localStorage.setItem(TS_KEY, Date.now().toString());
-          setStatus('fresh');
-          updateCount();
-          if (manual) { toast(`${products.length} products refreshed`); hideLoading(); }
-        }
-      } catch (e) {
-        setStatus('err');
-        if (manual) { toast('Could not reach URL', '⚠️'); hideLoading(); }
-      }
-      rb.classList.remove('spinning');
+function setStatus(state) {
+  const dot = document.getElementById('status-dot');
+  const txt = document.getElementById('status-text');
+  const ago = timeAgo(parseInt(localStorage.getItem(TS_KEY) || '0'));
+  dot.className = 'status-dot';
+  if (state === 'fresh')  { txt.textContent = `${products.length} products · updated ${ago}`; }
+  if (state === 'cached') { dot.classList.add('stale'); txt.textContent = `${products.length} products (cached ${ago})`; }
+  if (state === 'no-url') { dot.classList.add('stale'); txt.textContent = 'Open Settings to load your plant list'; }
+  if (state === 'err')    { dot.classList.add('err');   txt.textContent = 'Refresh failed · showing cached list'; }
+}
+
+function updateCount() {
+  document.getElementById('hdr-count').textContent = products.length ? `${products.length} plants` : '—';
+}
+
+// ═══════════════════════════════════════════════════
+//  CSV PARSER
+// ═══════════════════════════════════════════════════
+function parseCSV(text) {
+  const lines = text.trim().split(/\r?\n/);
+  if (lines.length < 2) { toast('CSV appears empty', '⚠️'); return null; }
+  const headers = parseLine(lines[0]).map(h => h.trim().toLowerCase());
+  const ni = findCol(headers, ['name','item name','description','plant name','common name','product name','item description','descr']);
+  const si = findCol(headers, ['size','container','uom','unit','gallon','pot size','container size','sizing','pkg','stk_unit']);
+  const ki = findCol(headers, ['item_no','sku','item #','item number','item no','product id','productid','item id']);
+  const ai = findCol(headers, ['barcod','barcode','alt_lookup','alt lookup','alternate lookup','upc','upc code']);
+  const li = findCol(headers, ['loc_id','location','loc','zone','area','section','row']);
+  if (ni === -1) { toast('No "Name" column found in CSV', '⚠️'); return null; }
+  const out = [];
+  for (let i = 1; i < lines.length; i++) {
+    const c = parseLine(lines[i]);
+    const n = (c[ni] || '').trim(); if (!n) continue;
+    out.push({ name:n, size:(si!==-1?(c[si]||'').trim():''), sku:(ki!==-1?(c[ki]||'').trim():''), alt:(ai!==-1?(c[ai]||'').trim():''), loc:(li!==-1?(c[li]||'').trim():'') });
+  }
+  return out;
+}
+
+function findCol(headers, keys) {
+  for (const k of keys) {
+    const i = headers.findIndex(h => h === k || h.includes(k) || k.includes(h));
+    if (i !== -1) return i;
+  }
+  return -1;
+}
+
+function parseLine(line) {
+  const r=[]; let c=''; let q=false;
+  for (const ch of line) {
+    if (ch==='"') { q=!q; continue; }
+    if (ch===',' && !q) { r.push(c); c=''; continue; }
+    c+=ch;
+  }
+  r.push(c); return r;
+}
+
+function handleManualCSV(input) {
+  const file = input.files[0]; if (!file) return;
+  const fr = new FileReader();
+  fr.onload = e => {
+    const p = parseCSV(e.target.result);
+    if (p && p.length) {
+      products = p;
+      localStorage.setItem(CACHE_KEY, JSON.stringify(p));
+      localStorage.setItem(TS_KEY, Date.now().toString());
+      setStatus('fresh'); updateCount(); renderEmpty();
+      toast(`${p.length} products loaded`);
+      closeSetup();
     }
+  };
+  fr.readAsText(file);
+}
 
-    function setStatus(state) {
-      const dot = document.getElementById('status-dot');
-      const txt = document.getElementById('status-text');
-      const ago = timeAgo(parseInt(localStorage.getItem(TS_KEY) || '0'));
-      dot.className = 'status-dot';
-      if (state === 'fresh') { txt.textContent = `${products.length} products · updated ${ago}`; }
-      if (state === 'cached') { dot.classList.add('stale'); txt.textContent = `${products.length} products (cached ${ago})`; }
-      if (state === 'no-url') { dot.classList.add('stale'); txt.textContent = 'Open Settings to load your plant list'; }
-      if (state === 'err') { dot.classList.add('err'); txt.textContent = 'Refresh failed · showing cached list'; }
-    }
+// ═══════════════════════════════════════════════════
+//  SEARCH
+// ═══════════════════════════════════════════════════
+function onSearch(val) {
+  document.getElementById('s-clear').style.display = val ? 'block' : 'none';
+  const q = val.toLowerCase().trim();
+  if (!q) { renderEmpty(); return; }
+  renderResults(products.filter(p =>
+    p.name.toLowerCase().includes(q) ||
+    p.sku.toLowerCase().includes(q) ||
+    p.size.toLowerCase().includes(q)
+  ));
+}
 
-    function updateCount() {
-      document.getElementById('hdr-count').textContent = products.length ? `${products.length} plants` : '—';
-    }
+function clearSearch() {
+  const inp = document.getElementById('search-input');
+  inp.value = ''; inp.focus();
+  document.getElementById('s-clear').style.display = 'none';
+  renderEmpty();
+}
 
-    // ═══════════════════════════════════════════════════
-    //  CSV PARSER
-    // ═══════════════════════════════════════════════════
-    function parseCSV(text) {
-      const lines = text.trim().split(/\r?\n/);
-      if (lines.length < 2) { toast('CSV appears empty', '⚠️'); return null; }
-      const headers = parseLine(lines[0]).map(h => h.trim().toLowerCase());
-      const ni = findCol(headers, ['name', 'item name', 'description', 'plant name', 'common name', 'product name', 'item description', 'descr']);
-      const si = findCol(headers, ['size', 'container', 'uom', 'unit', 'gallon', 'pot size', 'container size', 'sizing', 'pkg', 'stk_unit']);
-      const ki = findCol(headers, ['sku', 'item #', 'item number', 'item no', 'code', 'upc', 'barcode', 'product id', 'productid', 'id', 'item id', 'item_no']);
-      const ai = findCol(headers, ['alt_lookup', 'alt lookup', 'alternate lookup', 'alt', 'upc', 'upc code', 'barcod', 'barcode']);
-      const li = findCol(headers, ['loc_id', 'location', 'loc', 'zone', 'area', 'section', 'row']);
-      if (ni === -1) { toast('No "Name" column found in CSV', '⚠️'); return null; }
-      const out = [];
-      for (let i = 1; i < lines.length; i++) {
-        const c = parseLine(lines[i]);
-        const n = (c[ni] || '').trim(); if (!n) continue;
-        out.push({ name: n, size: (si !== -1 ? (c[si] || '').trim() : ''), sku: (ki !== -1 ? (c[ki] || '').trim() : ''), alt: (ai !== -1 ? (c[ai] || '').trim() : ''), loc: (li !== -1 ? (c[li] || '').trim() : '') });
-      }
-      return out;
-    }
-
-    function findCol(headers, keys) {
-      for (const k of keys) {
-        const i = headers.findIndex(h => h === k || h.includes(k) || k.includes(h));
-        if (i !== -1) return i;
-      }
-      return -1;
-    }
-
-    function parseLine(line) {
-      const r = []; let c = ''; let q = false;
-      for (const ch of line) {
-        if (ch === '"') { q = !q; continue; }
-        if (ch === ',' && !q) { r.push(c); c = ''; continue; }
-        c += ch;
-      }
-      r.push(c); return r;
-    }
-
-    function handleManualCSV(input) {
-      const file = input.files[0]; if (!file) return;
-      const fr = new FileReader();
-      fr.onload = e => {
-        const p = parseCSV(e.target.result);
-        if (p && p.length) {
-          products = p;
-          localStorage.setItem(CACHE_KEY, JSON.stringify(p));
-          localStorage.setItem(TS_KEY, Date.now().toString());
-          setStatus('fresh'); updateCount(); renderEmpty();
-          toast(`${p.length} products loaded`);
-          closeSetup();
-        }
-      };
-      fr.readAsText(file);
-    }
-
-    // ═══════════════════════════════════════════════════
-    //  SEARCH
-    // ═══════════════════════════════════════════════════
-    function onSearch(val) {
-      document.getElementById('s-clear').style.display = val ? 'block' : 'none';
-      const q = val.toLowerCase().trim();
-      if (!q) { renderEmpty(); return; }
-      renderResults(products.filter(p =>
-        p.name.toLowerCase().includes(q) ||
-        p.sku.toLowerCase().includes(q) ||
-        p.size.toLowerCase().includes(q)
-      ));
-    }
-
-    function clearSearch() {
-      const inp = document.getElementById('search-input');
-      inp.value = ''; inp.focus();
-      document.getElementById('s-clear').style.display = 'none';
-      renderEmpty();
-    }
-
-    function renderEmpty() {
-      document.getElementById('results-list').innerHTML = `
+function renderEmpty() {
+  document.getElementById('results-list').innerHTML = `
     <div class="empty-state">
       <div class="empty-icon">🌱</div>
       <div class="empty-title">Search for a plant</div>
       <div class="empty-sub">Type a plant name, size, or scan a barcode tag</div>
     </div>`;
-    }
+}
 
-    function renderResults(list) {
-      const el = document.getElementById('results-list');
-      if (!list.length) {
-        el.innerHTML = `<div class="empty-state"><div class="empty-icon">🔍</div><div class="empty-title">No matches</div><div class="empty-sub">Try a different name or scan the barcode</div></div>`;
-        return;
-      }
-      el.innerHTML = list.slice(0, 80).map(p => {
-        const idx = products.indexOf(p);
-        return `<div class="result-card" onclick="selectProduct(${idx})">
+function renderResults(list) {
+  const el = document.getElementById('results-list');
+  if (!list.length) {
+    el.innerHTML = `<div class="empty-state"><div class="empty-icon">🔍</div><div class="empty-title">No matches</div><div class="empty-sub">Try a different name or scan the barcode</div></div>`;
+    return;
+  }
+  el.innerHTML = list.slice(0, 80).map(p => {
+    const idx = products.indexOf(p);
+    return `<div class="result-card" onclick="selectProduct(${idx})">
       <div class="result-emoji">${emoji(p.name)}</div>
       <div class="result-info">
         <div class="result-name">${esc(p.name)}</div>
-        <div class="result-meta">${[p.size, p.sku ? 'ID: ' + p.sku : '', p.loc ? '📍 ' + p.loc : ''].filter(Boolean).join(' · ')}</div>
+        <div class="result-meta">${[p.size, p.sku?'ID: '+p.sku:'', p.loc?'📍 '+p.loc:''].filter(Boolean).join(' · ')}</div>
       </div>
       <div class="result-arrow">›</div>
     </div>`;
-      }).join('');
-    }
+  }).join('');
+}
 
-    // ═══════════════════════════════════════════════════
-    //  SELECT → CAPTURE
-    // ═══════════════════════════════════════════════════
-    function selectProduct(idx) {
-      selected = products[idx];
-      angleIdx = 0; photoBlob = null;
-      document.getElementById('cap-emoji').textContent = emoji(selected.name);
-      document.getElementById('cap-name').textContent = selected.name;
-      document.getElementById('cap-size').textContent = selected.size || 'No size listed';
-      document.getElementById('cap-sku').textContent = selected.sku ? 'ID: ' + selected.sku : '';
-      document.getElementById('cap-loc').textContent = selected.loc ? '📍 ' + selected.loc : '';
-      document.getElementById('fn-display').textContent = mkFilename() + '.jpg';
-      resetCapture();
-      showScreen('capture');
-    }
+// ═══════════════════════════════════════════════════
+//  SELECT → CAPTURE
+// ═══════════════════════════════════════════════════
+function selectProduct(idx) {
+  selected = products[idx];
+  angleIdx = 0; photoBlob = null;
+  document.getElementById('cap-emoji').textContent = emoji(selected.name);
+  document.getElementById('cap-name').textContent  = selected.name;
+  document.getElementById('cap-size').textContent  = selected.size || 'No size listed';
+  document.getElementById('cap-sku').textContent   = selected.sku ? 'ID: ' + selected.sku : '';
+  document.getElementById('cap-loc').textContent   = selected.loc ? '📍 ' + selected.loc : '';
+  document.getElementById('fn-display').textContent = mkFilename() + '.jpg';
+  resetCapture();
+  showScreen('capture');
+}
 
-    function resetCapture() {
-      photoBlob = null; stopCam();
-      show('cam-ph'); hide('cam-zone'); hide('shutter-row');
-      hide('upload-fallback'); hide('preview-area'); hide('save-confirm');
-    }
+function resetCapture() {
+  photoBlob = null; stopCam();
+  show('cam-ph'); hide('cam-zone'); hide('shutter-row');
+  hide('upload-fallback'); hide('preview-area'); hide('save-confirm');
+}
 
-    function backToSearch() { stopCam(); showScreen('search'); }
+function backToSearch() { stopCam(); showScreen('search'); }
 
-    // ═══════════════════════════════════════════════════
-    //  FILENAME
-    // ═══════════════════════════════════════════════════
-    function mkFilename() {
-      if (!selected) return 'photo';
-      const d = new Date();
-      const date = d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate());
-      const ang = angleIdx > 0 ? `_angle${angleIdx + 1}` : '';
-      return `${slug(selected.name)}${selected.size ? '_' + slug(selected.size) : ''}${ang}_${date}`;
-    }
-    function slug(s) { return (s || '').trim().replace(/'/g, 'ft').replace(/"/g, 'in').replace(/[^\w\s-]/g, '').replace(/\s+/g, '').replace(/-+/g, '-'); }
-    function pad(n) { return String(n).padStart(2, '0'); }
+// ═══════════════════════════════════════════════════
+//  FILENAME
+// ═══════════════════════════════════════════════════
+function mkFilename() {
+  if (!selected) return 'photo';
+  const d = new Date();
+  const date = d.getFullYear() + pad(d.getMonth()+1) + pad(d.getDate());
+  const ang  = angleIdx > 0 ? `_angle${angleIdx+1}` : '';
+  return `${slug(selected.name)}${selected.size?'_'+slug(selected.size):''}${ang}_${date}`;
+}
+function slug(s){ return (s||'').trim().replace(/'/g,'ft').replace(/"/g,'in').replace(/[^\w\s-]/g,'').replace(/\s+/g,'').replace(/-+/g,'-'); }
+function pad(n){ return String(n).padStart(2,'0'); }
 
-    // ═══════════════════════════════════════════════════
-    //  CAMERA
-    // ═══════════════════════════════════════════════════
-    async function startCamera() {
-      try {
-        camStream = await navigator.mediaDevices.getUserMedia({
-          video: { facingMode: facing, width: { ideal: 2560 }, height: { ideal: 1920 } }, audio: false
-        });
-        document.getElementById('cam-video').srcObject = camStream;
-        hide('cam-ph'); show('cam-zone'); show('shutter-row'); show('upload-fallback');
-        document.getElementById('shutter-row').style.display = 'flex';
-      } catch (e) {
-        toast('Camera unavailable — use photo library', '📁');
-        hide('cam-ph'); show('upload-fallback');
-      }
-    }
+// ═══════════════════════════════════════════════════
+//  CAMERA
+// ═══════════════════════════════════════════════════
+async function startCamera() {
+  try {
+    camStream = await navigator.mediaDevices.getUserMedia({
+      video:{ facingMode:facing, width:{ideal:2560}, height:{ideal:1920} }, audio:false
+    });
+    document.getElementById('cam-video').srcObject = camStream;
+    hide('cam-ph'); show('cam-zone'); show('shutter-row'); show('upload-fallback');
+    document.getElementById('shutter-row').style.display = 'flex';
+  } catch(e) {
+    toast('Camera unavailable — use photo library', '📁');
+    hide('cam-ph'); show('upload-fallback');
+  }
+}
 
-    async function flipCamera() {
-      facing = facing === 'environment' ? 'user' : 'environment';
-      stopCam(); await startCamera();
-    }
+async function flipCamera() {
+  facing = facing === 'environment' ? 'user' : 'environment';
+  stopCam(); await startCamera();
+}
 
-    function stopCam() {
-      if (camStream) { camStream.getTracks().forEach(t => t.stop()); camStream = null; }
-    }
+function stopCam() {
+  if (camStream) { camStream.getTracks().forEach(t=>t.stop()); camStream = null; }
+}
 
-    function capturePhoto() {
-      const vid = document.getElementById('cam-video');
-      const cvs = document.getElementById('cam-canvas');
-      cvs.width = vid.videoWidth; cvs.height = vid.videoHeight;
-      cvs.getContext('2d').drawImage(vid, 0, 0);
-      stopCam(); hide('cam-zone'); hide('shutter-row');
-      compress(cvs);
-    }
+function capturePhoto() {
+  const vid = document.getElementById('cam-video');
+  const cvs = document.getElementById('cam-canvas');
+  cvs.width = vid.videoWidth; cvs.height = vid.videoHeight;
+  cvs.getContext('2d').drawImage(vid, 0, 0);
+  stopCam(); hide('cam-zone'); hide('shutter-row');
+  compress(cvs);
+}
 
-    function triggerUpload() { document.getElementById('photo-upload').click(); }
+function triggerUpload() { document.getElementById('photo-upload').click(); }
 
-    function handleUpload(input) {
-      const file = input.files[0]; if (!file) return;
-      const img = new Image();
-      const url = URL.createObjectURL(file);
-      img.onload = () => {
-        const cvs = document.getElementById('cam-canvas');
-        cvs.width = img.naturalWidth; cvs.height = img.naturalHeight;
-        cvs.getContext('2d').drawImage(img, 0, 0);
-        URL.revokeObjectURL(url);
-        stopCam(); hide('cam-zone'); hide('shutter-row');
-        compress(cvs);
-      };
-      img.src = url;
-    }
+function handleUpload(input) {
+  const file = input.files[0]; if (!file) return;
+  const img = new Image();
+  const url = URL.createObjectURL(file);
+  img.onload = () => {
+    const cvs = document.getElementById('cam-canvas');
+    cvs.width = img.naturalWidth; cvs.height = img.naturalHeight;
+    cvs.getContext('2d').drawImage(img, 0, 0);
+    URL.revokeObjectURL(url);
+    stopCam(); hide('cam-zone'); hide('shutter-row');
+    compress(cvs);
+  };
+  img.src = url;
+}
 
-    // ═══════════════════════════════════════════════════
-    //  COMPRESSION — iterative JPEG quality + resize
-    // ═══════════════════════════════════════════════════
-    function compress(canvas) {
-      showLoading('Compressing photo…');
-      const target = targetKB * 1024;
-      const work = document.createElement('canvas');
-      work.width = canvas.width; work.height = canvas.height;
-      work.getContext('2d').drawImage(canvas, 0, 0);
-      let q = 0.88, pass = 0;
+// ═══════════════════════════════════════════════════
+//  COMPRESSION — iterative JPEG quality + resize
+// ═══════════════════════════════════════════════════
+function compress(canvas) {
+  showLoading('Compressing photo…');
+  const target = targetKB * 1024;
+  const work = document.createElement('canvas');
+  work.width = canvas.width; work.height = canvas.height;
+  work.getContext('2d').drawImage(canvas, 0, 0);
+  let q = 0.88, pass = 0;
 
-      function run() {
-        work.toBlob(blob => {
-          if (!blob) { hideLoading(); toast('Processing failed', '⚠️'); return; }
-          if (blob.size > target && pass < 14) {
-            if (q > 0.50) { q = Math.max(0.28, q - 0.09); }
-            else {
-              const scale = Math.sqrt(target / blob.size) * 0.93;
-              const nw = Math.max(400, Math.floor(work.width * scale));
-              const nh = Math.max(300, Math.floor(work.height * scale));
-              const tmp = document.createElement('canvas');
-              tmp.width = nw; tmp.height = nh;
-              tmp.getContext('2d').drawImage(work, 0, 0, nw, nh);
-              work.width = nw; work.height = nh;
-              work.getContext('2d').drawImage(tmp, 0, 0);
-              q = Math.max(0.28, q - 0.05);
-            }
-            pass++; run();
-          } else {
-            photoBlob = blob;
-            const kb = Math.round(blob.size / 1024);
-            const url = URL.createObjectURL(blob);
-            document.getElementById('prev-img').src = url;
-            document.getElementById('prev-badge').textContent = `${kb} KB · ${work.width}×${work.height}`;
-            const pa = document.getElementById('preview-area');
-            pa.style.display = 'flex'; pa.style.flexDirection = 'column'; pa.style.gap = '12px';
-            hide('save-confirm'); hide('upload-fallback'); hide('cam-ph');
-            hideLoading();
-          }
-        }, 'image/jpeg', q);
-      }
-      run();
-    }
-
-    function retake() {
-      photoBlob = null;
-      hide('preview-area'); hide('save-confirm'); show('cam-ph');
-    }
-
-    function anotherAngle() {
-      angleIdx++;
-      document.getElementById('fn-display').textContent = mkFilename() + '.jpg';
-      hide('preview-area'); hide('save-confirm'); show('cam-ph');
-      photoBlob = null;
-    }
-
-    // ═══════════════════════════════════════════════════
-    //  SAVE
-    // ═══════════════════════════════════════════════════
-    function savePhoto() {
-      if (!photoBlob || !selected) return;
-      const fn = mkFilename() + '.jpg';
-      const url = URL.createObjectURL(photoBlob);
-      const a = document.createElement('a');
-      a.href = url; a.download = fn;
-      document.body.appendChild(a); a.click(); document.body.removeChild(a);
-      setTimeout(() => URL.revokeObjectURL(url), 2000);
-      document.getElementById('save-fn').textContent = fn;
-      show('save-confirm');
-      toast('Saved: ' + fn);
-    }
-
-    // ═══════════════════════════════════════════════════
-    //  BARCODE SCANNER
-    //  Uses native BarcodeDetector on Android/Chrome,
-    //  Quagga2 on iPhone Safari (loaded eagerly on boot)
-    // ═══════════════════════════════════════════════════
-    let quaggaReady = false;
-    let quaggaRunning = false;
-
-    // Load Quagga2 eagerly so it's ready when needed
-    (function loadQuagga() {
-      if ('BarcodeDetector' in window) return; // not needed on Chrome/Android
-      const s = document.createElement('script');
-      s.src = 'https://cdn.jsdelivr.net/npm/@ericblade/quagga2@1.8.4/dist/quagga.min.js';
-      s.onload = () => { quaggaReady = true; };
-      s.onerror = () => { quaggaReady = false; };
-      document.head.appendChild(s);
-    })();
-
-    async function openScanner() {
-      document.getElementById('scan-modal').classList.add('open');
-
-      // Use native BarcodeDetector where available (Chrome, Android, Firefox 123+)
-      if ('BarcodeDetector' in window) {
-        try {
-          scanStream = await navigator.mediaDevices.getUserMedia({
-            video: { facingMode: 'environment', width: { ideal: 1280 }, height: { ideal: 720 } }, audio: false
-          });
-          const vid = document.getElementById('scan-video');
-          vid.srcObject = scanStream;
-          barcodeDetector = new BarcodeDetector({
-            formats: ['ean_13', 'ean_8', 'upc_a', 'upc_e', 'code_128', 'code_39', 'qr_code', 'itf', 'codabar']
-          });
-          // Wait for video to be fully playing before scanning frames
-          let loopStarted = false;
-          const startLoop = () => { if (!loopStarted) { loopStarted = true; scanLoop(); } };
-          vid.addEventListener('playing', startLoop, { once: true });
-          setTimeout(startLoop, 1500); // safety fallback
-        } catch (e) {
-          const msg = e.name === 'NotAllowedError' ? 'Camera access denied' : 'Could not open camera';
-          toast(msg, '⚠️'); closeScanner();
+  function run() {
+    work.toBlob(blob => {
+      if (!blob) { hideLoading(); toast('Processing failed', '⚠️'); return; }
+      if (blob.size > target && pass < 14) {
+        if (q > 0.50) { q = Math.max(0.28, q - 0.09); }
+        else {
+          const scale = Math.sqrt(target / blob.size) * 0.93;
+          const nw = Math.max(400, Math.floor(work.width * scale));
+          const nh = Math.max(300, Math.floor(work.height * scale));
+          const tmp = document.createElement('canvas');
+          tmp.width = nw; tmp.height = nh;
+          tmp.getContext('2d').drawImage(work, 0, 0, nw, nh);
+          work.width = nw; work.height = nh;
+          work.getContext('2d').drawImage(tmp, 0, 0);
+          q = Math.max(0.28, q - 0.05);
         }
-        return;
-      }
-
-      // iPhone Safari — use Quagga2
-      if (!quaggaReady) {
-        // Still loading — wait up to 5 seconds
-        let waited = 0;
-        const wait = setInterval(() => {
-          waited += 200;
-          if (quaggaReady) { clearInterval(wait); startQuagga(); }
-          else if (waited >= 5000) {
-            clearInterval(wait);
-            toast('Scanner unavailable — search by name instead', '⚠️');
-            closeScanner();
-          }
-        }, 200);
-        return;
-      }
-      startQuagga();
-    }
-
-    function startQuagga() {
-      if (quaggaRunning) return;
-      quaggaRunning = true;
-
-      Quagga.init({
-        inputStream: {
-          name: 'Live',
-          type: 'LiveStream',
-          target: document.getElementById('scan-video'),
-          constraints: { facingMode: 'environment', width: { ideal: 1280 }, height: { ideal: 720 } }
-        },
-        decoder: {
-          readers: ['ean_reader', 'ean_8_reader', 'upc_reader', 'upc_e_reader', 'code_128_reader', 'code_39_reader']
-        },
-        locate: true
-      }, err => {
-        if (err) {
-          quaggaRunning = false;
-          toast('Camera access denied', '⚠️');
-          closeScanner();
-          return;
-        }
-        Quagga.start();
-        Quagga.onDetected(result => {
-          const code = result && result.codeResult && result.codeResult.code;
-          if (code) { closeScanner(); handleCode(code); }
-        });
-      });
-    }
-
-    async function scanLoop() {
-      if (!scanStream || !barcodeDetector) return;
-      const vid = document.getElementById('scan-video');
-      // Don't attempt detection on a frame that isn't ready
-      if (vid.readyState < 2) { setTimeout(scanLoop, 100); return; }
-      try {
-        const codes = await barcodeDetector.detect(vid);
-        if (codes.length) { closeScanner(); handleCode(codes[0].rawValue); return; }
-      } catch (e) {
-        // Ignore transient errors (empty frames, focus changes)
-        if (e.name !== 'InvalidStateError') console.warn('scan err:', e.message);
-      }
-      if (scanStream) requestAnimationFrame(scanLoop);
-    }
-
-    function handleCode(code) {
-      const stripped = code.replace(/[^a-zA-Z0-9-]/g, '');
-      const match = products.find(p =>
-        p.sku === code || p.sku === stripped ||
-        p.sku.replace(/[^a-zA-Z0-9]/g, '') === stripped ||
-        p.alt === code || p.alt === stripped ||
-        p.alt.replace(/[^a-zA-Z0-9]/g, '') === stripped
-      );
-      if (match) {
-        selectProduct(products.indexOf(match));
-        toast('Found: ' + match.name);
+        pass++; run();
       } else {
-        showScreen('search');
-        const inp = document.getElementById('search-input');
-        inp.value = code; document.getElementById('s-clear').style.display = 'block';
-        onSearch(code);
-        toast('No match for ' + code + ' — check below', '🔍');
+        photoBlob = blob;
+        const kb = Math.round(blob.size/1024);
+        const url = URL.createObjectURL(blob);
+        document.getElementById('prev-img').src = url;
+        document.getElementById('prev-badge').textContent = `${kb} KB · ${work.width}×${work.height}`;
+        const pa = document.getElementById('preview-area');
+        pa.style.display = 'flex'; pa.style.flexDirection = 'column'; pa.style.gap = '12px';
+        hide('save-confirm'); hide('upload-fallback'); hide('cam-ph');
+        hideLoading();
       }
-    }
+    }, 'image/jpeg', q);
+  }
+  run();
+}
 
-    function closeScanner() {
-      document.getElementById('scan-modal').classList.remove('open');
-      if (scanStream) { scanStream.getTracks().forEach(t => t.stop()); scanStream = null; }
-      barcodeDetector = null;
-      if (quaggaRunning) {
-        try { Quagga.stop(); } catch (_) { }
-        quaggaRunning = false;
-      }
-    }
+function retake() {
+  photoBlob = null;
+  hide('preview-area'); hide('save-confirm'); show('cam-ph');
+}
 
-    // ═══════════════════════════════════════════════════
-    //  SETTINGS
-    // ═══════════════════════════════════════════════════
-    function openSetup() { document.getElementById('setup-modal').classList.add('open'); }
-    function closeSetup() { document.getElementById('setup-modal').classList.remove('open'); }
+function anotherAngle() {
+  angleIdx++;
+  document.getElementById('fn-display').textContent = mkFilename() + '.jpg';
+  hide('preview-area'); hide('save-confirm'); show('cam-ph');
+  photoBlob = null;
+}
 
-    function saveURL() {
-      const url = document.getElementById('url-input').value.trim();
-      localStorage.setItem(URL_KEY, url);
-      fetchRemote(true, url);
-      setTimeout(closeSetup, 300);
-    }
+// ═══════════════════════════════════════════════════
+//  SAVE
+// ═══════════════════════════════════════════════════
+function savePhoto() {
+  if (!photoBlob || !selected) return;
+  const fn = mkFilename() + '.jpg';
+  const url = URL.createObjectURL(photoBlob);
+  const a = document.createElement('a');
+  a.href = url; a.download = fn;
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 2000);
+  document.getElementById('save-fn').textContent = fn;
+  show('save-confirm');
+  toast('Saved: ' + fn);
+}
 
-    function setQuality(btn, kb) {
-      document.querySelectorAll('.q-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      targetKB = kb;
-      localStorage.setItem(KB_KEY, kb);
-    }
+// ═══════════════════════════════════════════════════
+//  BARCODE SCANNER
+//  Uses native BarcodeDetector on Android/Chrome,
+//  Quagga2 on iPhone Safari (loaded eagerly on boot)
+// ═══════════════════════════════════════════════════
+let quaggaReady = false;
+let quaggaRunning = false;
 
-    // ═══════════════════════════════════════════════════
-    //  UTILITIES
-    // ═══════════════════════════════════════════════════
-    function showScreen(id) {
-      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-      document.getElementById('screen-' + id).classList.add('active');
-    }
-    function show(id) { const el = document.getElementById(id); if (el) { el.style.display = ''; } }
-    function hide(id) { const el = document.getElementById(id); if (el) { el.style.display = 'none'; } }
-    function showLoading(msg) { document.getElementById('loading-text').textContent = msg; document.getElementById('loading').classList.add('open'); }
-    function hideLoading() { document.getElementById('loading').classList.remove('open'); }
+// Load Quagga2 eagerly so it's ready when needed
+(function loadQuagga() {
+  if ('BarcodeDetector' in window) return; // not needed on Chrome/Android
+  const s = document.createElement('script');
+  s.src = 'https://cdn.jsdelivr.net/npm/@ericblade/quagga2@1.8.4/dist/quagga.min.js';
+  s.onload  = () => { quaggaReady = true; };
+  s.onerror = () => { quaggaReady = false; };
+  document.head.appendChild(s);
+})();
 
-    let _tt = null;
-    function toast(msg, icon = '✅') {
-      const t = document.getElementById('toast');
-      t.innerHTML = icon + ' ' + msg;
-      t.classList.add('show');
-      clearTimeout(_tt);
-      _tt = setTimeout(() => t.classList.remove('show'), 3000);
-    }
+async function openScanner() {
+  document.getElementById('scan-modal').classList.add('open');
 
-    function timeAgo(ts) {
-      if (!ts) return 'never';
-      const m = Math.floor((Date.now() - ts) / 60000);
-      if (m < 2) return 'just now';
-      if (m < 60) return m + 'm ago';
-      const h = Math.floor(m / 60);
-      if (h < 24) return h + 'h ago';
-      return Math.floor(h / 24) + 'd ago';
-    }
-
-    function emoji(name) {
-      const n = (name || '').toLowerCase();
-      if (/rose|rhodo|azalea/.test(n)) return '🌹';
-      if (/lavender/.test(n)) return '💜';
-      if (/maple/.test(n)) return '🍁';
-      if (/oak|birch|beech|elm|linden/.test(n)) return '🌳';
-      if (/spruce|pine|fir|cedar|hemlock|juniper/.test(n)) return '🌲';
-      if (/hydrangea/.test(n)) return '💐';
-      if (/hosta|fern|grass|sedge|miscanthus|pennisetum/.test(n)) return '🌾';
-      if (/boxwood|holly|arborvitae|yew|euonymus/.test(n)) return '🌿';
-      if (/sunflower|rudbeckia|black.eyed/.test(n)) return '🌻';
-      if (/coneflower|echinacea|aster|phlox/.test(n)) return '🌼';
-      if (/tulip|lily|iris|daylily|allium/.test(n)) return '🌷';
-      if (/cherry|plum|crab|redbud|dogwood/.test(n)) return '🌸';
-      if (/peony|weigela|spirea|forsythia|viburnum/.test(n)) return '🌸';
-      return '🌿';
-    }
-
-    function esc(s) { return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
-
-    // Register service worker for PWA install
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js').catch(e => console.warn('SW:', e));
+  // Use native BarcodeDetector where available (Chrome, Android, Firefox 123+)
+  if ('BarcodeDetector' in window) {
+    try {
+      scanStream = await navigator.mediaDevices.getUserMedia({
+        video:{ facingMode:'environment', width:{ideal:1280}, height:{ideal:720} }, audio:false
       });
+      const vid = document.getElementById('scan-video');
+      vid.srcObject = scanStream;
+      barcodeDetector = new BarcodeDetector({
+        formats:['ean_13','ean_8','upc_a','upc_e','code_128','code_39','qr_code','itf','codabar']
+      });
+      // Wait for video to be fully playing before scanning frames
+      let loopStarted = false;
+      const startLoop = () => { if (!loopStarted) { loopStarted = true; scanLoop(); } };
+      vid.addEventListener('playing', startLoop, { once: true });
+      setTimeout(startLoop, 1500); // safety fallback
+    } catch(e) {
+      const msg = e.name === 'NotAllowedError' ? 'Camera access denied' : 'Could not open camera';
+      toast(msg, '⚠️'); closeScanner();
     }
-  </script>
-</body>
+    return;
+  }
 
+  // iPhone Safari — use Quagga2
+  if (!quaggaReady) {
+    // Still loading — wait up to 5 seconds
+    let waited = 0;
+    const wait = setInterval(() => {
+      waited += 200;
+      if (quaggaReady) { clearInterval(wait); startQuagga(); }
+      else if (waited >= 5000) {
+        clearInterval(wait);
+        toast('Scanner unavailable — search by name instead', '⚠️');
+        closeScanner();
+      }
+    }, 200);
+    return;
+  }
+  startQuagga();
+}
+
+function startQuagga() {
+  if (quaggaRunning) return;
+  quaggaRunning = true;
+
+  Quagga.init({
+    inputStream: {
+      name: 'Live',
+      type: 'LiveStream',
+      target: document.getElementById('scan-video'),
+      constraints: { facingMode: 'environment', width:{ ideal:1280 }, height:{ ideal:720 } }
+    },
+    decoder: {
+      readers: ['ean_reader','ean_8_reader','upc_reader','upc_e_reader','code_128_reader','code_39_reader']
+    },
+    locate: true
+  }, err => {
+    if (err) {
+      quaggaRunning = false;
+      toast('Camera access denied', '⚠️');
+      closeScanner();
+      return;
+    }
+    Quagga.start();
+    Quagga.onDetected(result => {
+      const code = result && result.codeResult && result.codeResult.code;
+      if (code) { closeScanner(); handleCode(code); }
+    });
+  });
+}
+
+async function scanLoop() {
+  if (!scanStream || !barcodeDetector) return;
+  const vid = document.getElementById('scan-video');
+  // Don't attempt detection on a frame that isn't ready
+  if (vid.readyState < 2) { setTimeout(scanLoop, 100); return; }
+  try {
+    const codes = await barcodeDetector.detect(vid);
+    if (codes.length) { closeScanner(); handleCode(codes[0].rawValue); return; }
+  } catch(e) {
+    // Ignore transient errors (empty frames, focus changes)
+    if (e.name !== 'InvalidStateError') console.warn('scan err:', e.message);
+  }
+  if (scanStream) requestAnimationFrame(scanLoop);
+}
+
+function handleCode(code) {
+  const stripped = code.replace(/[^a-zA-Z0-9-]/g,'');
+  const match = products.find(p =>
+    p.sku === code || p.sku === stripped ||
+    p.sku.replace(/[^a-zA-Z0-9]/g,'') === stripped ||
+    p.alt === code || p.alt === stripped ||
+    p.alt.replace(/[^a-zA-Z0-9]/g,'') === stripped
+  );
+  if (match) {
+    selectProduct(products.indexOf(match));
+    toast('Found: ' + match.name);
+  } else {
+    showScreen('search');
+    const inp = document.getElementById('search-input');
+    inp.value = code; document.getElementById('s-clear').style.display = 'block';
+    onSearch(code);
+    toast('No match for ' + code + ' — check below', '🔍');
+  }
+}
+
+function closeScanner() {
+  document.getElementById('scan-modal').classList.remove('open');
+  if (scanStream) { scanStream.getTracks().forEach(t=>t.stop()); scanStream = null; }
+  barcodeDetector = null;
+  if (quaggaRunning) {
+    try { Quagga.stop(); } catch(_) {}
+    quaggaRunning = false;
+  }
+}
+
+// ═══════════════════════════════════════════════════
+//  SETTINGS
+// ═══════════════════════════════════════════════════
+function openSetup() { document.getElementById('setup-modal').classList.add('open'); }
+function closeSetup() { document.getElementById('setup-modal').classList.remove('open'); }
+
+function saveURL() {
+  const url = document.getElementById('url-input').value.trim();
+  localStorage.setItem(URL_KEY, url);
+  fetchRemote(true, url);
+  setTimeout(closeSetup, 300);
+}
+
+function setQuality(btn, kb) {
+  document.querySelectorAll('.q-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  targetKB = kb;
+  localStorage.setItem(KB_KEY, kb);
+}
+
+// ═══════════════════════════════════════════════════
+//  UTILITIES
+// ═══════════════════════════════════════════════════
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('screen-' + id).classList.add('active');
+}
+function show(id) { const el=document.getElementById(id); if(el){ el.style.display=''; } }
+function hide(id) { const el=document.getElementById(id); if(el){ el.style.display='none'; } }
+function showLoading(msg) { document.getElementById('loading-text').textContent=msg; document.getElementById('loading').classList.add('open'); }
+function hideLoading() { document.getElementById('loading').classList.remove('open'); }
+
+let _tt = null;
+function toast(msg, icon='✅') {
+  const t = document.getElementById('toast');
+  t.innerHTML = icon + ' ' + msg;
+  t.classList.add('show');
+  clearTimeout(_tt);
+  _tt = setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+function timeAgo(ts) {
+  if (!ts) return 'never';
+  const m = Math.floor((Date.now()-ts)/60000);
+  if (m<2) return 'just now';
+  if (m<60) return m+'m ago';
+  const h=Math.floor(m/60);
+  if (h<24) return h+'h ago';
+  return Math.floor(h/24)+'d ago';
+}
+
+function emoji(name) {
+  const n=(name||'').toLowerCase();
+  if (/rose|rhodo|azalea/.test(n))                        return '🌹';
+  if (/lavender/.test(n))                                 return '💜';
+  if (/maple/.test(n))                                    return '🍁';
+  if (/oak|birch|beech|elm|linden/.test(n))               return '🌳';
+  if (/spruce|pine|fir|cedar|hemlock|juniper/.test(n))    return '🌲';
+  if (/hydrangea/.test(n))                                return '💐';
+  if (/hosta|fern|grass|sedge|miscanthus|pennisetum/.test(n)) return '🌾';
+  if (/boxwood|holly|arborvitae|yew|euonymus/.test(n))    return '🌿';
+  if (/sunflower|rudbeckia|black.eyed/.test(n))           return '🌻';
+  if (/coneflower|echinacea|aster|phlox/.test(n))         return '🌼';
+  if (/tulip|lily|iris|daylily|allium/.test(n))           return '🌷';
+  if (/cherry|plum|crab|redbud|dogwood/.test(n))          return '🌸';
+  if (/peony|weigela|spirea|forsythia|viburnum/.test(n))  return '🌸';
+  return '🌿';
+}
+
+function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+// Register service worker for PWA install
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(e => console.warn('SW:', e));
+  });
+}
+</script>
+</body>
 </html>
