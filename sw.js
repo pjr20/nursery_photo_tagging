@@ -1,7 +1,7 @@
 // Maple Lane Photo Tool — Service Worker
 // Handles offline caching of the app shell
 
-const CACHE = 'ml-photos-v1';
+const CACHE = 'ml-photos-v2';
 const SHELL = ['/', '/index.html', '/manifest.json'];
 
 self.addEventListener('install', e => {
