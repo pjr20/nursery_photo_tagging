@@ -727,7 +727,7 @@ function mkFilename() {
   const date = d.getFullYear() + pad(d.getMonth()+1) + pad(d.getDate());
   const ang    = angleIdx > 0 ? `_angle${angleIdx+1}` : '';
   const suffix = targetKB <= 300 ? '_EMAIL' : targetKB >= 900 ? '_HIRES' : '';
-  return `${slug(selected.name)}${selected.size?'_'+slug(selected.size):''}${ang}_${date}${suffix}`;
+  return `${slug(selected.name)}${selected.size?'_'+slug(selected.size):''}${ang}_${date}${suffix}_NFA`;
 }
 function setCapQuality(btn, kb) {
   document.querySelectorAll('.size-pill').forEach(b => b.classList.remove('active'));
