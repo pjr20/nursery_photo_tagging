@@ -338,6 +338,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-b);background:var(-
           <button class="size-pill" data-kb="300" onclick="setCapQuality(this,300)">300 KB<span>Email · _EMAIL</span></button>
           <button class="size-pill active" data-kb="500" onclick="setCapQuality(this,500)">500 KB<span>Balanced</span></button>
           <button class="size-pill" data-kb="900" onclick="setCapQuality(this,900)">900 KB<span>Hi-res · _HIRES</span></button>
+          <button class="size-pill" data-kb="1500" onclick="setCapQuality(this,1500)">1.5 MB<span>Sharpest · _HIRES</span></button>
         </div>
 
         <div class="cam-ph" id="cam-ph" onclick="startCamera()">
@@ -815,23 +816,34 @@ function compress(canvas) {
   const work = document.createElement('canvas');
   work.width = canvas.width; work.height = canvas.height;
   work.getContext('2d').drawImage(canvas, 0, 0);
-  let q = 0.88, pass = 0;
+
+  // Start at high quality and drop slowly — only resize as last resort
+  let q = 0.96;
+  let pass = 0;
+  const MAX_PASSES = 20;
 
   function run() {
     work.toBlob(blob => {
       if (!blob) { hideLoading(); toast('Processing failed', '⚠️'); return; }
-      if (blob.size > target && pass < 14) {
-        if (q > 0.50) { q = Math.max(0.28, q - 0.09); }
-        else {
-          const scale = Math.sqrt(target / blob.size) * 0.93;
-          const nw = Math.max(400, Math.floor(work.width * scale));
-          const nh = Math.max(300, Math.floor(work.height * scale));
+
+      if (blob.size > target && pass < MAX_PASSES) {
+        if (q > 0.72) {
+          // Phase 1: reduce quality slowly in small steps to preserve sharpness
+          q = Math.max(0.72, q - 0.03);
+        } else if (q > 0.50) {
+          // Phase 2: slightly faster quality reduction
+          q = Math.max(0.50, q - 0.04);
+        } else {
+          // Phase 3: only now resize — keeps quality high, reduces dimensions
+          const scale = Math.sqrt(target / blob.size) * 0.95;
+          const nw = Math.max(800, Math.floor(work.width * scale));
+          const nh = Math.max(600, Math.floor(work.height * scale));
           const tmp = document.createElement('canvas');
           tmp.width = nw; tmp.height = nh;
           tmp.getContext('2d').drawImage(work, 0, 0, nw, nh);
           work.width = nw; work.height = nh;
           work.getContext('2d').drawImage(tmp, 0, 0);
-          q = Math.max(0.28, q - 0.05);
+          q = Math.min(q + 0.05, 0.82); // bounce quality back up after resize
         }
         pass++; run();
       } else {
